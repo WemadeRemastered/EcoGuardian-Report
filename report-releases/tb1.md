@@ -27,28 +27,12 @@
         <td><strong>Code</strong></td>
     </tr>
     <tr>
-        <td>Esteban García, Nicolás Sebastián</td>
-        <td>u202217485</td>
-    </tr>
-    <tr>
         <td>Huilca Chipana, Gustavo</td>
         <td>u202213983</td>
     </tr>
     <tr>
         <td>Jave Díaz, Mathias Alejandro</td>
         <td>u202212721</td>
-    </tr>
-    <tr>
-        <td>Kunimoto Watanabe, Mathias Tsuneo</td>
-        <td>u202210148</td>
-    </tr>
-    <tr>
-        <td>Luna Capuñay, Ítalo D'Alessandro</td>
-        <td>u202213375</td>
-    </tr>
-    <tr>
-        <td>Peña Rivera, Manuel Sebastián</td>
-        <td>u202210138</td>
     </tr>
     <tr>
         <td>Ramírez Hoffmann, Sebastián</td>
