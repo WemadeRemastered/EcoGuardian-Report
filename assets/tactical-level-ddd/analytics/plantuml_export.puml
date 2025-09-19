@@ -1,0 +1,78 @@
+@startuml
+
+title Bounded Context: Analytics - Domain Layer Class Diagram
+left to right direction
+skinparam packageStyle rectangle
+skinparam classAttributeIconSize 0
+
+class Metric {
+  +Id: int
+  +PlantId: int
+  +MetricTypeId: int
+  +CreatedAt: DateTime
+  +MetricValue: double
+  +Metric()
+  +Metric(command:CreateMetricCommand)
+  +Update(command:UpdateMetricCommand): void
+
+}
+
+class MetricType {
+  +Id: int
+  +Type: string
+  +MetricType(type: MetricTypes)
+}
+
+enum MetricTypes {
+  Humidity,
+  Illumination,
+  Temperature
+}
+
+class CreateMetricCommand {}
+class UpdateMetricCommand {}
+class SeedMetricTypesCommand {}
+
+class GetMetricsByMetricTypeIdQuery {}
+class GetMetricByIdQuery {}
+
+
+interface IMetricCommandService {
+  +Handle(command: CreateMetricCommand): void
+  +Handle(command: UpdateMetricCommand): void
+}
+
+interface IMetricTypeCommandService {
+  +Handle(command: SeedMetricTypesCommand): void
+}
+
+interface IMetricQueryService {
+  +Handle(query: GetMetricsByMetricTypeIdQuery): List<Metric>
+  +Handle(query: GetMetricByIdQuery): Metric
+}
+
+interface IMetricRepository {
+  +GetByMetricTypeId(metricTypeId: int): List<Metric>
+}
+
+interface IMetricTypeRepository {
+  +IsMetricTypeExists(type: MetricTypes): bool
+}
+
+MetricType --> MetricTypes
+IMetricRepository -[dotted]-> Metric
+IMetricTypeRepository -[dotted]-> MetricType
+Metric --> CreateMetricCommand
+Metric --> UpdateMetricCommand
+IMetricCommandService --> CreateMetricCommand
+IMetricCommandService --> UpdateMetricCommand
+IMetricTypeCommandService --> SeedMetricTypesCommand
+IMetricQueryService --> GetMetricsByMetricTypeIdQuery
+IMetricQueryService --> GetMetricByIdQuery
+
+
+
+
+
+
+@enduml

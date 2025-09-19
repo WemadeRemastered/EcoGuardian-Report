@@ -1,0 +1,121 @@
+@startuml
+
+class Question {
+  +Id: int
+  +Content: String
+  +UserId: int
+  +Question()
+  +Question(command: CreateQuestionCommand)
+  +Update(command: UpdateQuestionCommand)
+}
+
+
+
+interface IQuestionRepository{
+ +FindQuestionsByUserIdAsync(userId: int): List<Question>
+    +FindAllQuestionsAsync(): List<Question>
+}
+
+interface IQuestionCommandService{
+ +Handle(command: CreateQuestionCommand): Question
+ +Handle(command: UpdateQuestionCommand): Question
+}
+
+
+class CreateQuestionCommand {
+}
+
+class UpdateQuestionCommand {
+}
+
+interface IQuestionQueryService {
++Handle(query: GetQuestionsByUserIdQuery): List<Question>
++Handle(query: GetAllQuestionsQuery): List<Question>
+}
+
+class GetQuestionsByUserIdQuery {
+}
+class GetAllQuestionsQuery
+
+
+Question ..> CreateQuestionCommand
+Question ..> UpdateQuestionCommand
+IQuestionRepository ..> Question
+IQuestionCommandService --> CreateQuestionCommand
+IQuestionCommandService --> UpdateQuestionCommand
+GetQuestionsByUserIdQuery ..> IQuestionQueryService
+GetAllQuestionsQuery ..> IQuestionQueryService
+
+
+
+
+
+class Answer {
+  +Id: int
+  +UserId : int
+  +QuestionId: int
+  +Content: String
+  +Answer()
+  +Answer(command: CreateAnswerCommand)
+  +Update(command: UpdateAnswerCommand)
+}
+
+interface IAnswerRepository{
+ +FindAnswersByQuestionIdAsync(questionId: int): List<Answer>
+    +FindAnswersByUserIdAsync(userId: int): List<Answer>
+}
+
+interface IAnswerCommandService{
+ +Handle(command: CreateAnswerCommand): Answer
+ +Handle(command: UpdateAnswerCommand): Answer
+}
+
+
+class CreateAnswerCommand {
+}
+
+class UpdateAnswerCommand {
+}
+interface IAnswerQueryService {
++Handle(query: GetAnswersByQuestionIdQuery): List<Answer>
++Handle(query: GetAnswersByUserIdQuery): List<Answer>
+}
+class GetAnswersByQuestionIdQuery {
+}
+class GetAnswersByUserIdQuery {
+ }
+
+
+Answer ..> CreateAnswerCommand
+Answer ..> UpdateAnswerCommand
+IAnswerRepository ..> Answer
+IAnswerCommandService --> CreateAnswerCommand
+IAnswerCommandService --> UpdateAnswerCommand
+GetAnswersByQuestionIdQuery ..> IAnswerQueryService
+GetAnswersByUserIdQuery ..> IAnswerQueryService
+
+
+class QuestionPool {
+  +Id: int
+  +UserId: int
+    +QuestionId: int
+  +Type: String
+  +QuestionAnswer: Text
+    +QuestionPool()
+    +QuestionPool(questionAnswer: Text)
+}
+
+interface IQuestionPoolRepository{
+    +FindAllQuestionPoolsAsync(): List<QuestionPool>
+}
+interface IQuestionPoolQueryService {
++Handle(query: GetAllQuestionPoolsQuery): List<QuestionPool>
+}
+class GetAllQuestionPoolsQuery {
+}
+IQuestionPoolRepository ..> QuestionPool
+
+GetAllQuestionPoolsQuery ..> IQuestionPoolQueryService
+
+
+@enduml

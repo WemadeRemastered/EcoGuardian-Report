@@ -1,0 +1,87 @@
+@startuml "Management Domain Layer Diagram for Backend"
+  class Plant {
+    +Id:int
+    +Name:string
+    +IsPlantation:bool
+    +AreaCoverage:double
+    +Type:string
+    +UserId:int
+    +WaterThreshold:decimal
+    +CreatedAt:DateTime
+    +UpdatedAt:DateTime
+    +LightThreshold:decimal
+    +TemperatureThreshold:decimal
+    +StateId:int
+    +Plant()
+    +Plant(command:CreatePlantCommand)
+    +Update(command:UpdatePlantCommand):void
+    +UpdateState(command:UpdatePlantStateCommand):void
+  }
+  
+
+  class WelnessState {
+    +Id:int
+    +Type:string
+    +WelnessState()
+    +WelnessState(type:string)
+  }
+
+  enum WelnessStates {
+    Healthy
+    UnHealthy
+    Warning
+  }
+
+  WelnessState *-- "1" WelnessStates
+
+  class CreatePlantCommand
+  class UpdatePlantCommand
+  class UpdatePlantStateCommand
+  class SeedWelnessStateCommand
+
+  class GetPlantsByUserIdQuery
+  class GetPlantByIdQuery
+
+
+  interface IPlantCommandService {
+    +Handle(command:CreatePlantCommand):void
+    +Handle(command:UpdatePlantCommand):void
+    +Handle(command:UpdatePlantStateCommand):void
+  }
+
+
+
+  interface IPlantQueryService {
+    +Handle(query:GetPlantsByUserIdQuery):List<Plant>
+    +Handle(query:GetPlantByIdQuery):Plant
+  }
+
+
+  interface IWelnessStateCommandService {
+    +Handle(command:SeedWelnessStateCommand)
+  }
+
+  interface IPlantRepository {
+    +GetPlantsByUserIdAsync(userId:int):List<Plant>
+  }
+
+  interface IWelnessStateRepository {
+    +IsStateExists(type:string):bool
+  }
+
+
+  IPlantCommandService -- CreatePlantCommand
+  IPlantCommandService -- UpdatePlantCommand
+  IPlantCommandService -- UpdatePlantStateCommand
+
+
+  IPlantQueryService -- GetPlantsByUserIdQuery
+  IPlantQueryService -- GetPlantByIdQuery
+
+
+  IPlantRepository --> Plant
+  IWelnessStateRepository --> WelnessState
+
+  IWelnessStateCommandService -- SeedWelnessStateCommand
+  
+@enduml

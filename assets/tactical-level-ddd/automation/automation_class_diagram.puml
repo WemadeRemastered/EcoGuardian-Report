@@ -1,0 +1,44 @@
+@startuml
+
+class Actuator {
+  +id:int
+  +brand:int
+  +installedAt:DateTime
+  +activatedAt:DateTime
+  +Actuator()
+  +Actuator(command:CreateActuatorCommand)
+  +update(command:UpdateActuatorCommand):void
+  +activate(command:ActivateActuatorCommand):void
+}
+
+
+
+
+
+class CreateActuatorCommand {}
+class UpdateActuatorCommand{}
+
+class ActivateActuatorCommand {}
+
+
+interface IActuatorRepository {}
+
+interface IActuatorCommandService {
+  +handle(command:CreateActuatorCommand)
+  +handle(command:UpdateActuatorCommand)
+  +handle(command:ActivateActuatorCommand)
+}
+
+
+Actuator ...> CreateActuatorCommand
+Actuator ...> UpdateActuatorCommand
+Actuator ...> ActivateActuatorCommand
+
+IActuatorCommandService --> CreateActuatorCommand
+IActuatorCommandService --> UpdateActuatorCommand
+IActuatorCommandService --> ActivateActuatorCommand
+
+
+IActuatorRepository -[dotted]-> Actuator
+
+@enduml

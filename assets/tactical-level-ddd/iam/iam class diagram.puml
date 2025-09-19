@@ -1,0 +1,64 @@
+@startuml
+
+class SignInCommand {
+
+}
+
+class SignUpCommand {
+
+}
+
+class SeedRolesCommand {
+
+}
+
+class User {
+   +Id:int
+   +Email:string
+   +Password:string
+   +RoleId:int
+   +User()
+   +User(command:SignUpCommand)
+}
+
+enum Roles{
+  Domestic
+  Business
+  Specialist
+}
+
+
+class Role {
+  +Id:int
+  +Type:string
+  +Role()
+  +Role(type:string)
+}
+
+
+interface IRoleRepository{
+  +IsRoleExists(type:string):bool
+}
+
+interface IUserRepository{
+  +IsAlreadyExists(email:string): bool
+}
+
+interface IUserCommandService{
+  +Handle(command:SignUpCommand): bool
+  +Handle(command:SignInCommand) : User
+}
+
+interface IRoleCommandService {
+  +Handle(command:SeedRolesCommand):void
+}
+
+User -- SignUpCommand
+IUserRepository --> User
+IRoleRepository --> Role
+Role *-- "1" Roles
+IUserCommandService -- SignUpCommand
+IUserCommandService -- SignInCommand
+IRoleCommandService -- SeedRolesCommand
+
+@enduml
