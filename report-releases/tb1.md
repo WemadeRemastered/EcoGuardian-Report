@@ -58,6 +58,7 @@
   <tbody>
     <!-- TB1 -->
     <tr>
+    <td rowspan="7">0.1</td>
       <td>29/03/2025</td>
       <td>Gustavo Huilca Chipana</td>
       <td>
@@ -111,11 +112,7 @@ Front End Web Application: https://ecoguardian-tf.vercel.app/ | [Front End Appli
 |--------------------|-------------------------------------|
 | SEBRH              | Sebastian Ramirez Hoffmann          |
 | LordMathi2741      | Mathias Alejandro Jave Diaz         |
-| tatoft             | Italo D'alessandro Luna Capuñay     |
 | GustavoHuilca31    | Gustavo Huilca Chipana              |
-| U202210138         | Manuel Sebastian Peña Rivera        |
-| kuni2005           | Mathias Tsuneo Kunimoto Watanabe    |
-| Nekolas777         | Nicolas Sebastian Esteban Garcia    |
 
 
 ### TB1
@@ -124,101 +121,16 @@ Front End Web Application: https://ecoguardian-tf.vercel.app/ | [Front End Appli
 
 <p>Se muestran evidencias de los commits realizados en la entrega de la TB1 en el informe.</p>
 
-<img src="../assets/inisghts/tb1/colaborators.png" alt="imagen de las colaboraciones">  
+
 
 [*Colaboraciones del repositorio*]
 Se muestra evidencia del trabajo realizado en la TB1
 
-<img src="../assets/inisghts/tb1/commits.png" alt="imagen de los commits">  
+
 
 [*Registro de los commits donde se realizaron la mayor cantidad*]
 
 En ambos casos se puede observar el incremento de modificaciones y revisiones en los dias miercoles y una cantidad mayor de cambios que commits.
-
-### TP
-
-<p>Para la entrega del <strong>Trabajo Parcial (TP)</strong> se han realizado los procesos necesarios para lograr los objetivos propuestos de la entrega. Se toma en cuenta la importancia de la persistencia, y como grupo nos dedicamos a mantener una frecuencia de <strong>commits</strong> y cambios proyectada a ser óptima a futuro.</p>
-
-<p>Se muestran evidencias de los <strong>commits</strong> realizados en la entrega del TP en el informe.</p>
-
-<img src="../assets/inisghts/tp/informe-insights-tp.jpeg" alt="Colaboraciones generales del repositorio">  
-
-[*Colaboraciones generales del repositorio*]
-Se muestra evidencia del trabajo realizado en la Tp1
-
-
-<img src="../assets/inisghts/tp/informe-commits.png" alt="Commits generales del repositorio">  
-
-[*Registro de los commits generales donde se realizaron la mayor cantidad*]
-
-<p>En ambos casos se puede observar el incremento de modificaciones y revisiones en los días miércoles, y una cantidad mayor de cambios que commits. A continuación, se desglosa el trabajo realizado específicamente en la <strong>landing page</strong> y en la <strong>aplicación web</strong>:</p>
-
-#### Landing Page
-<img src="../assets/inisghts/tp/landing.png" alt="Colaboraciones Landing Page">  
-
-[*Colaboraciones realizadas en el diseño y maquetación de la landing page*]
-
-<img src="../assets/inisghts/tp/landing-commits.png" alt="Commits Landing Page">
-
-[*Commits asociados al desarrollo visual y estructural de la landing page*]
-
-#### Aplicación Web
-
-<img src="../assets/inisghts/tp/webapp-insights.jpeg" alt="Colaboraciones Webapp">  
-
-[*Colaboraciones en el diseño y construcción de componentes funcionales de la aplicación web*]
-
-<img src="../assets/inisghts/tp/webapp-commits.jpeg" alt="Commits Webapp">  
-
-[*Commits correspondientes al desarrollo lógico y visual del prototipo de la webapp*]
-
-### TB2
-<p>Para la entrega del TB2 se han realizado los procesos necesarios para lograr los objetivos propuestos de la entrega y del sprint. En este caso hemos implementado el avance de nuestras soluciones desde embeded hasta mobile app. Adicionalmente, se hacen las correciones al informe que se esperan de nosotros.</p>
-
-<p>Se muestran evidencias de los <strong>commits</strong> realizados en la entrega del TB2 en el informe.</p>
-
-<img src="../assets/inisghts/tb2/insights-tb2-pulse.png" alt="Colaboraciones generales del repositorio">  
-
-[*Colaboraciones generales del repositorio*]
-Se muestra evidencia del trabajo realizado en la TB2 donde podemos observar el progreso que hemos tenido a lo largo de la entrega, claramente esto solo se encasilla a este reporte, no obstante si se quiere ver mas informacion de esta entrega en la seccion de Sprint 2 estan las evidencias de participacion en los demas repositorios.
-
-
-<img src="../assets/inisghts/tb2/commits-tb2.png" alt="Commits generales del repositorio">  
-
-### TF
-<p>Para la entrega del TF se han realizado los procesos necesarios para lograr los objetivos propuestos de la entrega y del sprint. En este caso hemos implementado el avance de nuestras soluciones y mejoras desde el embeded hasta mobile app. Adicionalmente, se hacen las correciones al informe que se esperan de nosotros.</p>
-
-<p>Se muestran evidencias de los <strong>commits</strong> realizados en la entrega del TF en el informe.</p>
-
-<img src="../assets/inisghts/tf/report-line.png" alt="Colaboraciones generales del repositorio">  
-
-[*Colaboraciones generales del repositorio*]
-Se muestra evidencia del trabajo realizado en el TF donde podemos observar el progreso que hemos tenido a lo largo de la entrega, claramente esto solo se encasilla a este reporte, no obstante si se quiere ver mas informacion de esta entrega en la seccion de Sprint 2 estan las evidencias de participacion en los demas repositorios.
-
-
-<img src="../assets/inisghts/tf/commits-tf.png" alt="Commits generales del repositorio"> 
-
-
-#### Aplicación Web
-
-<img src="../assets/inisghts/tf/commits-front-1.png" alt="Colaboraciones Webapp">  
-
-[*Colaboraciones en el diseño y construcción de componentes funcionales de la aplicación web*]
-
-#### Mobile
-
-<img src="../assets/inisghts/tf/commits-mobile.png" alt="Commits Mobile">  
-
-[*Commits correspondientes al desarrollo lógico y visual del prototipo de mobile*]
-
-#### Backend
-
-<img src="../assets/inisghts/tf/commits-back.png" alt="Commits Backend">  
-
-[*Commits correspondientes al desarrollo lógico y visual del prototipo de backend*]
-
-[*Registro de los commits generales donde se realizaron la mayor cantidad*]
-
 
 ---
 
@@ -378,46 +290,6 @@ Se muestra evidencia del trabajo realizado en el TF donde podemos observar el pr
 [4.2.9.6. Bounded Context Software Architecture Code Level Diagrams](#4296-bounded-context-software-architecture-code-level-diagrams)     
 [4.2.9.6.1. Bounded Context Domain Layer Class Diagrams](#42961-bounded-context-domain-layer-class-diagrams)     
 [4.2.9.6.2. Bounded Context Database Design Diagram](#42962-bounded-context-database-design-diagram)
-
-[Capítulo V: Solution UI/UX Design](#capítulo-v-solution-ui/ux-design)
-
-[5.1. Style Guidelines](#51-style-guidelines)      
-[5.1.1. General Style Guidelines](#511-general-style-guidelines)        
-[5.1.2. Web, Mobile and IoT Style Guidelines](#512-web-mobile-and-iot-style-guidelines)          
-[5.2. Information Architecture](#52-information-architecture)      
-[5.2.1. Organization Systems](#521-organization-systems)      
-[5.2.2. Labeling Systems](#522-labeling-systems)       
-[5.2.3. SEO Tags and Meta Tags](#523-seo-tags-and-meta-tags)      
-[5.2.4. Searching Systems](#524-searching-systems)      
-[5.2.5. Navigation Systems](#525-navigation-systems)      
-[5.3. Landing Page UI Design](#53-landing-page-ui-design)      
-[5.3.1. Landing Page Wireframe](#531-landing-page-wireframe)      
-[5.3.2. Landing Page Mock-up](#532-landing-page-mock-up)      
-[5.4. Applications UX/UI Design](#54-applications-uxui-design)      
-[5.4.1. Applications Wireframes](#541-applications-wireframes)      
-[5.4.2. Applications Wireflow Diagrams](#542-applications-wireflow-diagrams)      
-[5.4.2. Applications Mock-ups](#542-applications-mock-ups)      
-[5.4.3. Applications User Flow Diagrams](#543-applications-user-flow-diagrams)
-[5.5. Applications Prototyping](#55-applications-prototyping)
-
-[Capítulo VI: Product Implementation, Validation & Deployment](#capítulo-vi-product-implementation-validation--deployment)
-
-[6.1. Software Configuration Management](#61-software-configuration-management)      
-[6.1.1. Software Development Environment Configuration](#611-software-development-environment-configuration)        
-[6.1.2. Source Code Management](#612-source-code-management)       
-[6.1.3. Source Code Style Guide & Conventions](#613-source-code-style-guide--conventions)       
-[6.1.4. Software Deployment Configuration](#614-software-deployment-configuration)          
-[6.2. Landing Page, Services & Applications Implementation](#62-landing-page-services--applications-implementation)       
-[6.2.1. Sprint 1](#621-sprint-1)      
-[6.2.1.1. Sprint Planning 1](#6211-sprint-planning-1)      
-[6.2.1.2. Aspect Leaders and Collaborators](#6212-aspect-leaders-and-collaborators)      
-[6.2.1.3. Sprint Backlog 1](#6213-sprint-backlog-1)      
-[6.2.1.4. Development Evidence for Sprint Review](#6214-development-evidence-for-sprint-review)     
-[6.2.1.5. Testing Suite Evidence for Sprint Review](#6215-testing-suite-evidence-for-sprint-review)     
-[6.2.1.6. Execution Evidence for Sprint Review](#6216-execution-evidence-for-sprint-review)     
-[6.2.1.7. Services Documentation Evidence for Sprint Review](#6217-services-documentation-evidence-for-sprint-review)     
-[6.2.1.8. Software Deployment Evidence for Sprint Review](#6218-software-deployment-evidence-for-sprint-review)     
-[6.2.1.9. Team Collaboration Insights during Sprint](#6219-team-collaboration-insights-during-sprint)
 
 
 [Conclusiones](#conclusiones)
