@@ -1832,7 +1832,72 @@ Las siguientes restricciones son impuestas por el negocio y el producto, y son i
 | CON-04 | Servicios LLM                  | La generación de recomendaciones personalizadas debe integrarse con servicios de modelos de lenguaje, como los de Google o OpenAI, a través de sus APIs.                           | Escenario: El usuario solicita una recomendación. Cuando: El backend envía una petición a la API de Google Gemini. Entonces: El servicio LLM devuelve un texto estructurado con la recomendación.                                                                 |
 | CON-05 | Base de Datos NoSQL            | El sistema debe utilizar una base de datos NoSQL optimizada para datos de series de tiempo (como InfluxDB o MongoDB) para almacenar los datos de los sensores de manera eficiente. | Escenario: Un analista de datos solicita los datos históricos de humedad de una planta en un rango de fechas. Cuando: Se ejecuta una consulta en la base de datos. Entonces: La respuesta es retornada en menos de 2 segundos, incluso con millones de registros. |
 ### 4.1.4 Architectural Design Decisions
+| Driver ID | Título | Monolito Modular (DDD) | Microservicios |
+| :--- | :--- | :--- | :--- |
+| | | **Pro** | **Con** | **Pro** | **Con** |
+| **DR-01** | **Escalabilidad** | Modularización interna permite escalar por capas (aplicación o base de datos), útil para escenarios graduales. | Limitaciones al escalar horizontalmente componentes específicos sin escalar todo el sistema. | Escalabilidad horizontal granular, cada servicio puede escalarse de forma independiente. | Overhead de red y complejidad de orquestación. |
+| **DR-02** | **Disponibilidad** | Despliegue único facilita failover controlado con alta confiabilidad. | Cualquier fallo crítico impacta la totalidad del sistema. | Fallos en un servicio no afectan otros (aislamiento de fallos). | Alta disponibilidad requiere infraestructura compleja (gateways, balanceadores). |
+| **DR-03** | **Mantenibilidad** | Separación por módulos alineados a DDD facilita el mantenimiento. Y es adecuado para equipos centralizados. | Requiere pruebas integrales para cada cambio. | Servicios pequeños, independientes, permiten evolución aislada. | Requiere gobernanza fuerte para mantener consistencia entre servicios. |
+| **DR-04** | **Despliegue rápido** | Despliegue monolítico controlado, menor riesgo en ambientes no productivos. | Requiere reinicio completo del sistema. | Permite despliegues parciales sin afectar otros servicios. | Más esfuerzo en CI/CD y pruebas distribuidas. |
+| **DR-05** | **Alineación con DDD** | Contextos delimitados implementados como módulos con límites explícitos. Ademas facilita agregados y servicios de dominio compartidos. | Dificultad en encapsular límites de contexto estrictos. | Cada servicio representa un Bounded Context completo. | Requiere orquestación de contextos y compleja gestión de consistencia eventual. |
+| **DR-06** | **Seguridad** | Seguridad centralizada con autenticación, roles y control de acceso uniforme. | Mayor superficie de impacto en caso de brechas. | Seguridad por servicio; aislamiento de datos por dominio. | Requiere gestión de tokens y políticas distribuidas. |
+| **DR-07** | **UX / Experiencia Usuario** | Interfaz consistente y responsiva por compartir lógica de presentación. Y mejora velocidad percibida y cohesión. | Dificultad para optimizar performance por canal. | Posibilidad de adaptar vistas por canal. | Difícil mantener coherencia visual y navegación homogénea. |
+| **DR-08** | **Integración** | Capacidad de exponer APIs externas centralizadas. | Menos flexible para integrar nuevos servicios de terceros rápidamente. | Cada servicio puede integrarse independientemente con terceros. | Mayor número de contratos y puntos de integración a mantener. |
+| **DR-09** | **Portabilidad** | Reutilización de lógica en backend común para múltiples clientes.Tiene uso eficiente de frameworks cross-platform. | Pesa más en dispositivos limitados. | Servicios backend desacoplados permiten clientes específicos por plataforma. | Puede duplicar lógica entre servicios para cada cliente. |
+| **DR-10** | **Trazabilidad** | Logging centralizado con trazabilidad completa dentro del monolito. Ademas más simple implementar auditoría integral. | Dificultad de filtrar por dominios si no se segmenta bien. | Trazabilidad por servicio mejora detalle local. | Difícil seguimiento de flujos interservicios sin herramientas especializadas. |
+
+<br>
+La arquitectura Monolítica Modular con DDD es la opción más adecuada para el caso presentado, debido a que:
+
+* Satisface completamente los drivers identificados, especialmente en términos de seguridad, experiencia de usuario y mantenibilidad.
+* Reduce la complejidad operativa, ideal para equipos pequeños o medianos.
+* Permite aplicar DDD eficientemente, segmentando el sistema por dominio dentro de una única unidad desplegable.
+* Evita la sobreingeniería de una arquitectura de microservicios, que en este caso podría ser innecesaria o contraproducente.
+
+---
 ### 4.1.5 Quality Attribute Scenario Refinements
+
+#### Scenario Refinement for Scenario 1
+
+* **Scenario (s):** Como miembro de un grupo, quiero registrar un gasto compartido de forma inmediata desde mi dispositivo móvil, para que los demás miembros del grupo puedan ver el gasto actualizado en tiempo real.
+* **Business Goals:** Garantizar la consistencia e inmediatez en el registro de transacciones financieras, promoviendo la transparencia en grupos de gasto compartido.
+* **Relevant Quality Attributes:** Performance, Availability, Usability
+* **Scenario Components**
+  * **Stimulus:** El usuario presiona el botón “Registrar Gasto” desde el dispositivo móvil.
+  * **Stimulus Source:** Usuario final (miembro del grupo).
+  * **Environment:** Sistema operativo móvil (iOS/Android), conexión a internet estable.
+  * **Artifact:** Módulo de interfaz de usuario + backend de registro de transacciones.
+  * **Response:** El sistema guarda el gasto en la base de datos y lo sincroniza con los dispositivos del resto del grupo.
+  * **Response Measure:** El gasto es visible para todos en menos de 1 segundo tras su registro, sin errores de validación.
+* **Questions & Issues:** ¿Qué sucede si la conexión del usuario se cae durante el registro? ¿Hay mecanismos de cola offline para reintento automático? ¿Cómo se gestiona la validación de datos incorrectos?
+
+#### Scenario Refinement for Scenario 2
+
+* **Scenario (s):** Como usuario registrado, quiero iniciar sesión utilizando autenticación multifactor, para asegurarme de que solo yo pueda acceder a mis gastos y deudas compartidas.
+* **Business Goals:** Aumentar la confianza de los usuarios mediante la protección efectiva de sus datos financieros sensibles.
+* **Relevant Quality Attributes:** Security, Confidentiality, Availability
+* **Scenario Components**
+  * **Stimulus:** El usuario intenta iniciar sesión desde un dispositivo nuevo.
+  * **Stimulus Source:** Usuario (actor autenticado)
+  * **Environment:** Sistema público con red posiblemente no segura.
+  * **Artifact:** Módulo de autenticación (frontend + backend + OTP service).
+  * **Response:** El sistema valida credenciales, envía un código por correo/SMS y autentica al usuario solo si se ingresa correctamente.
+  * **Response Measure:** La autenticación completa no debe tomar más de 5 segundos, y debe rechazar accesos incorrectos con 0% de falsos positivos.
+* **Questions & Issues:** ¿Qué proveedores de autenticación multifactor se integrarán? ¿Qué sucede si el código de verificación se pierde o expira? ¿Cómo se mitiga un ataque por fuerza bruta?
+
+#### Scenario Refinement for Scenario 3
+
+* **Scenario (s):** Como administrador de grupo, quiero ver el historial completo de transacciones y pagos, para auditar cualquier cambio o error en la gestión de finanzas compartidas.
+* **Business Goals:** Facilitar el control y verificación de transacciones para resolver disputas y mejorar la confianza grupal.
+* **Relevant Quality Attributes:** Modifiability, Reliability, Traceability
+* **Scenario Components**
+  * **Stimulus:** El administrador solicita el historial del grupo desde el dashboard de pagos.
+  * **Stimulus Source:** Usuario con rol administrativo.
+  * **Environment:** Entorno web o móvil, sesión iniciada.
+  * **Artifact:** Subsistema de logs + visualización de reportes.
+  * **Response:** El sistema muestra la lista de transacciones con filtros por usuario, fecha, tipo de gasto y estado de pago.
+  * **Response Measure:** La búsqueda debe retornar los datos en < 2 segundos con filtros activos.
+* **Questions & Issues:** ¿Los registros modificados pueden ser restaurados o solo visualizados? ¿Se almacena el historial completo de cada edición o solo el último estado? ¿Se requiere firma digital o hash para validación de integridad de los registros?
 
 ## 4.1. Strategic-Level Domain-Driven Design.
 
