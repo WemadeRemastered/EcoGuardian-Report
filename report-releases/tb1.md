@@ -63,7 +63,7 @@
     <!-- TB1 -->
     <tr>
     <td rowspan="7">0.1</td>
-      <td>29/03/2025</td>
+      <td>20/09/2025</td>
       <td>Gustavo Huilca Chipana</td>
       <td>
         <ul>
@@ -73,7 +73,7 @@
       </td>
     </tr>
     <tr>
-      <td>29/03/2025</td>
+      <td>20/09/2025</td>
       <td>Sebastian Ramirez Hoffmann</td>
       <td>
         <ul>
@@ -83,12 +83,22 @@
       </td>
     </tr>
     <tr>
-      <td>29/03/2025</td>
+      <td>20/09/2025</td>
       <td>Mathias Alejandro Jave Diaz</td>
       <td>
         <ul>
           <li>User Journey Mapping</li>
           <li>Impact Mapping</li>
+        </ul>
+      </td>
+    </tr>
+     <tr>
+      <td>20/09/2025</td>
+      <td>Alex Ramon Alberto Avila Asto</td>
+      <td>
+        <ul>
+          <li>User Stories</li>
+          <li>Product Backlog</li>
         </ul>
       </td>
     </tr>
@@ -102,13 +112,11 @@
 
 Repositorios:
 
-Proyecto: https://github.com/wemade-IoT/Documents_Repository | [Repositorio de documentos](https://github.com/wemade-IoT/Documents_Repository)
+Proyecto: https://github.com/WemadeRemastered/EcoGuardian-Report | [Repositorio de documentos](https://github.com/WemadeRemastered/EcoGuardian-Report)
 
-Landing Page: https://github.com/wemade-IoT/landing-page | [Landing Page Repository](https://github.com/wemade-IoT/landing-page)
 
 Landing Page: https://inquisitive-taiyaki-8e3b96.netlify.app/ | [Landing Page](https://inquisitive-taiyaki-8e3b96.netlify.app/)
 
-Front End Web App Repository: https://github.com/wemade-IoT/eco-guardian-frontend | [Front end Repository](https://github.com/wemade-IoT/eco-guardian-frontend)
 
 Front End Web Application: https://ecoguardian-tf.vercel.app/ | [Front End Application](https://ecoguardian-tb2.vercel.app/)
 
@@ -117,6 +125,7 @@ Front End Web Application: https://ecoguardian-tf.vercel.app/ | [Front End Appli
 | SEBRH              | Sebastian Ramirez Hoffmann          |
 | LordMathi2741      | Mathias Alejandro Jave Diaz         |
 | GustavoHuilca31    | Gustavo Huilca Chipana              |
+| Ryzeon    | Alex Ramon Alberto Avila Asto              |
 
 
 ### TB1
@@ -361,7 +370,7 @@ EcoGuardian es una solución IoT que ayuda a cuidar plantas mediante sensores de
   <td style="padding: 8px; text-align: center;">
     <img src="https://avatars.githubusercontent.com/u/60982533" alt="Alex Avila" style="margin-bottom: 5px; width: 450px;"/>
   </td>
-  <td style="padding: 8px; text-align: left;">Alex Ávila Asto</td>
+  <td style="padding: 8px; text-align: left;">Alex Ramon Alberto Ávila Asto</td>
   <td style="padding: 8px; text-align: left;">U20221A322</td>
   <td style="padding: 8px; text-align: left;">Ingeniería de Software</td>
   <td style="padding: 8px; text-align: left;">
@@ -737,7 +746,7 @@ Finalmente, juntamos todo lo que hemos hecho en este proceso y lo agregamos en u
   </tr>
   <tr>
     <td><b>Ventaja Competitiva</b></td>
-    <td>Plataforma web y móvil, recomendaciones basadas en datos, enfoque UX, escalabilidad y soporte para hobby y agricultura técnica.</td>
+    <td>Plataforma web y móvil, recomendaciones basadas en datos, enfoque UX, escalabilidad y visualización de recomendaciones para el usuario.</td>
     <td>Empresa internacional con app móvil y web, diversificada en minería y doméstico, ofrece fertirrigación y otros métodos de riego.</td>
     <td>Producto económico, fácil de usar, marca global reconocida. Buen diseño y app intuitiva para usuarios domésticos.</td>
     <td>Empresa consolidada en tecnología de riego inteligente, integración con smart home y optimización del agua.</td>
