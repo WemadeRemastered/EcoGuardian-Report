@@ -705,7 +705,6 @@ Finalmente, juntamos todo lo que hemos hecho en este proceso y lo agregamos en u
     <td><b>Geográfica</b></td>
     <td>Depende de la ubicación del hogar del usuario</td>
     <td>Ubicación cercana al servicio y/o ubicados en áreas donde las industrias agrícolas, la agricultura urbana o sectores relacionados con las plantas están activos.</td>
-    <td>Generalmente ubicados en centros de asesoría agrícola o jardines botánicos.</td>
   </tr>
   <tr>
     <td><b>Demográfica</b></td>
