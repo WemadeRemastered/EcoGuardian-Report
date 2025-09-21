@@ -1805,10 +1805,18 @@ Para pequeños agricultores y empresas: Proporciona un sistema de monitoreo y se
 Personalización: La solución se adapta a diferentes necesidades con distintos planes de pago, ofreciendo desde funcionalidades básicas de monitoreo hasta servicios avanzados de consultoría y análisis de datos.
 
 ## 4.1.2 Attribute-Driven Design Inputs
-
 ### 4.1.2.1 Primary Functionality (Primary User Stories).
+En la solución EcoGuardian, las siguientes Historias de Usuario (HU) son cruciales para el diseño de la arquitectura, ya que definen las interacciones centrales y los flujos de datos más importantes.
+
+Monitorear en tiempo real (HU-01): Esta funcionalidad es la base de la aplicación. Requiere una arquitectura que permita la ingesta constante y a gran escala de datos de múltiples sensores IoT (humedad, temperatura, luz) desde diferentes dispositivos. Esto impacta directamente la estructura de la base de datos (posiblemente un modelo NoSQL optimizado para series de tiempo), la comunicación con los dispositivos (MQTT, CoAP) y la lógica del backend para procesar y almacenar la información de manera eficiente.
+
+Recibir alertas inmediatas (HU-05): Para que las alertas sean efectivas, el sistema debe ser capaz de procesar los datos de los sensores en tiempo real y, ante una condición anormal, notificar al usuario de inmediato. Esto exige una arquitectura orientada a eventos (event-driven) y un servicio de notificación push (FCM, APNS) que garantice la entrega rápida y confiable de las alertas. La lógica de negocio para disparar las alertas debe ser robusta y precisa.
+
+Generar recomendaciones personalizadas (HU-10): Esta historia es fundamental para el valor agregado de EcoGuardian. Implica una arquitectura que pueda integrar servicios de inteligencia artificial. El sistema debe ser capaz de procesar los datos históricos de los sensores junto con el conocimiento de expertos, para luego usar un servicio LLM que genere recomendaciones coherentes. Esto requiere un diseño que permita la comunicación fluida entre el backend principal, los servicios de LLM y una base de datos de conocimiento.
 ### 4.1.2.2 Quality attribute Scenarios
+Los siguientes escenarios de atributos de calidad son los más relevantes y guiarán el diseño arquitectónico de EcoGuardian.
 ### 4.1.2.3 Constraints
+Las siguientes restricciones son impuestas por el negocio y el producto, y son innegociables para el diseño de la solución EcoGuardian.
 ### 4.1.4 Architectural Design Decisions
 ### 4.1.5 Quality Attribute Scenario Refinements
 
