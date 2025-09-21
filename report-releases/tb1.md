@@ -1239,18 +1239,20 @@ Características Subjetivas:
 
 <center>
 
-| Necesidad / Función                      | Doméstico Importancia | Doméstico Frecuencia | Empresa Importancia | Empresa Frecuencia | 
-|-----------------------------------------|----------------------|---------------------|--------------------|-------------------|-------------------------|------------------------|
-| Ver estado actual de plantas/cultivos  | Alta                 | Media               | Alta               | Alta              | 
-| Recibir alertas sobre humedad, luz o acidez | Alta             | Alta                | Alta               | Alta              | 
-| Acceder a recomendaciones de especialistas | Alta              | Alta                | Media              | Media             | 
-| Consultar historial de datos            | Media                | Baja                | Alta               | Alta              | 
-| Optimizar riego según sensores          | Alta                 | Alta                | Alta               | Alta              | 
-| Configurar múltiples sensores           | Baja                 | Baja                | Alta               | Media             | 
-| Medir impacto económico/productivo      | Baja                 | Nula                | Alta               | Alta              | 
-| Compartir información o reportes        | Media                | Baja                | Alta               | Media             | 
-| Acceso desde app móvil                   | Alta                 | Alta                | Media              | Media             | 
+| Necesidad / Función                       | Doméstico Importancia | Doméstico Frecuencia | Empresa Importancia | Empresa Frecuencia |
+|-------------------------------------------|-----------------------|----------------------|---------------------|--------------------|
+| Ver estado actual de plantas/cultivos     | Alta                  | Media                | Alta                | Alta               |
+| Recibir alertas sobre humedad, luz o acidez | Alta                | Alta                 | Alta                | Alta               |
+| Acceder a recomendaciones de especialistas | Alta                 | Alta                 | Media               | Media              |
+| Consultar historial de datos              | Media                 | Baja                 | Alta                | Alta               |
+| Optimizar riego según sensores            | Alta                  | Alta                 | Alta                | Alta               |
+| Configurar múltiples sensores             | Baja                  | Baja                 | Alta                | Media              |
+| Medir impacto económico/productivo        | Baja                  | Nula                 | Alta                | Alta               |
+| Compartir información o reportes          | Media                 | Baja                 | Alta                | Media              |
+| Acceso desde app móvil                    | Alta                  | Alta                 | Media               | Media              |
+
 </center>
+
 <p>Con este user task matrix entendemos las actividades que realizan nuestros usuarios segmento y la importancia que estas acciones tienen de las tareas principales que identificamos se observa.</p>
 
 
