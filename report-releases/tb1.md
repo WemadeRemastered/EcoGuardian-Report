@@ -1779,8 +1779,38 @@ Link Trello: https://shorturl.at/OzBw1
 
 
 
-# Capítulo IV:  Solution Software Design
+# Capítulo IV: Strategic-Level Software Design
 
+## 4.1. Strategic-Level Attribute-Driven Design
+
+Con el objetivo de identificar los drivers de arquitectura para el caso, se hizo un analisis de los requisitos no funcionales según el enfoque de ADD.
+
+### 4.1.1 Design Purpose
+
+El propósito principal del diseño de EcoGuardian es facilitar el cuidado de plantas a través de la tecnología IoT y la inteligencia artificial, haciendo la jardinería y la agricultura accesibles y eficientes para un amplio rango de usuarios. La solución está diseñada para ser un asistente inteligente y proactivo en el cuidado de plantas, eliminando la incertidumbre y la necesidad de conocimientos avanzados.
+
+Facilitar una Experiencia de Usuario Intuitiva y Eficiente
+El diseño de EcoGuardian se centra en la simplicidad y la claridad. La interfaz de usuario (UI) está diseñada para ser altamente intuitiva, permitiendo que un usuario no técnico configure y monitoree sus plantas fácilmente. La información clave, como los niveles de humedad, temperatura y luz, se presenta de manera visual y accesible a través de dashboards interactivos y gráficos fáciles de interpretar. La navegación es fluida, permitiendo a los usuarios pasar rápidamente de la visualización de un solo sensor a las estadísticas generales de todas sus plantas.
+
+Aumentar la Productividad y la Eficiencia del Usuario
+EcoGuardian busca optimizar el tiempo y el esfuerzo del usuario. En lugar de que el usuario tenga que revisar constantemente las condiciones de sus plantas, el sistema envía alertas inmediatas y proactivas cuando se detecta un problema. La automatización de la recopilación de datos de los sensores IoT y la aplicación de servicios LLM para generar recomendaciones personalizadas, reduce significativamente el trabajo manual y la toma de decisiones. Esto permite a los usuarios, ya sean aficionados o pequeños agricultores, gestionar múltiples plantas de manera más eficiente y sin esfuerzo.
+
+Satisfacer Necesidades Específicas del Usuario o del Negocio
+EcoGuardian resuelve problemas concretos para su público objetivo:
+
+Para el hogar y oficina: Facilita el cuidado de plantas ornamentales, asegurando que se mantengan sanas con un mínimo de atención, ideal para personas con poco tiempo o conocimiento.
+
+Para pequeños agricultores y empresas: Proporciona un sistema de monitoreo y seguimiento de crecimiento, que junto a las recomendaciones de expertos y LLM, optimiza la producción y previene pérdidas, basándose en datos precisos.
+
+Personalización: La solución se adapta a diferentes necesidades con distintos planes de pago, ofreciendo desde funcionalidades básicas de monitoreo hasta servicios avanzados de consultoría y análisis de datos.
+
+## 4.1.2 Attribute-Driven Design Inputs
+
+### 4.1.2.1 Primary Functionality (Primary User Stories).
+### 4.1.2.2 Quality attribute Scenarios
+### 4.1.2.3 Constraints
+### 4.1.4 Architectural Design Decisions
+### 4.1.5 Quality Attribute Scenario Refinements
 
 ## 4.1. Strategic-Level Domain-Driven Design.
 
