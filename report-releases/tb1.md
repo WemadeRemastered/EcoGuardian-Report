@@ -837,6 +837,9 @@ Además, se pueden implementar el soporte con APIs para empresas agrícolas que 
 -**Enfoque multiplataforma**:
 EcoGuardian ofrece una experiencia integrada en web, móvil y dispositivos IoT, permitiendo a los usuarios acceder a la información desde cualquier lugar y en cualquier momento, así como configurar automatizaciones en el sistema.
 
+-**Recomendaciones mediante el uso de IA**:
+EcoGuardian ofrece a sus usuarios recomendaciones personalizadas a las necesidades de sus plantas mediante el uso de bibliotecas de LLM.
+
 ## 2.2. Entrevistas.
 
 ### 2.2.1. Diseño de entrevistas.
