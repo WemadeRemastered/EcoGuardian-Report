@@ -1370,568 +1370,62 @@ Miro con el As-Is To-Be: https://miro.com/welcomeonboard/aTZVNVpRQU54SUJDelF3cUU
 
 La sección de User Stories sirve para saber las distintas situaciones y puntos clave que tiene el usuario al realizar operaciones en los distintos aspectos del proyecto, desde la landing page hasta los aspectos técnicos que realizan los desarrolladores. Es importante debido a que nos ayuda a poder realizar un product backlog y con los criterios de aceptación sabremos como verificar que estas historias de usuario están siendo satisfechas.
 
-<table>
-    <tr>
-        <td>HUX/EPX</td>
-        <td>Historia de Usuario / Épica</td>
-        <td>Descripción</td>
-        <td>Criterios de Aceptación</td>
-        <td>Relacionado con (Epic ID)</td>
-    </tr>
-    <tr>
-        <td>EP01</td>
-        <td>Información del producto</td>
-        <td>Como visitante del sitio web, quiero visualizar información relacionada a la startup y el producto que se ofrece.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU01</td>
-        <td>Visualizar información institucional de la startup</td>
-        <td>Como visitante del landing page, quiero acceder fácilmente a información sobre la startup responsable del producto, para conocer quién está detrás del desarrollo, generar confianza y decidir si seguir explorando el sitio.</td>
-        <td>Escenario 1: El visitante accede a la información institucional de la startup Dado que el visitante se encuentra en la página principal del sitio webCuando busca información sobre la empresa responsable del productoEntonces el sistema muestra información clara sobre la misión, visión, valores y equipo de la startupY la información está actualizada y es relevante para generar confianza.</td>
-        <td>EP01</td>
-    </tr>
-    <tr>
-        <td>HU02</td>
-        <td>Conocer los medios oficiales de la startup</td>
-        <td>Como visitante del sitio web, quiero conocer los medios oficiales de la startup para tener un mayor conocimiento sobre ella y recibir actualizaciones.</td>
-        <td>Escenario 1: Acceso a canales oficiales de comunicaciónDado que el visitante navega en el sitio webCuando busca formas de seguir o contactar a la startupEntonces el sistema proporciona enlaces funcionales a los canales oficiales de comunicaciónY los enlaces redirigen correctamente a las plataformas externas correspondientes.</td>
-        <td>EP01</td>
-    </tr>
-    <tr>
-        <td>HU03</td>
-        <td>Ofrecer servicios de asesoría en cuidado de plantas</td>
-        <td>Como visitante (especialista de plantas) del sitio web, quiero tener la posibilidad de ofrecer servicios de asesoría en cuidado de plantas para tener la oportunidad de trabajar en la startup.</td>
-        <td></td>
-        <td>EP01</td>
-    </tr>
-    <tr>
-        <td>HU04</td>
-        <td>Visualizar beneficios del producto</td>
-        <td>Como visitante del sitio web, quiero visualizar información sobre los beneficios del producto para conocer cómo puede resolver mis necesidades personales o de negocio.</td>
-        <td>Escenario 1: Exploración de beneficios por segmento de usuarioDado que el visitante está interesado en conocer los beneficios del productoCuando explora la información disponibleEntonces el sistema muestra beneficios específicos organizados por tipo de usuario (doméstico/empresarial)Y cada beneficio incluye información clara sobre el valor que aporta.Escenario 2: Comparación entre segmentosDado que el visitante quiere entender qué opción se adapta mejor a sus necesidadesCuando revisa los beneficios disponiblesEntonces el sistema permite comparar las ventajas entre diferentes segmentos de usuarioY proporciona criterios claros para la toma de decisiones.</td>
-        <td>EP01</td>
-    </tr>
-    <tr>
-        <td>EP02</td>
-        <td>Registro de plantas y plantaciones</td>
-        <td>Como usuario de consumidor quiero que la información recolectada de mi planta sea registrada a lo largo del tiempo para saber el avance sobre su cuidado.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU05</td>
-        <td>Registro de planta en plataforma web</td>
-        <td>Como usuario web doméstico quiero registrar una de mis plantas para poder monitorearla y saber de su cuidado.</td>
-        <td>Escenario 1: Registro exitoso de nueva plantaDado que el usuario doméstico tiene una cuenta activa en la plataformaCuando proporciona la información requerida para registrar una planta (nombre, tipo, ubicación, parámetros de cuidado)Entonces el sistema registra la planta en el perfil del usuarioY genera una orden de instalación de sensores con estado &quot;pendiente&quot;Y la planta aparece en la lista de plantas del usuario.Escenario 2: Validación de datos incorrectosDado que el usuario intenta registrar una plantaCuando proporciona información incompleta o inválidaEntonces el sistema muestra mensajes de validación específicosY no completa el registro hasta que todos los datos requeridos sean válidos.</td>
-        <td>EP02</td>
-    </tr>
-    <tr>
-        <td>HU06</td>
-        <td>Registro de planta en plataforma móvil</td>
-        <td>Como usuario móvil doméstico quiero registrar una de mis plantas para poder monitorearla y saber de su cuidado.</td>
-        <td>Escenario 1: Registro exitoso de nueva planta desde dispositivo móvilDado que el usuario doméstico accede desde la aplicación móvilCuando completa el proceso de registro de una planta con todos los datos requeridosEntonces el sistema registra la planta y la sincroniza con su perfilY genera automáticamente una orden de instalación de sensoresY la planta queda disponible para monitoreo futuro.Escenario 2: Manejo de errores de validación en móvilDado que el usuario móvil intenta registrar una plantaCuando los datos ingresados no cumplen con los criterios de validaciónEntonces el sistema proporciona retroalimentación clara sobre los erroresY permite corregir la información sin perder los datos ya ingresados.</td>
-        <td>EP02</td>
-    </tr>
-    <tr>
-        <td>HU07</td>
-        <td>Registro de plantación en plataforma web</td>
-        <td>Como usuario web doméstico quiero registrar una plantación para poder monitorearla y automatizar su riego.</td>
-        <td>Escenario 1: Registro exitoso de plantación con estimación de costosDado que el usuario empresarial desea registrar una plantaciónCuando proporciona las especificaciones del área (dimensiones, tipo de cultivo, condiciones ambientales)Entonces el sistema calcula y muestra una estimación de costos para los dispositivos necesariosY registra la plantación en el sistemaY genera una orden de instalación con estado &quot;pendiente&quot;.Escenario 2: Validación de dimensiones excesivasDado que el usuario intenta registrar una plantaciónCuando las dimensiones o especificaciones exceden los límites soportadosEntonces el sistema informa sobre las limitaciones del servicioY sugiere ajustar las especificaciones a rangos aceptables.</td>
-        <td>EP02</td>
-    </tr>
-    <tr>
-        <td>HU08</td>
-        <td>Registro de plantación en plataforma móvil</td>
-        <td>Como usuario móvil doméstico quiero registrar una plantación para poder monitorearla y automatizar su riego.</td>
-        <td>Escenario 1: Registro exitoso de plantación desde dispositivo móvilDado que el usuario empresarial utiliza la aplicación móvilCuando ingresa las especificaciones completas de la plantaciónEntonces el sistema procesa la información y calcula los costos estimadosY registra la plantación con todos los parámetros necesariosY la orden de instalación queda programada para gestión posterior.Escenario 2: Manejo de especificaciones inválidas en móvilDado que el usuario móvil registra una plantaciónCuando las especificaciones no son técnicamente viablesEntonces el sistema proporciona alternativas o ajustes recomendadosY explica las razones técnicas de las limitaciones.</td>
-        <td>EP02</td>
-    </tr>
-    <tr>
-        <td>EP03</td>
-        <td>Registro de cuenta</td>
-        <td>Como usuario general quiero registrarme a Eco Guardián para ingresar con mi cuenta.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU09</td>
-        <td>Registro de usuario doméstico</td>
-        <td>Como usuario doméstico quiero registrar mi cuenta a un plan de suscripción doméstico para utilizar los servicios de EcoGuardian.</td>
-        <td>Escenario 1: Registro exitoso con plan domésticoDado que un nuevo usuario desea crear una cuenta domésticaCuando proporciona información personal válida y selecciona un plan domésticoY completa el proceso de pago satisfactoriamenteEntonces el sistema crea la cuenta con el plan seleccionadoY confirma la activación del servicioY el usuario puede acceder a las funcionalidades correspondientes a su plan.Escenario 2: Fallo en el procesamiento de pagoDado que un usuario intenta registrarse con un plan de pagoCuando el procesamiento del pago falla por cualquier motivoEntonces el sistema mantiene los datos del usuario temporalmenteY proporciona opciones para reintentar el pago o cambiar el métodoY no activa los servicios hasta completar el pago exitosamente.</td>
-        <td>EP03</td>
-    </tr>
-    <tr>
-        <td>HU10</td>
-        <td>Registro de usuario empresarial</td>
-        <td>Como usuario empresarial quiero registrar mi cuenta a un plan de suscripción empresarial para utilizar los servicios de EcoGuardian.</td>
-        <td>Escenario 1: Registro exitoso con plan empresarialDado que un nuevo usuario empresarial desea crear una cuentaCuando proporciona información válida de la empresa y selecciona un plan empresarialY completa el proceso de pago satisfactoriamenteEntonces el sistema crea la cuenta empresarial con el plan seleccionadoY activa las funcionalidades empresariales correspondientesY el usuario puede gestionar múltiples plantaciones y usuarios.Escenario 2: Error en validación de información empresarialDado que un usuario empresarial intenta registrarseCuando la información de la empresa no puede ser validadaEntonces el sistema solicita documentación adicional o correccionesY suspende temporalmente el proceso hasta completar la validación.</td>
-        <td>EP03</td>
-    </tr>
-    <tr>
-        <td>EP04</td>
-        <td>Autenticación de cuenta</td>
-        <td>Como usuario quiero ingresar y autenticarme en Eco Guardián para hacer uso de sus servicios.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU11</td>
-        <td>Autenticación de usuario especialista web</td>
-        <td>Como usuario web especialista quiero ingresar a mi cuenta para empezar a trabajar con EcoGuardian.</td>
-        <td>Escenario 1: Autenticación exitosa del especialistaDado que el especialista tiene credenciales válidasCuando ingresa sus datos de acceso correctosEntonces el sistema valida su identidad y permisos de especialistaY le proporciona acceso a las herramientas de consultoríaY puede visualizar las consultas asignadas.Escenario 2: Fallo en autenticaciónDado que el especialista intenta autenticarseCuando las credenciales son incorrectas o la cuenta está inactivaEntonces el sistema deniega el accesoY proporciona información clara sobre el errorY ofrece opciones de recuperación si corresponde.</td>
-        <td>EP04</td>
-    </tr>
-    <tr>
-        <td>HU12</td>
-        <td>Autenticación de usuario especialista móvil</td>
-        <td>Como usuario móvil especialista quiero ingresar a mi cuenta para empezar a trabajar con EcoGuardian.</td>
-        <td>Escenario 1: Autenticación móvil exitosaDado que el especialista accede desde la aplicación móvilCuando proporciona credenciales válidasEntonces el sistema autentica al usuario y sincroniza su sesiónY le permite acceder a las funcionalidades de especialista en móvilY mantiene la sesión activa de forma segura.Escenario 2: Problemas de conectividad durante autenticaciónDado que el especialista intenta autenticarse desde móvilCuando hay problemas de conectividad de redEntonces el sistema intenta reconectar automáticamenteY almacena temporalmente los datos ingresadosY completa la autenticación una vez restablecida la conexión.</td>
-        <td>EP04</td>
-    </tr>
-    <tr>
-        <td>HU13</td>
-        <td>Autenticación de usuario web</td>
-        <td>Como usuario consumidor web quiero ingresar a mi cuenta para empezar a usar los servicios de EcoGuardian.</td>
-        <td>Escenario 1: Autenticación exitosa del usuarioDado que el usuario tiene una cuenta válidaCuando ingresa credenciales correctasEntonces el sistema valida la identidad del usuarioY le proporciona acceso a las funcionalidades según su tipo de planY mantiene la sesión activa de forma segura.Escenario 2: Intento de acceso con cuenta suspendidaDado que el usuario intenta autenticarseCuando su cuenta está suspendida o inactivaEntonces el sistema deniega el accesoY explica la razón de la suspensiónY proporciona información sobre cómo reactivar la cuenta.</td>
-        <td>EP04</td>
-    </tr>
-    <tr>
-        <td>HU14</td>
-        <td>Autenticación de usuario móvil</td>
-        <td>Como usuario consumidor móvil quiero ingresar a mi cuenta para empezar a usar los servicios de EcoGuardian.</td>
-        <td>Escenario 1: Autenticación móvil exitosa Dado que el usuario accede desde la aplicación móvil: Cuando proporciona credenciales válidasEntonces el sistema autentica al usuario y carga su perfilY sincroniza los datos de sus plantas en tiempo realY habilita las notificaciones push si están configuradas.Escenario 2: Autenticación móvil fallida Dado que el usuario accede desde la aplicación móvil: Cuando proporciona credenciales válidas Entonces el sistema muestra una alerta indicando un error al validar las credenciales.</td>
-        <td>EP04</td>
-    </tr>
-    <tr>
-        <td>TS01</td>
-        <td>Autenticación usando MFA</td>
-        <td>Como desarrollador quiero implementar la validación utilizando MFA (Multi-Factor Authentication) para asegurar la seguridad del sistema y proteger los datos del usuario.</td>
-        <td>Escenario 1: MFA activado correctamenteDado que el usuario ha iniciado sesión con credenciales válidasCuando se solicita la autenticación multifactorY el usuario proporciona el código MFA correctoEntonces el sistema permite el acceso completo a la plataformaY registra el evento de autenticación exitosa.Escenario 2: MFA fallidoDado que el usuario ha iniciado sesión con credenciales válidasCuando se solicita la autenticación multifactorY el usuario proporciona un código incorrectoEntonces el sistema deniega el accesoY registra el intento fallido para monitoreo de seguridadY permite un número limitado de reintentos.</td>
-        <td>EP04</td>
-    </tr>
-    <tr>
-        <td>EP05</td>
-        <td>Seguimiento de orden</td>
-        <td>Como usuario consumidor quiero realizar un seguimiento a mi orden para saber qué acciones debo realizar y saber el estado de mi orden.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU15</td>
-        <td>Continuar el proceso de orden de agregar planta agregando fecha de instalación móvil</td>
-        <td>Como usuario consumidor móvil quiero agendar una fecha de instalación para continuar con el proceso de mi orden.</td>
-        <td>Escenario 1: Agendamiento exitoso de instalaciónDado que el usuario tiene una orden pendiente de instalaciónCuando selecciona una fecha disponible para la instalaciónEntonces el sistema confirma la cita y actualiza el estado de la ordenY envía confirmación al usuario y al técnico asignadoY la orden progresa al siguiente estado del proceso.Escenario 2: Fecha no disponibleDado que el usuario intenta agendar una instalaciónCuando la fecha seleccionada no está disponibleEntonces el sistema permite al usuario seleccionar una nueva fecha.</td>
-        <td>EP05</td>
-    </tr>
-    <tr>
-        <td>HU16</td>
-        <td>Continuar el proceso de orden de agregar planta/plantación agregando fecha de instalación web</td>
-        <td>Como usuario consumidor web quiero agendar una fecha de instalación para continuar con el proceso de mi orden.</td>
-        <td>Escenario 1: Agendamiento exitoso de instalaciónDado que el usuario tiene una orden pendiente de instalaciónCuando selecciona una fecha disponible para la instalaciónEntonces el sistema confirma la cita y actualiza el estado de la ordenY envía confirmación al usuario y al técnico asignadoY la orden progresa al siguiente estado del proceso.Escenario 2: Fecha no disponibleDado que el usuario intenta agendar una instalaciónCuando la fecha seleccionada no está disponibleEntonces el sistema permite al usuario seleccionar una nueva fecha.</td>
-        <td>EP05</td>
-    </tr>
-    <tr>
-        <td>HU17</td>
-        <td>Continuar el proceso de orden de agregar plantación/planta asignando un especialista para la instalación (externo)</td>
-        <td>Como usuario consumidor web quiero que un especialista me de asesoramiento para la instalación de los dispositivos.</td>
-        <td>Escenario 1: Asesoramiento de instalacion con especialistaDado que el usuario consumidor requiere a un especialista para el asesoramiento de su instalacion Cuando el especialista sea asignado por medio de una seleccion externa al sistema Entonces el sistema asigna a ese especialista a la orden para el cumplimiento de la instalacion.Escenario 2: Especialista no disponibleDado que se requiere un especialista para la instalaciónCuando el especialista asignado no está disponibleEntonces el sistema notifica de la necesidad de un especialista para proceder con la orden.</td>
-        <td>EP05</td>
-    </tr>
-    <tr>
-        <td>HU18</td>
-        <td>Continuar el proceso de orden de instalación con pago web</td>
-        <td>Como usuario web consumidor quiero realizar el pago para continuar con el proceso de mi orden.</td>
-        <td>Escenario 1: Procesamiento exitoso de pagoDado que el usuario tiene una orden pendiente para pagoCuando proporciona información de pago válidaEntonces el sistema procesa el pago de forma seguraY confirma la transacciónY actualiza el estado de la orden para proceder con la instalación.Escenario 2: Fallo en el procesamiento de pagoDado que el usuario intenta realizar un pagoCuando la transacción falla por problemas bancarios o de redEntonces el sistema informa sobre el error específicoY mantiene la orden en estado pendienteY ofrece métodos alternativos de pago.</td>
-        <td>EP05</td>
-    </tr>
-    <tr>
-        <td>HU19</td>
-        <td>Continuar el proceso de orden de suscripción con pago web</td>
-        <td>Como usuario web consumidor quiero realizar el pago para continuar con el proceso de mi orden.</td>
-        <td>Escenario 1: Activación exitosa de suscripciónDado que el usuario selecciona un plan de suscripciónCuando completa el pago de la suscripciónEntonces el sistema activa inmediatamente el plan seleccionadoY habilita todas las funcionalidades correspondientesY establece el ciclo de facturación automático.Escenario 2: Problema con el pago recurrenteDado que el usuario tiene una suscripción activaCuando el pago recurrente fallaEntonces el sistema intenta procesar el pago nuevamenteY notifica al usuario sobre el problemaY proporciona un período de gracia antes de suspender el servicio.</td>
-        <td>EP05</td>
-    </tr>
-    <tr>
-        <td>HU20</td>
-        <td>Seguimiento de orden móvil </td>
-        <td>Como usuario consumidor móvil quiero ver el estado y detalles de mis órdenes para seguimiento, sin la opción de realizar pagos.</td>
-        <td>Escenario 1: Visualización de estado de ordenDado que el usuario accede desde la aplicación móvilCuando consulta el estado de sus órdenesEntonces el sistema muestra información actualizada sobre cada ordenY proporciona detalles sobre el progreso y próximos pasosY redirige al usuario a la plataforma web para acciones que requieren pago.Escenario 2: Notificaciones de cambio de estadoDado que el usuario tiene órdenes activasCuando hay cambios en el estado de cualquier ordenEntonces el sistema envía notificaciones push al dispositivo móvilY actualiza la información en tiempo realY permite al usuario ver los detalles del cambio.</td>
-        <td>EP05</td>
-    </tr>
-    <tr>
-        <td>HU21</td>
-        <td>Seguimiento de orden web</td>
-        <td>Como usuario consumidor web quiero ver el estado y detalles de mis órdenes para seguimiento, sin la opción de realizar pagos.</td>
-        <td>Escenario 1: Visualización de estado de ordenDado que el usuario accede desde la aplicación móvilCuando consulta el estado de sus órdenesEntonces el sistema muestra información actualizada sobre cada ordenY proporciona detalles sobre el progreso y próximos pasosY redirige al usuario a la plataforma web para acciones que requieren pago.Escenario 2: Notificaciones de cambio de estadoDado que el usuario tiene órdenes activasCuando hay cambios en el estado de cualquier ordenEntonces el sistema envía notificaciones push al dispositivo móvilY actualiza la información en tiempo realY permite al usuario ver los detalles del cambio.</td>
-        <td>EP05</td>
-    </tr>
-    <tr>
-        <td>EP06</td>
-        <td>Monitoreo de plantas y plantaciones</td>
-        <td>Como usuario quiero monitorear las estadísticas de mis plantas / plantaciones para saber su estado y tomar acciones preventivas.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU22</td>
-        <td>Monitoreo de Plantas web</td>
-        <td>Como usuario web doméstico quiero realizar el monitoreo de mis plantas para saber sus estadísticas.</td>
-        <td>Escenario 1: Visualización de datos en tiempo realDado que el usuario tiene plantas con sensores instaladosCuando accede al sistema de monitoreoEntonces puede ver datos actualizados de humedad, temperatura, luz Y recibe alertas cuando los valores están fuera de los rangos óptimos.Escenario 2: Planta sin sensores activosDado que el usuario tiene plantas registradas sin sensores activadosCuando intenta monitorear la plantaEntonces el sistema indica que no hay datos disponiblesY le indica de que tiene que terminar el proceso de instalacion.</td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>HU23</td>
-        <td>Monitoreo de Plantaciones web</td>
-        <td>Como usuario web empresarial quiero realizar el monitoreo de mis plantaciones para saber sus estadísticas.</td>
-        <td>Escenario 1: Dashboard empresarial de plantacionesDado que el usuario empresarial gestiona múltiples plantacionesCuando accede al dashboard de monitoreoEntonces puede ver un resumen por plantacionY recibir alertas prioritarias sobre problemas críticos. Escenario 2: Plantacion sin sensores activosDado que el usuario tiene plantaciones registradas sin sensores activadosCuando intenta monitorear la plantacionEntonces el sistema indica que no hay datos disponiblesY le indica de que tiene que terminar el proceso de instalacion.</td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>HU24</td>
-        <td>Monitoreo de Plantaciones móvil</td>
-        <td>Como usuario empresarial móvil quiero realizar el monitoreo de mis plantaciones para saber sus estadísticas en la app móvil.</td>
-        <td>Escenario 1: Monitoreo móvil en campoDado que el usuario empresarial está en el campoCuando utiliza la aplicación móvilEntonces puede acceder a datos en tiempo real de la plantaciónY recibir notificaciones inmediatas sobre anomalíasY tomar fotografías para realizar consultas.Escenario 2: Sincronización offlineDado que el usuario está en una zona con conectividad limitadaCuando utiliza la aplicación móvilEntonces puede acceder a datos previamente sincronizadosY registrar observaciones localmenteY sincronizar automáticamente cuando se restablezca la conexión.</td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>HU25</td>
-        <td>Monitoreo de Plantas móvil</td>
-        <td>Como usuario doméstico móvil quiero realizar el monitoreo de mis plantas para saber sus estadísticas.</td>
-        <td>Escenario 1: Monitoreo doméstico desde móvilDado que el usuario doméstico usa la aplicación móvilCuando revisa sus plantasEntonces puede ver el estado actual de cada plantaY tomar fotografías para realizar consultas.Escenario 2: Alertas móviles urgentesDado que una planta requiere atención inmediataCuando se detecta una condición críticaEntonces el usuario recibe una notificación push inmediataY puede ver los detalles del problema.</td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>TS02</td>
-        <td>Registro de estadísticas</td>
-        <td>Como desarrollador, quiero que la API procese y envíe datos estadísticos de manera optimizada y estructurada, para que el frontend los reciba listos para su uso y representación sin necesidad de procesamiento adicional.</td>
-        <td>Escenario 1: Procesamiento exitoso de datos estadísticosDado que los sensores envían datos en tiempo realCuando la API recibe la informaciónEntonces procesa y estructura los datos estadísticosY los almacena en el formato optimizado para consultasY los entrega al frontend listos para visualización.Escenario 2: Manejo de datos inconsistentesDado que se reciben datos con anomalías o erroresCuando la API detecta inconsistenciasEntonces valida y filtra los datos problemáticosY registra los errores para análisis posteriorY mantiene la integridad de las estadísticas almacenadas.</td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>EP07</td>
-        <td>Pagos y procesos de pago</td>
-        <td>Como usuario quiero realizar pagos en la aplicación para poder acceder a los servicios de EcoGuardian y seguir el proceso de orden.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU26</td>
-        <td>Cartera de pagos</td>
-        <td>Como usuario consumidor quiero tener una cartera de pagos para tener distintos medios de pago.</td>
-        <td>Escenario 1: Gestión de múltiples métodos de pago(VISA, Mastercard. etc)Dado que el usuario necesita flexibilidad en los pagosCuando accede a su cartera de pagosEntonces puede seleccionar su método de pago.</td>
-        <td>EP07</td>
-    </tr>
-    <tr>
-        <td>HU27</td>
-        <td>Historial de pagos web</td>
-        <td>Como usuario web quiero ver el historial de mis pagos para controlar mis gastos y acceder a comprobantes.</td>
-        <td>Escenario 1: Consulta de historial completoDado que el usuario quiere revisar sus pagos anterioresCuando accede al historial de pagosEntonces puede ver una lista cronológica de todas las transaccionesY filtrar por fecha, monto o tipo de servicio,.Escenario 2: Búsqueda específica de transaccionesDado que el usuario busca una transacción específicaCuando utiliza los filtros de búsquedaEntonces puede localizar rápidamente la transacción deseadaY ver todos los detalles asociadosY generar un comprobante detallado si es necesario.</td>
-        <td>EP07</td>
-    </tr>
-    <tr>
-        <td>HU28</td>
-        <td>Historial de pagos movil</td>
-        <td>Como usuario movil quiero ver el historial de mis pagos para controlar mis gastos y acceder a comprobantes.</td>
-        <td>Escenario 1: Consulta de historial completoDado que el usuario quiere revisar sus pagos anterioresCuando accede al historial de pagosEntonces puede ver una lista cronológica de todas las transaccionesY filtrar por fecha, monto o tipo de servici,.Escenario 2: Búsqueda específica de transaccionesDado que el usuario busca una transacción específicaCuando utiliza los filtros de búsquedaEntonces puede localizar rápidamente la transacción deseadaY ver todos los detalles asociadosY generar un comprobante detallado si es necesario.</td>
-        <td>EP07</td>
-    </tr>
-    <tr>
-        <td>TS03</td>
-        <td>Integración de Stripe para gestión proceso de pagos</td>
-        <td>Como desarrollador quiero integrar la API de Stripe en nuestro sistema para manejar el historial de pagos y las transacciones de manera segura y eficiente.</td>
-        <td>Escenario 1: Integración exitosa con StripeDado que el sistema necesita procesar pagosCuando se integra la API de StripeEntonces todas las transacciones se procesan de forma seguraY el historial se sincroniza automáticamenteY se mantiene la trazabilidad completa de las operaciones.Escenario 2: Manejo de errores de StripeDado que puede haber fallos en la comunicación con StripeCuando se produce un error en la APIEntonces el sistema maneja la excepción apropiadamenteY registra el error para análisis posteriorY proporciona alternativas al usuario para completar la transacción.</td>
-        <td>EP07</td>
-    </tr>
-    <tr>
-        <td>EP08</td>
-        <td>Gestión de Dispositivos IoT</td>
-        <td>Como maker quiero gestionar mis dispositivos IoT y asegurar la comunicación para mantener integridad y control.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU29</td>
-        <td>Registro y gestión de dispositivos IoT</td>
-        <td>Como maker quiero registrar y gestionar los dispositivos (sensores, edge nodes) para mantener el control y la visibilidad sobre ellos y continuar con el proceso de orden.</td>
-        <td>Escenario 1: Registro exitoso de dispositivosDado que el maker necesita integrar nuevos dispositivos IoTCuando registra un dispositivo en el sistemaEntonces el dispositivo se configura automáticamenteY se establece la comunicación con la red(EdgeNode)Y queda disponible para el registro de informacion.Escenario 2: Gestión de dispositivos inactivosDado que un dispositivo deja de responderCuando el sistema detecta la desconexiónEntonces notifica al edge application.</td>
-        <td>EP08</td>
-    </tr>
-    <tr>
-        <td>HU30</td>
-        <td>Configuración de parámetros de dispositivos IoT</td>
-        <td>Como maker quiero configurar los parámetros de los dispositivos (umbrales, frecuencias de muestreo) para optimizar la recolección de datos según el entorno.</td>
-        <td>Escenario 1: Configuración personalizada de parámetrosDado que el maker necesita optimizar el rendimiento de los sensoresCuando configura los parámetros del dispositivoEntonces puede ajustar umbrales, frecuencias y rangos de mediciónY los cambios se aplican inmediatamenteY el dispositivo confirma la nueva configuración.</td>
-        <td>EP08</td>
-    </tr>
-    <tr>
-        <td>HU31</td>
-        <td>Monitoreo de conexion dispositivos IoT</td>
-        <td>Como maker quiero conocer el estado de conexión de los dispositivos para saber cuáles necesitan revisión.</td>
-        <td>Escenario 1: Validacion de estado de conexion Dado que el maker necesita evaluar el estado de conexion los dispositivosCuando solicita la conexion con el edge node Entonces el dispositivo notifica de el estado de conexion.</td>
-        <td>EP08</td>
-    </tr>
-    <tr>
-        <td>HU32</td>
-        <td>Vinculación en cadena de dispositivos IoT a Edge, FOG y Sistema central</td>
-        <td>Como maker quiero vincular sensores IoT a los edge nodes, estos a nodos FOG, y finalmente al sistema central, para asegurar que los datos fluyan correctamente y se mantenga la integridad y comunicación entre todos los niveles y completar el proceso de instalación de la orden.</td>
-        <td>Escenario 1: Vinculación exitosa de arquitectura IoTDado que el maker debe establecer la arquitectura de comunicaciónCuando configura la vinculación entre sensores, edge nodes y FOGEntonces se establece la cadena de comunicación completaY los datos fluyen correctamente en todos los nivelesY se verifica la integridad de la transmisión.Escenario 2: Resolución de fallos en la cadena de comunicaciónDado que puede haber interrupciones en la comunicaciónCuando se detecta un fallo en algún nivel de la arquitecturaEntonces el sistema identifica el punto de falla específicoYnotifica al maker para resolver el problema.</td>
-        <td>EP08</td>
-    </tr>
-    <tr>
-        <td>EP09</td>
-        <td>Seguridad y Gestión de Autenticación, Autorización y APIs</td>
-        <td>Como desarrollador quiero implementar mecanismos de seguridad robustos para el sistema, para que sólo usuarios y dispositivos autorizados puedan interactuar con los servicios y sistema de Eco Guardian.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>TS04</td>
-        <td>Implementación de autenticación con JWT</td>
-        <td>Como desarrollador quiero implementar JWT para autenticar usuarios y makers de manera segura y escalable, garantizando la protección de sesiones y datos sensibles.</td>
-        <td>Escenario 1: Generación y validación exitosa de JWTDado que un usuario se autentica correctamenteCuando el sistema genera un token JWTEntonces el token contiene la información necesaria de forma seguraY tiene un tiempo de expiración apropiadoY puede ser validado en todas las solicitudes subsecuentes.Escenario 2: Manejo de tokens expiradosDado que un usuario intenta acceder con un token expiradoCuando el sistema valida el tokenEntonces detecta la expiración automáticamenteY solicita una nueva autenticación.</td>
-        <td>EP09</td>
-    </tr>
-    <tr>
-        <td>TS05</td>
-        <td>Gestión segura de API Keys en variables de entorno</td>
-        <td>Como desarrollador quiero gestionar las API Keys y secretos en variables de entorno para evitar exponer información sensible en el código fuente y facilitar la rotación de claves.</td>
-        <td>Escenario 1: Configuración segura de API KeysDado que el sistema requiere API Keys para servicios externosCuando se configuran las variables de entornoEntonces las claves se almacenan de forma segura fuera del códigoY son accesibles solo por componentes autorizadosY se pueden rotar sin cambios en el código fuente.</td>
-        <td>EP09</td>
-    </tr>
-    <tr>
-        <td>TS06</td>
-        <td>Implementación de políticas de acceso y roles</td>
-        <td>Como administrador quiero definir roles y permisos para controlar el acceso a funcionalidades y datos, asegurando que cada tipo de usuario (usuario, maker, admin) sólo pueda realizar las acciones permitidas (base de datos).</td>
-        <td>Escenario 1: Definición y aplicación de rolesDado que el administrador necesita controlar el accesoCuando define roles y permisos específicos en la base de datosEntonces cada usuario puede acceder solo a las funcionalidades autorizadasY los permisos se aplican consistentemente en toda la aplicación.Escenario 2: Prevención de escalación de privilegiosDado que un usuario intenta acceder a funcionalidades no autorizadasCuando el sistema valida los permisosEntonces deniega el acceso automáticamente.</td>
-        <td>EP09</td>
-    </tr>
-    <tr>
-        <td>TS07</td>
-        <td>Seguridad y validación en procesos de pago</td>
-        <td>Como desarrollador quiero asegurar que los pagos se procesen de forma segura, validando tokens y datos sensibles para evitar fraudes y proteger la información de los usuarios.</td>
-        <td>Escenario 1: Procesamiento seguro de pagosDado que un usuario realiza un pagoCuando se procesa la transacciónEntonces todos los datos se cifran durante la transmisiónY se cumple con los estándares PCI DSS.</td>
-        <td>EP09</td>
-    </tr>
-    <tr>
-        <td>EP10</td>
-        <td>Proceso de Consultas</td>
-        <td>Como usuario quiero registrar preguntas sobre mis plantas o plantaciones, y como especialista quiero gestionarlas y responderlas para brindar soporte efectivo.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU33</td>
-        <td>Registro de pregunta de usuario consumidor (web)</td>
-        <td>Como usuario consumidor web quiero registrar una pregunta para recibir soporte especializado.</td>
-        <td>Escenario 1: Registro exitoso de consultaDado que el usuario necesita asesoría especializadaCuando registra una pregunta detallada sobre su planta o plantaciónEntonces el sistema crea la consulta.Escenario 2: Consulta con información insuficienteDado que el usuario registra una pregunta carente de datos necesariosCuando el sistema analiza el contenidoEntonces solicita información adicional específicaY permite al usuario completar la consulta antes de enviarla.</td>
-        <td>EP10</td>
-    </tr>
-    <tr>
-        <td>HU34</td>
-        <td>Visualización y gestión de preguntas para especialista (web)</td>
-        <td>Como especialista en la plataforma web quiero ver el listado de preguntas en las categorías &quot;Resolved&quot;, &quot;Pending&quot; y &quot;Closed&quot; para gestionar las solicitudes de soporte.</td>
-        <td>Escenario 1: Gestión eficiente de cola de consultasDado que el especialista tiene múltiples consultas Cuando accede a su panel de gestiónEntonces puede ver todas las consultas organizadas por estado y prioridadY se le permite responderlas para cambiar el estado de esta misma.Escenario 2: Filtrado y búsqueda de consultasDado que el especialista necesita encontrar consultas específicasCuando utiliza los filtros de búsquedaEntonces puede localizar consultas por estado o usuario.</td>
-        <td>EP10</td>
-    </tr>
-    <tr>
-        <td>HU35</td>
-        <td>Responder pregunta y cambiar estado (web)</td>
-        <td>Como especialista en la plataforma web quiero responder una pregunta para cambiar su estado y cerrar el ciclo de soporte al usuario.</td>
-        <td>Escenario 1: Respuesta completa y cierre de consultaDado que el especialista ha analizado la consultaCuando proporciona una respuesta detallada y las recomendaciones apropiadasEntonces el sistema envía la respuesta al usuarioY actualiza el estado de la consulta a &quot;Resolved&quot;Y permite al usuario evaluar la calidad de la respuesta.Escenario 2: Consulta que escala a una revision de sensores Dado que una consulta necesita información adicional de los sensoresCuando el especialista menciona en su respuesta de que se necesita una revision tecnicaEntonces la consulta se cambia al estado &quot;Closed&quot;.</td>
-        <td>EP10</td>
-    </tr>
-    <tr>
-        <td>HU36</td>
-        <td>Solicitar ayuda adicional en pregunta (web)</td>
-        <td>Como especialista  en la plataforma web  quiero poder solicitar ayuda adicional en una pregunta para obtener información de la planta relacionada y brindar mejor soporte.</td>
-        <td>Escenario 1: Solicitud de datos adicionales de sensoresDado que el especialista necesita más información para diagnósticoCuando solicita datos adicionales de la plantaEntonces el sistema proporciona acceso a un servicio externo de informacionY puede integrar esta información en su respuesta.</td>
-        <td>EP10</td>
-    </tr>
-    <tr>
-        <td>HU37</td>
-        <td>Registro de pregunta de usuario consumidor (móvil)</td>
-        <td>Como usuario consumidor móvil quiero registrar una pregunta para recibir soporte especializado.</td>
-        <td>Escenario 1: Registro exitoso de consultaDado que el usuario necesita asesoría especializadaCuando registra una pregunta detallada sobre su planta o plantaciónEntonces el sistema crea la consulta Y notifica al especialista sobre la nueva consulta.Escenario 2: Consulta con información insuficienteDado que el usuario registra una pregunta carente de datos necesariosCuando el sistema analiza el contenidoEntonces solicita información adicional específicaY permite al usuario completar la consulta antes de enviarla.</td>
-        <td>EP10</td>
-    </tr>
-    <tr>
-        <td>HU38</td>
-        <td>Visualización y gestión de preguntas para especialista (móvil)</td>
-        <td>Como especialista en la plataforma móvil quiero ver el listado de preguntas en las categorías &quot;Resolved&quot;, &quot;Pending&quot; y &quot;Closed&quot; para gestionar las solicitudes de soporte.</td>
-        <td>Escenario 1: Gestión eficiente de cola de consultasDado que el especialista tiene múltiples consultas Cuando accede a su panel de gestiónEntonces puede ver todas las consultas organizadas por estado y prioridadY se le permite responderlas para cambiar el estado de esta misma.Escenario 2: Filtrado y búsqueda de consultasDado que el especialista necesita encontrar consultas específicasCuando utiliza los filtros de búsquedaEntonces puede localizar consultas por estado o usuario.</td>
-        <td>EP10</td>
-    </tr>
-    <tr>
-        <td>HU39</td>
-        <td>Responder pregunta y cambiar estado (móvil)</td>
-        <td>Como especialista en la plataforma móvil quiero responder una pregunta para cambiar su estado y cerrar el ciclo de soporte al usuario.</td>
-        <td>Escenario 1: Respuesta completa y cierre de consultaDado que el especialista ha analizado la consultaCuando proporciona una respuesta detallada y las recomendaciones apropiadasEntonces el sistema envía la respuesta al usuarioY actualiza el estado de la consulta a &quot;Resolved&quot;Y permite al usuario evaluar la calidad de la respuesta.Escenario 2: Consulta que escala a una revision de sensores Dado que una consulta necesita información adicional de los sensoresCuando el especialista menciona en su respuesta de que se necesita una revision tecnicaEntonces la consulta se cambia al estado &quot;Closed&quot;.</td>
-        <td>EP10</td>
-    </tr>
-    <tr>
-        <td>HU40</td>
-        <td>Solicitar ayuda adicional en pregunta (móvil)</td>
-        <td>Como especialista  en la plataforma móvil  quiero poder solicitar ayuda adicional en una pregunta para obtener información de la planta relacionada y brindar mejor soporte.</td>
-        <td>Escenario 1: Solicitud de datos adicionales de sensoresDado que el especialista necesita más información para diagnósticoCuando solicita datos adicionales de la plantaEntonces el sistema proporciona acceso a un servicio externo de informacionY puede integrar esta información en su respuesta.</td>
-        <td>EP10</td>
-    </tr>
-    <tr>
-        <td>EP11</td>
-        <td>Gestión de Perfil de Usuario</td>
-        <td>Como usuario quiero gestionar mi perfil personal para mantener actualizada mi información y controlar el acceso a mi cuenta.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU41</td>
-        <td>Edición de datos personales web</td>
-        <td>Como usuario quiero poder editar mis datos personales (nombre, username, correo, imagen perfil) para mantener mi perfil actualizado.</td>
-        <td>Escenario 1: Actualización exitosa de datos personalesDado que el usuario necesita actualizar su informaciónCuando modifica sus datos personalesEntonces el sistema valida la información ingresadaY actualiza el perfil con los nuevos datos.Escenario 2: Validación de email y nombre de usuario duplicadoDado que el usuario intenta cambiar su emailCuando el email ya está registrado por otro usuarioEntonces el sistema previene la duplicaciónY informa sobre el conflicto.</td>
-        <td>EP11</td>
-    </tr>
-    <tr>
-        <td>HU42</td>
-        <td>Edición de datos personales movil</td>
-        <td>Como usuario quiero poder editar mis datos personales (nombre, username, correo, imagen perfil) para mantener mi perfil actualizado.</td>
-        <td>Escenario 1: Actualización exitosa de datos personalesDado que el usuario necesita actualizar su informaciónCuando modifica sus datos personalesEntonces el sistema valida la información ingresadaY actualiza el perfil con los nuevos datos.Escenario 2: Validación de email y nombre de usuario duplicadoDado que el usuario intenta cambiar su emailCuando el email ya está registrado por otro usuarioEntonces el sistema previene la duplicaciónY informa sobre el conflicto.</td>
-        <td>EP11</td>
-    </tr>
-    <tr>
-        <td>HU43</td>
-        <td>Cambio de contraseña web</td>
-        <td>Como usuario web quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td>
-        <td>Escenario 1: Cambio exitoso de contraseñaDado que el usuario quiere actualizar su contraseñaCuando proporciona la contraseña actual y la nueva contraseñaEntonces el sistema valida la contraseña actualY verifica que la nueva contraseña cumple con los requisitos de seguridadY actualiza la contraseña exitosamente.Escenario 2: Contraseña actual incorrectaDado que el usuario intenta cambiar su contraseñaCuando la contraseña actual proporcionada es incorrectaEntonces el sistema deniega el cambioY registra el intento para seguridadY ofrece la opción de recuperación de contraseña si es necesario.</td>
-        <td>EP11</td>
-    </tr>
-    <tr>
-        <td>HU44</td>
-        <td>Cambio de contraseña movil</td>
-        <td>Como usuario movil quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td>
-        <td>Escenario 1: Cambio exitoso de contraseñaDado que el usuario quiere actualizar su contraseñaCuando proporciona la contraseña actual y la nueva contraseñaEntonces el sistema valida la contraseña actualY verifica que la nueva contraseña cumple con los requisitos de seguridadY actualiza la contraseña exitosamente.Escenario 2: Contraseña actual incorrectaDado que el usuario intenta cambiar su contraseñaCuando la contraseña actual proporcionada es incorrectaEntonces el sistema deniega el cambioY registra el intento para seguridadY ofrece la opción de recuperación de contraseña si es necesario.</td>
-        <td>EP11</td>
-    </tr>
-    <tr>
-        <td>EP12</td>
-        <td>Gestión de Plantas y Plantaciones</td>
-        <td>Como usuario quiero gestionar mis plantas y plantaciones, incluyendo la edición, eliminación y configuración de umbrales para su monitoreo.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU45</td>
-        <td>Edición de planta web</td>
-        <td>Como usuario web quiero poder editar los datos de mis plantas para corregir o actualizar información importante.</td>
-        <td>Escenario 1: Actualización exitosa de información de plantaDado que el usuario necesita modificar los datos de una plantaCuando actualiza la información (nombre, tipo, ubicación, umbrales)Entonces el sistema valida los nuevos datosY actualiza la información de la plantaY recalibra los sensores si es necesario.Escenario 2: Edición de umbrales con advertenciasDado que el usuario modifica los umbrales de monitoreoCuando los nuevos valores están fuera de rangos recomendadosEntonces el sistema muestra advertencias sobre posibles riesgosY permite al usuario confirmar o ajustar los valoresY documenta las razones del cambio.</td>
-        <td>EP12</td>
-    </tr>
-    <tr>
-        <td>HU46</td>
-        <td>Eliminación de planta movil</td>
-        <td>Como usuario movil quiero poder eliminar una planta para gestionar solo las plantas activas en mi perfil.</td>
-        <td>Escenario 1: Eliminación exitosa de plantaDado que el usuario ya no necesita monitorear una plantaCuando solicita eliminar la planta del sistemaEntonces el sistema solicita confirmación de la acciónY desvincula los sensores asociadosY archiva los datos históricos para futuras referencias.Escenario 2: Eliminación de planta con orden activaDado que el usuario intenta eliminar una planta con una orden de instalación activaCuando solicita la eliminaciónEntonces el sistema informa sobre la orden pendienteY permite cancelar la orden o esperar a completarlaY mantiene la integridad de los procesos en curso.</td>
-        <td>EP12</td>
-    </tr>
-    <tr>
-        <td>HU47</td>
-        <td>Edición de plantación web</td>
-        <td>Como usuario web empresarial quiero poder editar los datos de mis plantaciones para corregir o actualizar información relevante.</td>
-        <td>Escenario 1: Actualización de datos de plantación empresarialDado que el usuario empresarial necesita modificar una plantaciónCuando actualiza parámetros como área, tipos de cultivo o configuracionesEntonces el sistema recalcula los recursos necesariosY actualiza las configuraciones de los dispositivos IoTY notifica sobre cambios en costos o requerimientos.Escenario 2: Modificación que afecta múltiples zonasDado que una plantación tiene múltiples zonas de cultivoCuando se modifica una configuración que afecta varias zonasEntonces el sistema analiza el impacto en cada zonaY permite aplicar cambios selectivamenteY mantiene la coherencia en toda la plantación.</td>
-        <td>EP12</td>
-    </tr>
-    <tr>
-        <td>HU48</td>
-        <td>Eliminación de plantación movil</td>
-        <td>Como usuario movil empresarial quiero poder eliminar una plantación para mantener organizada la información activa en mi perfil.</td>
-        <td>Escenario 1: Eliminación de plantación con confirmaciónDado que el usuario empresarial necesita eliminar una plantaciónCuando solicita la eliminaciónEntonces el sistema muestra el impacto de la eliminaciónY requiere confirmación múltiple debido a la complejidadY desactiva gradualmente los dispositivos y servicios asociados.Escenario 2: Archivado vs eliminación permanenteDado que una plantación tiene datos históricos valiososCuando el usuario solicita eliminar la plantaciónEntonces el sistema ofrece la opción de archivar en lugar de eliminarY explica las diferencias entre ambas opcionesY permite recuperar plantaciones archivadas si es necesario.</td>
-        <td>EP12</td>
-    </tr>
-    <tr>
-        <td>HU49</td>
-        <td>Edición de umbrales y parámetros de plantas y plantaciones con advertencias</td>
-        <td>Como usuario quiero editar los umbrales y parámetros de mis plantas y plantaciones para optimizar su monitoreo, y recibir advertencias si los valores ingresados son riesgosos o poco recomendables.</td>
-        <td>Escenario 1: Configuración segura de umbralesDado que el usuario quiere optimizar los parámetros de monitoreoCuando ajusta los umbrales de temperatura, humedad y luzEntonces el sistema valida que los valores estén en rangos segurosY aplica los cambios si son apropiadosY confirma la nueva configuración al usuario.Escenario 2: Advertencias por valores riesgososDado que el usuario establece umbrales fuera de rangos recomendadosCuando el sistema detecta valores potencialmente peligrososEntonces muestra advertencias claras sobre los riesgosY sugiere valores alternativos basados en mejores prácticasY requiere confirmación explícita antes de aplicar valores riesgosos.</td>
-        <td>EP12</td>
-    </tr>
-    <tr>
-        <td>EP13</td>
-        <td>Gestión de Notificaciones</td>
-        <td>Como usuario quiero recibir y visualizar notificaciones relevantes sobre el estado de mis plantas y plantaciones, para estar informado y poder actuar oportunamente.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU50</td>
-        <td>Visualización de notificaciones en web</td>
-        <td>Como usuario web quiero ver notificaciones, para revisar las alertas activas o recientes.</td>
-        <td>Escenario 1: Gestión de notificaciones multiplataformaDado que el usuario accede desde la web Cuando revisa sus notificacionesEntonces puede ver todas las alertas sincronizadas entre plataformasY filtrar por tipo de alerta o nivel de prioridad.Escenario 2: Notificaciones históricas y trendingDado que el usuario quiere analizar patrones de alertasCuando accede al historial de notificacionesEntonces puede ver tendencias de problemas recurrentes.</td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>HU51</td>
-        <td>Visualización de notificaciones en móvil</td>
-        <td>Como usuario móvil quiero ver notificaciones, para revisar las alertas activas o recientes.</td>
-        <td>Escenario 1: Gestión de notificaciones multiplataformaDado que el usuario accede desde la aplicacion movil Cuando revisa sus notificacionesEntonces puede ver todas las alertas sincronizadas entre plataformasY filtrar por tipo de alerta o nivel de prioridad.Escenario 2: Notificaciones históricas y trendingDado que el usuario quiere analizar patrones de alertasCuando accede al historial de notificacionesEntonces puede ver tendencias de problemas recurrentes.</td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>HU52</td>
-        <td>Recepción de notificaciones push en móvil</td>
-        <td>Como usuario móvil quiero recibir notificaciones push activas para estar informado en tiempo real sobre eventos importantes de mis plantas y plantaciones.</td>
-        <td>Escenario 1: Configuración personalizada de notificaciones pushDado que el usuario quiere control sobre las notificacionesCuando configura sus preferencias de notificaciónEntonces puede seleccionar qué tipos de alertas recibir.</td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>EP14</td>
-        <td>Visualización de datos y consumo de recursos</td>
-        <td>Como usuario quiero ver el consumo de recursos de mis plantas y plantaciones, para optimizar su uso.</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>HU53</td>
-        <td>Visualización de consumo de recursos web</td>
-        <td>Como usuario web consumidor quiero ver el consumo de recursos de energía y agua de mis plantas y plantaciones para optimizar su uso.</td>
-        <td>Escenario 1: Dashboard de consumo en tiempo realDado que el usuario quiere monitorear el consumo de recursosCuando accede al dashboard de consumoEntonces puede ver gráficos de consumo de agua y energía en tiempo realY comparar el consumo actual con períodos anterioresY recibir recomendaciones para optimizar el uso de recursos.</td>
-        <td>EP14</td>
-    </tr>
-    <tr>
-        <td>HU54</td>
-        <td>Visualización de consumo de recursos movil</td>
-        <td>Como usuario movil consumidor quiero ver el consumo de recursos de energía y agua de mis plantas y plantaciones para optimizar su uso.</td>
-        <td>Escenario 1: Dashboard de consumo en tiempo realDado que el usuario quiere monitorear el consumo de recursosCuando accede al dashboard de consumoEntonces puede ver gráficos de consumo de agua y energía en tiempo realY comparar el consumo actual con períodos anterioresY recibir recomendaciones para optimizar el uso de recursos.</td>
-        <td>EP14</td>
-    </tr>
-    <tr>
-        <td>TS08</td>
-        <td>Cálculo de consumo de energía</td>
-        <td>Como desarrollador quiero calcular el consumo de energía de las plantas y plantaciones para informar al usuario.</td>
-        <td>Escenario 1: Cálculo preciso de consumo energéticoDado que el sistema monitorea dispositivos IoTCuando recopila datos de consumo de sensores y actuadoresEntonces calcula el consumo total de energía por plantaciónY almacena los datos históricos para análisisY proporciona métricas detalladas al frontend.</td>
-        <td>EP14</td>
-    </tr>
-    <tr>
-        <td>TS09</td>
-        <td>Cálculo de consumo de agua</td>
-        <td>Como desarrollador quiero calcular el consumo de agua de las plantas y plantaciones para informar al usuario.</td>
-        <td>Escenario 1: Monitoreo de consumo hídricoDado que los sensores detectan la humedad del sueloCuando se activan los sistemas de riegoEntonces el sistema calcula el volumen de agua utilizadoY registra el consumo por planta y período de tiempo.</td>
-        <td>EP14</td>
-    </tr>
-    <tr>
-        <td>TS10</td>
-        <td>Cálculo de niveles de humedad en porcentaje</td>
-        <td>Como desarrollador quiero calcular los niveles de humedad en porcentaje para mostrar la información más efectiva.</td>
-        <td>Escenario 1: Conversión precisa de lecturas de sensoresDado que los sensores proporcionan valores brutos de humedadCuando el sistema procesa estas lecturasEntonces convierte los valores a porcentajes comprensiblesY calibra según el tipo de suelo y plantaY proporciona lecturas consistentes y precisas.Escenario 2: Normalización de datos entre diferentes sensoresDado que diferentes sensores pueden tener escalas distintasCuando el sistema recopila datos de múltiples fuentesEntonces normaliza las lecturas a una escala común de porcentajeY mantiene la consistencia entre dispositivos.</td>
-        <td>EP14</td>
-    </tr>
-    <tr>
-        <td>TS11</td>
-        <td>Cálculo de niveles de luz en porcentaje</td>
-        <td>Como desarrollador quiero calcular los niveles de luz en porcentaje para mostrar la información más efectiva.</td>
-        <td>Escenario 1: Medición relativa de luminosidadDado que los sensores de luz capturan la intensidad lumínicaCuando el sistema procesa estos datosEntonces convierte las lecturas a porcentajes relativos al óptimo para cada tipo de plantaY ajusta según la hora del día.Escenario 2: Compensación por variaciones ambientalesDado que la luz natural varía constantementeCuando el sistema analiza los niveles de luzEntonces compensa por factores como nubosidad y sombrasY calcula promedios ponderados por tiempo.</td>
-        <td>EP14</td>
-    </tr>
-</table>
+| CÓDIGO | DESCRIPCIÓN                                                                                                                                                                                                                                                                          | CRITERIO DE ACEPTACIÓN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| HU01   | Como visitante del landing page, quiero acceder fácilmente a información sobre la startup responsable del producto, para conocer quién está detrás del desarrollo, generar confianza y decidir si seguir explorando el sitio.                                                        | Escenario 1: El visitante accede a la información institucional de la startup Dado que el visitante se encuentra en la página principal del sitio webCuando busca información sobre la empresa responsable del productoEntonces el sistema muestra información clara sobre la misión, visión, valores y equipo de la startupY la información está actualizada y es relevante para generar confianza.                                                                                                                                                                                                                                                                                                                                                                                     |
+| HU02   | Como visitante del sitio web, quiero conocer los medios oficiales de la startup para tener un mayor conocimiento sobre ella y recibir actualizaciones.                                                                                                                               | Escenario 1: Acceso a canales oficiales de comunicaciónDado que el visitante navega en el sitio webCuando busca formas de seguir o contactar a la startupEntonces el sistema proporciona enlaces funcionales a los canales oficiales de comunicaciónY los enlaces redirigen correctamente a las plataformas externas correspondientes.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| HU04   | Como visitante del sitio web, quiero visualizar información sobre los beneficios del producto para conocer cómo puede resolver mis necesidades personales o de negocio.                                                                                                              | Escenario 1: Exploración de beneficios por segmento de usuarioDado que el visitante está interesado en conocer los beneficios del productoCuando explora la información disponibleEntonces el sistema muestra beneficios específicos organizados por tipo de usuario (doméstico/empresarial)Y cada beneficio incluye información clara sobre el valor que aporta.Escenario 2: Comparación entre segmentosDado que el visitante quiere entender qué opción se adapta mejor a sus necesidadesCuando revisa los beneficios disponiblesEntonces el sistema permite comparar las ventajas entre diferentes segmentos de usuarioY proporciona criterios claros para la toma de decisiones.                                                                                                     |
+| HU05   | Como usuario web doméstico quiero registrar una de mis plantas para poder monitorearla y saber de su cuidado.                                                                                                                                                                        | Escenario 1: Registro exitoso de nueva plantaDado que el usuario doméstico tiene una cuenta activa en la plataformaCuando proporciona la información requerida para registrar una planta (nombre, tipo, ubicación, parámetros de cuidado)Entonces el sistema registra la planta en el perfil del usuarioY genera una orden de instalación de sensores con estado "pendiente"Y la planta aparece en la lista de plantas del usuario.Escenario 2: Validación de datos incorrectosDado que el usuario intenta registrar una plantaCuando proporciona información incompleta o inválidaEntonces el sistema muestra mensajes de validación específicosY no completa el registro hasta que todos los datos requeridos sean válidos.                                                            |
+| HU06   | Como usuario móvil doméstico quiero registrar una de mis plantas para poder monitorearla y saber de su cuidado.                                                                                                                                                                      | Escenario 1: Registro exitoso de nueva planta desde dispositivo móvilDado que el usuario doméstico accede desde la aplicación móvilCuando completa el proceso de registro de una planta con todos los datos requeridosEntonces el sistema registra la planta y la sincroniza con su perfilY genera automáticamente una orden de instalación de sensoresY la planta queda disponible para monitoreo futuro.Escenario 2: Manejo de errores de validación en móvilDado que el usuario móvil intenta registrar una plantaCuando los datos ingresados no cumplen con los criterios de validaciónEntonces el sistema proporciona retroalimentación clara sobre los erroresY permite corregir la información sin perder los datos ya ingresados.                                                |
+| HU07   | Como usuario web doméstico quiero registrar una plantación para poder monitorearla y automatizar su riego.                                                                                                                                                                           | Escenario 1: Registro exitoso de plantación con estimación de costosDado que el usuario empresarial desea registrar una plantaciónCuando proporciona las especificaciones del área (dimensiones, tipo de cultivo, condiciones ambientales)Entonces el sistema calcula y muestra una estimación de costos para los dispositivos necesariosY registra la plantación en el sistemaY genera una orden de instalación con estado "pendiente".Escenario 2: Validación de dimensiones excesivasDado que el usuario intenta registrar una plantaciónCuando las dimensiones o especificaciones exceden los límites soportadosEntonces el sistema informa sobre las limitaciones del servicioY sugiere ajustar las especificaciones a rangos aceptables.                                           |
+| HU08   | Como usuario móvil doméstico quiero registrar una plantación para poder monitorearla y automatizar su riego.                                                                                                                                                                         | Escenario 1: Registro exitoso de plantación desde dispositivo móvilDado que el usuario empresarial utiliza la aplicación móvilCuando ingresa las especificaciones completas de la plantaciónEntonces el sistema procesa la información y calcula los costos estimadosY registra la plantación con todos los parámetros necesariosY la orden de instalación queda programada para gestión posterior.Escenario 2: Manejo de especificaciones inválidas en móvilDado que el usuario móvil registra una plantaciónCuando las especificaciones no son técnicamente viablesEntonces el sistema proporciona alternativas o ajustes recomendadosY explica las razones técnicas de las limitaciones.                                                                                              |
+| HU09   | Como usuario doméstico quiero registrar mi cuenta a un plan de suscripción doméstico para utilizar los servicios de EcoGuardian.                                                                                                                                                     | Escenario 1: Registro exitoso con plan domésticoDado que un nuevo usuario desea crear una cuenta domésticaCuando proporciona información personal válida y selecciona un plan domésticoY completa el proceso de pago satisfactoriamenteEntonces el sistema crea la cuenta con el plan seleccionadoY confirma la activación del servicioY el usuario puede acceder a las funcionalidades correspondientes a su plan.Escenario 2: Fallo en el procesamiento de pagoDado que un usuario intenta registrarse con un plan de pagoCuando el procesamiento del pago falla por cualquier motivoEntonces el sistema mantiene los datos del usuario temporalmenteY proporciona opciones para reintentar el pago o cambiar el métodoY no activa los servicios hasta completar el pago exitosamente. |
+| HU10   | Como usuario empresarial quiero registrar mi cuenta a un plan de suscripción empresarial para utilizar los servicios de EcoGuardian.                                                                                                                                                 | Escenario 1: Registro exitoso con plan empresarialDado que un nuevo usuario empresarial desea crear una cuentaCuando proporciona información válida de la empresa y selecciona un plan empresarialY completa el proceso de pago satisfactoriamenteEntonces el sistema crea la cuenta empresarial con el plan seleccionadoY activa las funcionalidades empresariales correspondientesY el usuario puede gestionar múltiples plantaciones y usuarios.Escenario 2: Error en validación de información empresarialDado que un usuario empresarial intenta registrarseCuando la información de la empresa no puede ser validadaEntonces el sistema solicita documentación adicional o correccionesY suspende temporalmente el proceso hasta completar la validación.                          |
+| EP04   | Como usuario quiero ingresar y autenticarme en Eco Guardián para hacer uso de sus servicios.                                                                                                                                                                                         | Escenario 1: Autenticación exitosa. Dado que el usuario tiene credenciales válidas, cuando ingresa sus datos de acceso entonces el sistema valida su identidad y le proporciona acceso a la plataforma.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| HU13   | Como usuario consumidor web quiero ingresar a mi cuenta para empezar a usar los servicios de EcoGuardian.                                                                                                                                                                            | Escenario 1: Autenticación exitosa del usuario Dado que el usuario tiene una cuenta válida cuando ingresa credenciales correctas, entonces el sistema valida la identidad del usuario y le proporciona acceso a las funcionalidades según su tipo de plan y mantiene la sesión activa de forma segura. Escenario 2: Intento de acceso con cuenta suspendida Dado que el usuario intenta autenticarse cuando su cuenta está suspendida o inactiva, entonces el sistema deniega el acceso y explica la razón de la suspensión y proporciona información sobre cómo reactivar la cuenta.                                                                                                                                                                                                    |
+| HU14   | Como usuario consumidor móvil quiero ingresar a mi cuenta para empezar a usar los servicios de EcoGuardian.                                                                                                                                                                          | Escenario 1: Autenticación móvil exitosa Dado que el usuario accede desde la aplicación móvil, cuando proporciona credenciales válidas, entonces el sistema autentica al usuario y carga su perfil y sincroniza los datos de sus plantas en tiempo real y habilita las notificaciones push si están configuradas. Escenario 2: Autenticación móvil fallida Dado que el usuario accede desde la aplicación móvil, cuando proporciona credenciales válidas, entonces el sistema muestra una alerta indicando un error al validar las credenciales.                                                                                                                                                                                                                                         |
+| TS01   | Como desarrollador quiero implementar la validación utilizando MFA (Multi-Factor Authentication) para asegurar la seguridad del sistema y proteger los datos del usuario.                                                                                                            | Escenario 1: MFA activado correctamente Dado que el usuario ha iniciado sesión con credenciales válidas cuando se solicita la autenticación multifactor y el usuario proporciona el código MFA correcto, entonces el sistema permite el acceso completo a la plataforma y registra el evento de autenticación exitosa. Escenario 2: MFA fallido Dado que el usuario ha iniciado sesión con credenciales válidas cuando se solicita la autenticación multifactor y el usuario proporciona un código incorrecto, entonces el sistema deniega el acceso y registra el intento fallido para monitoreo de seguridad y permite un número limitado de reintentos.                                                                                                                               |
+| HU15   | Como usuario consumidor móvil quiero agendar una fecha de instalación para continuar con el proceso de mi orden.                                                                                                                                                                     | Escenario 1: Agendamiento exitoso de instalación Dado que el usuario tiene una orden pendiente de instalación cuando selecciona una fecha disponible para la instalación, entonces el sistema confirma la cita y actualiza el estado de la orden y envía confirmación al usuario y al técnico asignado y la orden progresa al siguiente estado del proceso. Escenario 2: Fecha no disponible Dado que el usuario intenta agendar una instalación cuando la fecha seleccionada no está disponible, entonces el sistema permite al usuario seleccionar una nueva fecha.                                                                                                                                                                                                                    |
+| HU16   | Como usuario consumidor web quiero agendar una fecha de instalación para continuar con el proceso de mi orden.                                                                                                                                                                       | Escenario 1: Agendamiento exitoso de instalación Dado que el usuario tiene una orden pendiente de instalación cuando selecciona una fecha disponible para la instalación, entonces el sistema confirma la cita y actualiza el estado de la orden y envía confirmación al usuario y al técnico asignado y la orden progresa al siguiente estado del proceso. Escenario 2: Fecha no disponible Dado que el usuario intenta agendar una instalación cuando la fecha seleccionada no está disponible, entonces el sistema permite al usuario seleccionar una nueva fecha.                                                                                                                                                                                                                    |
+| HU18   | Como usuario web consumidor quiero realizar el pago para continuar con el proceso de mi orden.                                                                                                                                                                                       | Escenario 1: Procesamiento exitoso de pago. Dado que el usuario tiene una orden pendiente para pago, cuando proporciona información de pago válida, entonces el sistema procesa el pago de forma segura y confirma la transacción y actualiza el estado de la orden para proceder con la instalación. Escenario 2: Fallo en el procesamiento de pago Dado que el usuario intenta realizar un pago cuando la transacción falla por problemas bancarios o de red, entonces el sistema informa sobre el error específico y mantiene la orden en estado pendiente y ofrece métodos alternativos de pago.                                                                                                                                                                                     |
+| HU19   | Continuar el proceso de orden de suscripción con pago web                                                                                                                                                                                                                            | Escenario 1: Activación exitosa de suscripción Dado que el usuario selecciona un plan de suscripción cuando completa el pago de la suscripción, entonces el sistema activa inmediatamente el plan seleccionado y habilita todas las funcionalidades correspondientes y establece el ciclo de facturación automático. Escenario 2: Problema con el pago recurrente Dado que el usuario tiene una suscripción activa cuando el pago recurrente falla, entonces el sistema intenta procesar el pago nuevamente y notifica al usuario sobre el problema y proporciona un período de gracia antes de suspender el servicio.                                                                                                                                                                   |
+| HU20   | Como usuario consumidor móvil quiero ver el estado y detalles de mis órdenes para seguimiento, sin la opción de realizar pagos.                                                                                                                                                      | Escenario 1: Visualización de estado de orden Dado que el usuario accede desde la aplicación móvil cuando consulta el estado de sus órdenes, entonces el sistema muestra información actualizada sobre cada orden y proporciona detalles sobre el progreso y próximos pasos y redirige al usuario a la plataforma web para acciones que requieren pago. Escenario 2: Notificaciones de cambio de estado Dado que el usuario tiene órdenes activas cuando hay cambios en el estado de cualquier orden, entonces el sistema envía notificaciones push al dispositivo móvil y actualiza la información en tiempo real y permite al usuario ver los detalles del cambio.                                                                                                                     |
+| HU21   | Como usuario consumidor web quiero ver el estado y detalles de mis órdenes para seguimiento, sin la opción de realizar pagos.                                                                                                                                                        | Escenario 1: Visualización de estado de orden Dado que el usuario accede desde la aplicación móvil cuando consulta el estado de sus órdenes, entonces el sistema muestra información actualizada sobre cada orden y proporciona detalles sobre el progreso y próximos pasos y redirige al usuario a la plataforma web para acciones que requieren pago. Escenario 2: Notificaciones de cambio de estado Dado que el usuario tiene órdenes activas cuando hay cambios en el estado de cualquier orden, entonces el sistema envía notificaciones push al dispositivo móvil y actualiza la información en tiempo real y permite al usuario ver los detalles del cambio.                                                                                                                     |
+| HU22   | Como usuario web doméstico quiero realizar el monitoreo de mis plantas para saber sus estadísticas.                                                                                                                                                                                  | Escenario 1: Visualización de datos en tiempo real Dado que el usuario tiene plantas con sensores instalados cuando accede al sistema de monitoreo, entonces puede ver datos actualizados de humedad, temperatura, luz y recibe alertas cuando los valores están fuera de los rangos óptimos. Escenario 2: Planta sin sensores activos Dado que el usuario tiene plantas registradas sin sensores activados, cuando intenta monitorear la planta, entonces el sistema indica que no hay datos disponibles y le indica de que tiene que terminar el proceso de instalación.                                                                                                                                                                                                               |
+| HU23   | Como usuario web empresarial quiero realizar el monitoreo de mis plantaciones para saber sus estadísticas.                                                                                                                                                                           | Escenario 1: Dashboard empresarial de plantaciones Dado que el usuario empresarial gestiona múltiples plantaciones cuando accede al dashboard de monitoreo, entonces puede ver un resumen por plantación y recibir alertas prioritarias sobre problemas críticos. Escenario 2: Plantación sin sensores activos Dado que el usuario tiene plantaciones registradas sin sensores activados, cuando intenta monitorear la plantación, entonces el sistema indica que no hay datos disponibles y le indica de que tiene que terminar el proceso de instalación.                                                                                                                                                                                                                              |
+| HU24   | Como usuario empresarial móvil quiero realizar el monitoreo de mis plantaciones para saber sus estadísticas en la app móvil.                                                                                                                                                         | Escenario 1: Monitoreo móvil en campo Dado que el usuario empresarial está en el campo, cuando utiliza la aplicación móvil, entonces puede acceder a datos en tiempo real de la plantación y recibir notificaciones inmediatas sobre anomalías y tomar fotografías para realizar consultas. Escenario 2: Sincronización offline Dado que el usuario está en una zona con conectividad limitada, cuando utiliza la aplicación móvil, entonces puede acceder a datos previamente sincronizados y registrar observaciones localmente y sincronizar automáticamente cuando se restablezca la conexión.                                                                                                                                                                                       |
+| HU25   | Como usuario doméstico móvil quiero realizar el monitoreo de mis plantas para saber sus estadísticas.                                                                                                                                                                                | Escenario 1: Monitoreo doméstico desde móvil Dado que el usuario doméstico usa la aplicación móvil cuando revisa sus plantas, entonces puede ver el estado actual de cada planta y tomar fotografías para realizar consultas. Escenario 2: Alertas móviles urgentes Dado que una planta requiere atención inmediata cuando se detecta una condición crítica, entonces el usuario recibe una notificación push inmediata y puede ver los detalles del problema.                                                                                                                                                                                                                                                                                                                           |
+| TS02   | Como desarrollador, quiero que la API procese y envíe datos estadísticos de manera optimizada y estructurada, para que el frontend los reciba listos para su uso y representación sin necesidad de procesamiento adicional.                                                          | Escenario 1: Procesamiento exitoso de datos estadísticos Dado que los sensores envían datos en tiempo real cuando la API recibe la información, entonces procesa y estructura los datos estadísticos y los almacena en el formato optimizado para consultas y los entrega al frontend listos para visualización. Escenario 2: Manejo de datos inconsistentes Dado que se reciben datos con anomalías o errores cuando la API detecta inconsistencias, entonces valida y filtra los datos problemáticos y registra los errores para análisis posterior y mantiene la integridad de las estadísticas almacenadas.                                                                                                                                                                          |
+| HU26   | Como usuario consumidor quiero tener una cartera de pagos para tener distintos medios de pago.                                                                                                                                                                                       | Escenario 1: Gestión de múltiples métodos de pago (VISA, Mastercard, etc) Dado que el usuario necesita flexibilidad en los pagos cuando accede a su cartera de pagos, entonces puede seleccionar su método de pago.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| HU27   | Como usuario web quiero ver el historial de mis pagos para controlar mis gastos y acceder a comprobantes.                                                                                                                                                                            | Escenario 1: Consulta de historial completo Dado que el usuario quiere revisar sus pagos anteriores cuando accede al historial de pagos, entonces puede ver una lista cronológica de todas las transacciones y filtrar por fecha, monto o tipo de servicio. Escenario 2: Búsqueda específica de transacciones Dado que el usuario busca una transacción específica cuando utiliza los filtros de búsqueda, entonces puede localizar rápidamente la transacción deseada y ver todos los detalles asociados y generar un comprobante detallado si es necesario.                                                                                                                                                                                                                            |
+| HU28   | Como usuario movil quiero ver el historial de mis pagos para controlar mis gastos y acceder a comprobantes.                                                                                                                                                                          | Escenario 1: Consulta de historial completo Dado que el usuario quiere revisar sus pagos anteriores cuando accede al historial de pagos, entonces puede ver una lista cronológica de todas las transacciones y filtrar por fecha, monto o tipo de servicio. Escenario 2: Búsqueda específica de transacciones Dado que el usuario busca una transacción específica cuando utiliza los filtros de búsqueda, entonces puede localizar rápidamente la transacción deseada y ver todos los detalles asociados y generar un comprobante detallado si es necesario.                                                                                                                                                                                                                            |
+| TS03   | Como desarrollador quiero integrar la API de Stripe en nuestro sistema para manejar el historial de pagos y las transacciones de manera segura y eficiente.                                                                                                                          | Escenario 1: Integración exitosa con Stripe Dado que el sistema necesita procesar pagos cuando se integra la API de Stripe, entonces todas las transacciones se procesan de forma segura y el historial se sincroniza automáticamente y se mantiene la trazabilidad completa de las operaciones. Escenario 2: Manejo de errores de Stripe Dado que puede haber fallos en la comunicación con Stripe cuando se produce un error en la API, entonces el sistema maneja la excepción apropiadamente y registra el error para análisis posterior y proporciona alternativas al usuario para completar la transacción.                                                                                                                                                                        |
+| HU30   | Como maker quiero configurar los parámetros de los dispositivos (umbrales, frecuencias de muestreo) para optimizar la recolección de datos según el entorno.                                                                                                                         | Escenario 1: Configuración personalizada de parámetros Dado que el maker necesita optimizar el rendimiento de los sensores cuando configura los parámetros del dispositivo, entonces puede ajustar umbrales, frecuencias y rangos de medición y los cambios se aplican inmediatamente y el dispositivo confirma la nueva configuración.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| HU31   | Como maker quiero conocer el estado de conexión de los dispositivos para saber cuáles necesitan revisión.                                                                                                                                                                            | Escenario 1: Validacion de estado de conexion Dado que el maker necesita evaluar el estado de conexion los dispositivos, cuando solicita la conexion con el edge node, entonces el dispositivo notifica de el estado de conexion.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| HU32   | Como maker quiero vincular sensores IoT a los edge nodes, estos a nodos FOG, y finalmente al sistema central, para asegurar que los datos fluyan correctamente y se mantenga la integridad y comunicación entre todos los niveles y completar el proceso de instalación de la orden. | Escenario 1: Vinculación exitosa de arquitectura IoT Dado que el maker debe establecer la arquitectura de comunicación cuando configura la vinculación entre sensores, edge nodes y FOG, entonces se establece la cadena de comunicación completa y los datos fluyen correctamente en todos los niveles y se verifica la integridad de la transmisión. Escenario 2: Resolución de fallos en la cadena de comunicación Dado que puede haber interrupciones en la comunicación cuando se detecta un fallo en algún nivel de la arquitectura, entonces el sistema identifica el punto de falla específico y notifica al maker para resolver el problema.                                                                                                                                    |
+| TS04   | Como desarrollador quiero implementar JWT para autenticar usuarios y makers de manera segura y escalable, garantizando la protección de sesiones y datos sensibles.                                                                                                                  | Escenario 1: Generación y validación exitosa de JWT Dado que un usuario se autentica correctamente cuando el sistema genera un token JWT, entonces el token contiene la información necesaria de forma segura y tiene un tiempo de expiración apropiado y puede ser validado en todas las solicitudes subsecuentes. Escenario 2: Manejo de tokens expirados Dado que un usuario intenta acceder con un token expirado cuando el sistema valida el token, entonces detecta la expiración automáticamente y solicita una nueva autenticación.                                                                                                                                                                                                                                              |
+| TS06   | Como administrador quiero definir roles y permisos para controlar el acceso a funcionalidades y datos, asegurando que cada tipo de usuario (usuario, maker, admin) sólo pueda realizar las acciones permitidas (base de datos).                                                      | Escenario 1: Definición y aplicación de roles Dado que el administrador necesita controlar el acceso cuando define roles y permisos específicos en la base de datos, entonces cada usuario puede acceder solo a las funcionalidades autorizadas y los permisos se aplican consistentemente en toda la aplicación. Escenario 2: Prevención de escalación de privilegios Dado que un usuario intenta acceder a funcionalidades no autorizadas cuando el sistema valida los permisos, entonces deniega el acceso automáticamente.                                                                                                                                                                                                                                                           |
+| TS07   | Como desarrollador quiero asegurar que los pagos se procesen de forma segura, validando tokens y datos sensibles para evitar fraudes y proteger la información de los usuarios.                                                                                                      | Escenario 1: Procesamiento seguro de pagos Dado que un usuario realiza un pago cuando se procesa la transacción, entonces todos los datos se cifran durante la transmisión y se cumple con los estándares PCI DSS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| HU33   | Como usuario consumidor web quiero registrar una pregunta para recibir soporte especializado.                                                                                                                                                                                        | Escenario 1: Registro exitoso de consulta Dado que el usuario necesita asesoría especializada cuando registra una pregunta detallada sobre su planta o plantación, entonces el sistema crea la consulta. Escenario 2: Consulta con información insuficiente Dado que el usuario registra una pregunta carente de datos necesarios, cuando el sistema analiza el contenido, entonces solicita información adicional específica y permite al usuario completar la consulta antes de enviarla.                                                                                                                                                                                                                                                                                              |
+| HU37   | Como usuario consumidor móvil quiero registrar una pregunta para recibir soporte especializado.                                                                                                                                                                                      | Escenario 1: Registro exitoso de consulta Dado que el usuario necesita asesoría especializada cuando registra una pregunta detallada sobre su planta o plantación, entonces el sistema crea la consulta. Escenario 2: Consulta con información insuficiente Dado que el usuario registra una pregunta carente de datos necesarios cuando el sistema analiza el contenido, entonces solicita información adicional específica y permite al usuario completar la consulta antes de enviarla.                                                                                                                                                                                                                                                                                               |
+| HU41   | Como usuario quiero poder editar mis datos personales (nombre, username, correo, imagen perfil) para mantener mi perfil actualizado.                                                                                                                                                 | Escenario 1: Actualización exitosa de datos personales Dado que el usuario necesita actualizar su información cuando modifica sus datos personales, entonces el sistema valida la información ingresada y actualiza el perfil con los nuevos datos. Escenario 2: Validación de email y nombre de usuario duplicado Dado que el usuario intenta cambiar su email cuando el email ya está registrado por otro usuario, entonces el sistema previene la duplicación y informa sobre el conflicto.                                                                                                                                                                                                                                                                                           |
+| HU42   | Como usuario quiero poder editar mis datos personales (nombre, username, correo, imagen perfil) para mantener mi perfil actualizado.                                                                                                                                                 | Escenario 1: Actualización exitosa de datos personales Dado que el usuario necesita actualizar su información cuando modifica sus datos personales, entonces el sistema valida la información ingresada y actualiza el perfil con los nuevos datos. Escenario 2: Validación de email y nombre de usuario duplicado Dado que el usuario intenta cambiar su email cuando el email ya está registrado por otro usuario, entonces el sistema previene la duplicación y informa sobre el conflicto.                                                                                                                                                                                                                                                                                           |
+| HU43   | Como usuario web quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.                                                                                                                                                                                               | Escenario 1: Cambio exitoso de contraseña Dado que el usuario quiere actualizar su contraseña, cuando proporciona la contraseña actual y la nueva contraseña, entonces el sistema valida la contraseña actual y verifica que la nueva contraseña cumple con los requisitos de seguridad y actualiza la contraseña exitosamente. Escenario 2: Contraseña actual incorrecta Dado que el usuario intenta cambiar su contraseña cuando la contraseña actual proporcionada es incorrecta, entonces el sistema deniega el cambio y registra el intento para seguridad y ofrece la opción de recuperación de contraseña si es necesario.                                                                                                                                                        |
+| HU44   | Como usuario movil quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.                                                                                                                                                                                             | Escenario 1: Cambio exitoso de contraseña Dado que el usuario quiere actualizar su contraseña, cuando proporciona la contraseña actual y la nueva contraseña, entonces el sistema valida la contraseña actual y verifica que la nueva contraseña cumple con los requisitos de seguridad y actualiza la contraseña exitosamente. Escenario 2: Contraseña actual incorrecta Dado que el usuario intenta cambiar su contraseña cuando la contraseña actual proporcionada es incorrecta, entonces el sistema deniega el cambio y registra el intento para seguridad y ofrece la opción de recuperación de contraseña si es necesario.                                                                                                                                                        |
+| HU45   | Como usuario web quiero poder editar los datos de mis plantas para corregir o actualizar información importante.                                                                                                                                                                     | Escenario 1: Actualización exitosa de información de planta Dado que el usuario necesita modificar los datos de una planta, cuando actualiza la información (nombre, tipo, ubicación, umbrales), entonces el sistema valida los nuevos datos y actualiza la información de la planta y recalibra los sensores si es necesario. Escenario 2: Edición de umbrales con advertencias Dado que el usuario modifica los umbrales de monitoreo, cuando los nuevos valores están fuera de rangos recomendados, entonces el sistema muestra advertencias sobre posibles riesgos y permite al usuario confirmar o ajustar los valores y documenta las razones del cambio.                                                                                                                          |
+| HU46   | Como usuario movil quiero poder eliminar una planta para gestionar solo las plantas activas en mi perfil.                                                                                                                                                                            | Escenario 1: Eliminación exitosa de planta Dado que el usuario ya no necesita monitorear una planta cuando solicita eliminar la planta del sistema, entonces el sistema solicita confirmación de la acción y desvincula los sensores asociados y archiva los datos históricos para futuras referencias. Escenario 2: Eliminación de planta con orden activa Dado que el usuario intenta eliminar una planta con una orden de instalación activa, cuando solicita la eliminación, entonces el sistema informa sobre la orden pendiente y permite cancelar la orden o esperar a completarla y mantiene la integridad de los procesos en curso.                                                                                                                                             |
+| HU47   | Como usuario web empresarial quiero poder editar los datos de mis plantaciones para corregir o actualizar información relevante.                                                                                                                                                     | Escenario 1: Actualización de datos de plantación empresarial Dado que el usuario empresarial necesita modificar una plantación, cuando actualiza parámetros como área, tipos de cultivo o configuraciones, entonces el sistema recalcula los recursos necesarios y actualiza las configuraciones de los dispositivos IoT y notifica sobre cambios en costos o requerimientos. Escenario 2: Modificación que afecta múltiples zonas Dado que una plantación tiene múltiples zonas de cultivo cuando se modifica una configuración que afecta varias zonas, entonces el sistema analiza el impacto en cada zona y permite aplicar cambios selectivamente y mantiene la coherencia en toda la plantación.                                                                                  |
+| HU48   | Como usuario movil empresarial quiero poder eliminar una plantación para mantener organizada la información activa en mi perfil.                                                                                                                                                     | Escenario 1: Eliminación de plantación con confirmación Dado que el usuario empresarial necesita eliminar una plantación cuando solicita la eliminación, entonces el sistema muestra el impacto de la eliminación y requiere confirmación múltiple debido a la complejidad y desactiva gradualmente los dispositivos y servicios asociados. Escenario 2: Archivado vs eliminación permanente Dado que una plantación tiene datos históricos valiosos cuando el usuario solicita eliminar la plantación, entonces el sistema ofrece la opción de archivar en lugar de eliminar y explica las diferencias entre ambas opciones y permite recuperar plantaciones archivadas si es necesario.                                                                                                |
+| HU49   | Como usuario quiero editar los umbrales y parámetros de mis plantas y plantaciones para optimizar su monitoreo, y recibir advertencias si los valores ingresados son riesgosos o poco recomendables.                                                                                 | Escenario 1: Configuración segura de umbrales Dado que el usuario quiere optimizar los parámetros de monitoreo cuando ajusta los umbrales de temperatura, humedad y luz, entonces el sistema valida que los valores estén en rangos seguros y aplica los cambios si son apropiados y confirma la nueva configuración al usuario. Escenario 2: Advertencias por valores riesgosos Dado que el usuario establece umbrales fuera de rangos recomendados cuando el sistema detecta valores potencialmente peligrosos, entonces muestra advertencias claras sobre los riesgos y sugiere valores alternativos basados en mejores prácticas y requiere confirmación explícita antes de aplicar valores riesgosos.                                                                               |
+| HU50   | Como usuario web quiero ver notificaciones, para revisar las alertas activas o recientes.                                                                                                                                                                                            | Escenario 1: Gestión de notificaciones multiplataforma Dado que el usuario accede desde la web cuando revisa sus notificaciones, entonces puede ver todas las alertas sincronizadas entre plataformas y filtrar por tipo de alerta o nivel de prioridad. Escenario 2: Notificaciones históricas y trending Dado que el usuario quiere analizar patrones de alertas cuando accede al historial de notificaciones, entonces puede ver tendencias de problemas recurrentes.                                                                                                                                                                                                                                                                                                                 |
+| HU51   | Como usuario móvil quiero ver notificaciones, para revisar las alertas activas o recientes.                                                                                                                                                                                          | Escenario 1: Gestión de notificaciones multiplataforma Dado que el usuario accede desde la aplicacion movil cuando revisa sus notificaciones, entonces puede ver todas las alertas sincronizadas entre plataformas y filtrar por tipo de alerta o nivel de prioridad. Escenario 2: Notificaciones históricas y trending Dado que el usuario quiere analizar patrones de alertas cuando accede al historial de notificaciones, entonces puede ver tendencias de problemas recurrentes.                                                                                                                                                                                                                                                                                                    |
+| HU52   | Como usuario móvil quiero recibir notificaciones push activas para estar informado en tiempo real sobre eventos importantes de mis plantas y plantaciones.                                                                                                                           | Escenario 1: Configuración personalizada de notificaciones push Dado que el usuario quiere control sobre las notificaciones, cuando configura sus preferencias de notificación, entonces puede seleccionar qué tipos de alertas recibir.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| HU53   | Como usuario web consumidor quiero ver el consumo de recursos de energía y agua de mis plantas y plantaciones para optimizar su uso.                                                                                                                                                 | Escenario 1: Dashboard de consumo en tiempo real Dado que el usuario quiere monitorear el consumo de recursos, cuando accede al dashboard de consumo, entonces puede ver gráficos de consumo de agua y energía en tiempo real y comparar el consumo actual con períodos anteriores y recibir recomendaciones para optimizar el uso de recursos.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| HU54   | Como usuario movil consumidor quiero ver el consumo de recursos de energía y agua de mis plantas y plantaciones para optimizar su uso.                                                                                                                                               | Escenario 1: Dashboard de consumo en tiempo real Dado que el usuario quiere monitorear el consumo de recursos, cuando accede al dashboard de consumo, entonces puede ver gráficos de consumo de agua y energía en tiempo real y comparar el consumo actual con períodos anteriores y recibir recomendaciones para optimizar el uso de recursos.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| TS08   | Como desarrollador quiero calcular el consumo de energía de las plantas y plantaciones para informar al usuario.                                                                                                                                                                     | Escenario 1: Cálculo preciso de consumo energético Dado que el sistema monitorea dispositivos IoT, cuando recopila datos de consumo de sensores y actuadores, entonces calcula el consumo total de energía por plantación y almacena los datos históricos para análisis y proporciona métricas detalladas al frontend.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| TS09   | Como desarrollador quiero calcular el consumo de agua de las plantas y plantaciones para informar al usuario.                                                                                                                                                                        | Escenario 1: Monitoreo de consumo hídrico Dado que los sensores detectan la humedad del suelo cuando se activan los sistemas de riego, entonces el sistema calcula el volumen de agua utilizado y registra el consumo por planta y período de tiempo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| TS10   | Como desarrollador quiero calcular los niveles de humedad en porcentaje para mostrar la información más efectiva.                                                                                                                                                                    | Escenario 1: Conversión precisa de lecturas de sensores Dado que los sensores proporcionan valores brutos de humedad cuando el sistema procesa estas lecturas, entonces convierte los valores a porcentajes comprensibles y calibra según el tipo de suelo y planta y proporciona lecturas consistentes y precisas. Escenario 2: Normalización de datos entre diferentes sensores Dado que diferentes sensores pueden tener escalas distintas cuando el sistema recopila datos de múltiples fuentes, entonces normaliza las lecturas a una escala común de porcentaje y mantiene la consistencia entre dispositivos.                                                                                                                                                                     |
+| TS11   | Como desarrollador quiero calcular los niveles de luz en porcentaje para mostrar la información más efectiva.                                                                                                                                                                        | Escenario 1: Medición relativa de luminosidad Dado que los sensores de luz capturan la intensidad lumínica cuando el sistema procesa estos datos, entonces convierte las lecturas a porcentajes relativos al óptimo para cada tipo de planta y ajusta según la hora del día. Escenario 2: Compensación por variaciones ambientales Dado que la luz natural varía constantemente cuando el sistema analiza los niveles de luz, entonces compensa por factores como nubosidad y sombras y calcula promedios ponderados por tiempo.                                                                                                                                                                                                                                                         |
 
 
 ## 3.3. Impact Mapping.
