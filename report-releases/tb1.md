@@ -462,20 +462,6 @@ EcoGuardian es una solución IoT que ayuda a cuidar plantas mediante sensores de
   </td>
 </tr>
     <tr>
-      <td style="padding: 8px; text-align: center;"><img src="../assets/photos-members/Manuel-Peña-Rivera.jpg" alt="Manuel Peña" style="margin-bottom: 5px; width: 450px;"/></td>
-      <td style="padding: 8px; text-align: left;">Manuel Peña</td>
-      <td style="padding: 8px; text-align: left;">u202210138</td>
-      <td style="padding: 8px; text-align: left;">Ingeniería de Software</td>
-      <td style="padding: 8px; text-align: left;">Cuento con experiencia en programación en C++, así como en desarrollo frontend con Vue, Angular y backend con tecnologías como JavaScript, Java, Spring Boot, C# y .NET. Me considero una persona responsable, flexible e innovadora, siempre abierta a escuchar activamente y mejorar en cada proyecto. Me esfuerzo por aprender constantemente y aportar soluciones efectivas, trabajando de manera colaborativa y con una actitud proactiva para lograr los objetivos del equipo.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; text-align: center;"><img src="../assets/photos-members/Nicolas-Esteban-Garcia.jpg" alt="Nicolas Esteban" style="margin-bottom: 5px; width: 450px;"/></td>
-      <td style="padding: 8px; text-align: left;">Nicolas Esteban</td>
-      <td style="padding: 8px; text-align: left;">u202217485</td>
-      <td style="padding: 8px; text-align: left;">Ingeniería de Software</td>
-      <td style="padding: 8px; text-align: left;">Tengo experiencia en frameworks como Astro, Vue y React, y actualmente estoy aprendiendo Next.js y Express. Me apasiona el desarrollo frontend, siempre enfocado en ofrecer una experiencia de usuario fluida y cómoda. Me considero una persona sociable, responsable y proactiva, además, disfruto participar en proyectos multidisciplinarios y apoyar a comunidades que promueven el desarrollo web. Siempre busco dar lo mejor de mí para asegurar un rendimiento óptimo en cada aplicación.</td>
-    </tr>
-    <tr>
       <td style="padding: 8px; text-align: center;"><img src="../assets/photos-members/Sebastian-Ramirez-Hoffmann.jpeg" alt="Sebastian Ramirez Hoffmann" style="margin-bottom: 5px; width: 450px;"/></td>
       <td style="padding: 8px; text-align: left;">Sebastian Ramirez Hoffmann</td>
       <td style="padding: 8px; text-align: left;">U202211894</td>
