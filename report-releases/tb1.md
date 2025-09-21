@@ -39,7 +39,7 @@
         <td>U202211894</td>
     </tr>
     <tr>
-        <td>Avila Asto, Alex</td>
+        <td>Avila Asto, Alex Ramon Alberto</td>
         <td>U20221A322</td>
     </tr>
 </table>
