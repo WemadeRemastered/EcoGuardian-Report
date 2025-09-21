@@ -587,11 +587,6 @@ En esta sección creamos un Proto-Persona como una suposición de cómo son nues
       <td style="padding: 8px; text-align: left;">- Gana lo esperado<br> - Trabaja en una empresa agrícola<br> - Busca optimizar la producción de su empresa</td>
       <td style="padding: 8px; text-align: left;">- Necesita saber el estado actual de una gran cantidad de plantaciones<br> - Requiere detectar cualquier problema en las plantaciones<br> - Requiere métricas cuantificables de la producción<br> - La gran cantidad de cultivos produce resultados poco homogéneos</td>
     </tr>
-    <tr>
-      <td style="padding: 8px; text-align: left;"><b>Godofredo:</b><br>27 años<br>Especialista en Agricultura</td>
-      <td style="padding: 8px; text-align: left;">- Gana lo esperado<br> - Tiene conocimientos de botánica y el cuidado de plantas<br> - Busca compartir sus conocimientos a personas que buscan aprender mas del tema - Cuenta con una pequeña comunidad aficionada al cuidado de plantas</td>
-      <td style="padding: 8px; text-align: left;">- Necesita una manera de poder contactar a las personas que este interesadas<br> - Requiere métricas cuantificables y visuales si es posible de el estado de la planta</td>
-    </tr>
   </tbody>
 </table>
 </center>
@@ -637,24 +632,6 @@ Para reducir riesgos en la cosecha, evitar pérdidas económicas y mejorar su to
 
 **¿Qué cambio de comportamiento podemos observar que nos cuente que lograron su objetivo?**  
 El usuario consulta datos regularmente, ajusta riegos y fertilización según la plataforma y ve mejoras en producción.
-
-**Continuamos con los assumptions para el tercer segmento:**
-
-**¿Qué busca lograr el usuario?**  
-Compartir sus conocimientos de botánica y el cuidado de las plantas con la comunidad.
-
-**¿Cómo se quiere sentir el usuario en este proceso?**  
-Sin estrés y preparado, sabe que la plataforma ofrece facilidades para encontrar consultas y responderlas sin necesidad de que se tenga que profundizar mucho.
-
-**¿Cómo nuestro producto acerca al usuario a un logro personal?**  
-Al aumentar la cantidad de personas que utilicen la plataforma se aumentará el número de personas a las que puede ayudar.
-**¿Por qué nuestro usuario buscaría nuestro producto?**  
-Nuestro producto ofrece una comisión para los especialistas que participen con nosotros bajo un contrato estipulado.
-
-**¿Qué cambio de comportamiento podemos observar que nos cuente que lograron su objetivo?**  
-El usuario utiliza la plataforma regularmente respondiendo consultas e incluso ayudando con la instalación y configuración de sensores.
-
-Este análisis de *User Outcomes* sirve para los tres segmentos en ciertos casos, ya que tienen un objetivo similar y se puede comprender el contexto desde las distintas perspectivas.
 
 ---
 
@@ -798,13 +775,11 @@ Finalmente, juntamos todo lo que hemos hecho en este proceso y lo agregamos en u
     <td></td>
     <td><b>Segmento 1</b></td>
     <td><b>Segmento 2</b></td>
-    <td><b>Segmento 3</b></td>
   </tr>
   <tr>
     <td><b>Variables</b></td>
     <td>Doméstico</td>
     <td>Negocios</td>
-    <td>Especialistas</td>
   </tr>
   <tr>
     <td><b>Geográfica</b></td>
@@ -816,13 +791,11 @@ Finalmente, juntamos todo lo que hemos hecho en este proceso y lo agregamos en u
     <td><b>Demográfica</b></td>
     <td>Diversidad en edad y género</td>
     <td>Edad adulta, posiblemente con formación universitaria en áreas relacionadas con las industrias agrícolas y afines.</td>
-    <td>Edad adulta, profesionales con formación en agronomía o áreas relacionadas con el medio ambiente, generalmente con experiencia práctica en el sector agrícola.</td>
   </tr>
   <tr>
     <td><b>Psicológica</b></td>
     <td>Actitud hacia la adopción de herramientas tecnológicas para el cuidado de sus plantas</td>
     <td>Una fuerte inclinación hacia la innovación y la eficiencia en el sector Agrícola. Las empresas de este segmento son propensas a adoptar nuevas tecnologías, especialmente soluciones IoT que mejoren la eficiencia operativa, reduzcan costos y aseguren sostenibilidad.</td>
-    <td>Apasionados por la sostenibilidad, el uso de nuevas tecnologías y la innovación en el cuidado de plantas. Buscan soluciones prácticas basadas en datos.</td>
   </tr>
 </table>
 </center>
@@ -981,15 +954,6 @@ EcoGuardian ofrece una experiencia integrada en web, móvil y dispositivos IoT, 
 7. ¿Estarías dispuesto/a a invertir en una solución tecnológica para mejorar la eficiencia de tus cultivos?
 8. ¿Qué mejoras específicas te gustaría lograr en tu negocio mediante la adopción de nuevas tecnologías en el cuidado de tus cultivos?
 
-**Entrevistas usuario segmento Especialista**
-
-1. Descríbe el proceso típico que sigues para diagnosticar un problema en una planta. ¿Qué información consideras imprescindible para hacer un análisis preciso?
-2. Imagina que tienes acceso a un dashboard con datos históricos y en tiempo real de una planta (humedad, temperatura, luz). ¿Cómo usarías esta información para mejorar tus recomendaciones?
-3. ¿Qué tipo de consultas de los clientes (domésticos o negocios) te toman más tiempo resolver y por qué? ¿Cómo podríamos simplificar ese proceso?
-4. ¿Has trabajado antes con plataformas digitales para asesorar clientes? ¿Qué funcionalidades te gustaría que tuviera EcoGuardian para hacer tu trabajo más eficiente?
-5. ¿Cómo estableces tu tarifa por consulta? ¿Prefieres un pago por hora, por consulta, o un modelo de suscripción donde atiendas X consultas al mes?
-6. ¿Qué tipo de soporte o capacitación necesitarías para usar una plataforma como EcoGuardian?
-7. ¿Qué te motivaría a recomendar EcoGuardian a otros colegas? ¿Un sistema de puntuación, beneficios económicos, o acceso a un gran número de clientes?
 
 
 ### 2.2.2. Registro de entrevistas.
@@ -1151,48 +1115,6 @@ Plataforma de monitoreo agrícola que incluya:
 - **Reportes automáticos** de rendimiento y estado de los cultivos.
 
 
----
-
-**Segmento Especialista**
-
-Nombre: Luis Eduardo Herrera
-<br>
-Edad: 20 años
-<br>
-Ocupación: Estudiante Universitario dedicado a la botanica
-<br>
-Browser Preferido: Safari
-<br>
-Dispositivos: Teléfono Iphone Y Mac Apple
-<br>
-Distritos: San Borja, Lima
-<br>
-Timing: 34:55
-<br>
-<center>
-<img src="../assets/images-interviews/specialist/entrevista-segmento3.png" alt="Entrevista 1 Segmento Especialista" width="500"/>
-</center>
-Luis nos comenta en la entrevista respecto a la importancia en la búsqueda de cambios en la planta, ya sean hongos, insectos o cambios en el color, ya que ayudan a saber qué puede estar sucediéndole a la planta. Se le plantea un dashboard con información le ayudaría a saber más de la planta y le facilitará a realizar diagnósticos en base a los cambios aunque en su opinion menciona que una visualización de la planta siempre mejora la efectividad. Él comenta que un diagnóstico empresarial tomaría más tiempo. Menciona que una tarifa por subscripción se ve más prometedora. Menciona que las capacitaciones que se deberían realizar para un perfil como el suyo es necesario que la interfaz sea intuitiva para entender bien, comenta que quisiera un inicio donde pueda ver sus plantas. Comenta que realizar una respuesta fácil es importante para él y sería una razón para compartir la solución propuesta.
-
-
-Nombre: Esau Carretero Benites
-<br>
-Edad: 20 años
-<br>
-Ocupación: Estudiante Universitario dedicado a la botanica
-<br>
-Browser Preferido: Google Chrome
-<br>
-Dispositivos: Teléfono Iphone Apple
-<br>
-Distritos: Jesus Maria, Lima
-<br>
-Timing: 46:04
-<br>
-<center>
-<img src="../assets/images-interviews/specialist/EntrevistaSegmento3_Esau.png" alt="Entrevista 2 Segmento Especialista" width="500"/>
-</center>
-Esau nos comenta en su entrevista aspectos que nos corroboran la importancia de la informacion adicional para el diagnosito de plantas, principalmente mencionando como en un area hipoteticamente laboral siente que datos como la humedad, iluminacion e incluso la temperatura en el ambiente puede afectar significativamente en la efficiencia de recomendacion. Al ser un estudiante universitario no ha tenido la experiencia previa de laborar como un especialista en agricultura o el cuidado de plantas, pero cuenta con vastos años de experiencia diagnosticando las necesidades de distintas plantas. Menciona que como medio de pago preferiria un salario por hora mas que un modelo de subscripcion o por cantidad de consultas. Asimismo se rescata la frase de "Facilitar el trabajo" para hacer alusion a la esperanza de que con la data que ofrezcamos el diagnostico sea mas facil de realizar. Finalmente comenta que entre un contexto de usuarios domesticos y empresariales siente que tiene mas problema con el domestico al esperar que la mayoria tenga conocimientos escasos o basicos respecto a el cuidado de plantas lo que puede resultar en preguntas innecesarias.
 
 ### 2.2.3. Análisis de entrevistas.
 
@@ -1289,40 +1211,6 @@ Características Subjetivas:
 <img src="../assets/images-interviews/negocios/graphic-data/6_caracteristicas-subjetivas.png" alt="Cantidad de entrevistados según características subjetivas" width="500"/>
 </center>
 
-**Segmento 3: (Especialistas)**
-
-<center>
-Estadísticas y Aspectos comunes:
-100% de los participantes piensa que la data adicional ayuda en la eficiencia de las recomendaciones.
-Ambos entrevistados creen que una aplicación que les dé información puede ser una herramienta llamativa.
-Ambos entrevistados comentan que los datos visuales de la planta ayuda mucho al diagnóstico inicial.
-50% piensa que una capacitación básica ayudaría mucho.
-
-<img src="../assets/images-interviews/specialist/graphic-data/1_aspectos-comunes.png" alt="Cantidad de entrevistados según data adicional" width="500"/>
-</center>
-
-Necesidades comunes:
-- Dashboard con información detallada sobre las plantas.
-- Visualización de datos como humedad, iluminación y temperatura.
-- Interfaz intuitiva para facilitar el diagnóstico.
-<center>
-<img src="../assets/images-interviews/specialist/graphic-data/2_necesidades.png" alt="Cantidad de entrevistados según necesidades comunes" width="500"/>
-</center>
-
-Características Objetivas:
-- Dispositivos utilizados: Teléfonos iPhone y computadoras Mac.
-- Preferencias de pago: Tarifa por suscripción o salario por hora, dependiendo del contexto.
-<center>
-<img src="../assets/images-interviews/specialist/graphic-data/3_dispositivos.png" alt="Cantidad de entrevistados según dispositivos" width="500"/>
-</center>
-
-Características Subjetivas:
-- Motivaciones: Facilitar el diagnóstico y cuidado de plantas mediante el acceso a información detallada y visual.
-- Intereses: Interfaz intuitiva que permita una fácil navegación y comprensión de los datos.
-- Desafíos: Adaptar la solución tecnológica a usuarios con conocimientos básicos en el cuidado de plantas
-<center>
-<img src="../assets/images-interviews/specialist/graphic-data/4_caracteristicas_subjetivas.png" alt="Cantidad de entrevistados según características subjetivas" width="500"/>
-</center>
 
 ## 2.3. Needfinding.
 
@@ -1341,10 +1229,7 @@ Características Subjetivas:
 
 <img src="../assets/user-personas/segmento-negocio.png" alt="Información user persona segmento negocio"/>
 
-**Segmento 3:**
 
-<p>Antonio Belaunde es un ingeniero agrónomo con amplia experiencia en manejo y cuidado de plantas, que busca aplicar su conocimiento en proyectos tecnológicos. Necesita una plataforma que le permita compartir recomendaciones prácticas y participar en iniciativas de agricultura sostenible. Su principal reto es encontrar oportunidades para aplicar su expertise en soluciones innovadoras.</p>
-<img src="../assets/user-personas/segmento-especialista.png" alt="Información user persona segmento especialista"/>
 
 ---
 
@@ -1354,17 +1239,17 @@ Características Subjetivas:
 
 <center>
 
-| Necesidad / Función                      | Doméstico Importancia | Doméstico Frecuencia | Empresa Importancia | Empresa Frecuencia | Especialista Importancia | Especialista Frecuencia |
+| Necesidad / Función                      | Doméstico Importancia | Doméstico Frecuencia | Empresa Importancia | Empresa Frecuencia | 
 |-----------------------------------------|----------------------|---------------------|--------------------|-------------------|-------------------------|------------------------|
-| Ver estado actual de plantas/cultivos  | Alta                 | Media               | Alta               | Alta              | Alta                    | Alta                   |
-| Recibir alertas sobre humedad, luz o acidez | Alta             | Alta                | Alta               | Alta              | Media                   | Media                  |
-| Acceder a recomendaciones de especialistas | Alta              | Alta                | Media              | Media             | Alta                    | Alta                   |
-| Consultar historial de datos            | Media                | Baja                | Alta               | Alta              | Alta                    | Alta                   |
-| Optimizar riego según sensores          | Alta                 | Alta                | Alta               | Alta              | Baja                    | Baja                   |
-| Configurar múltiples sensores           | Baja                 | Baja                | Alta               | Media             | Alta                    | Media                  |
-| Medir impacto económico/productivo      | Baja                 | Nula                | Alta               | Alta              | Media                   | Media                  |
-| Compartir información o reportes        | Media                | Baja                | Alta               | Media             | Alta                    | Alta                   |
-| Acceso desde app móvil                   | Alta                 | Alta                | Media              | Media             | Media                   | Media                  |
+| Ver estado actual de plantas/cultivos  | Alta                 | Media               | Alta               | Alta              | 
+| Recibir alertas sobre humedad, luz o acidez | Alta             | Alta                | Alta               | Alta              | 
+| Acceder a recomendaciones de especialistas | Alta              | Alta                | Media              | Media             | 
+| Consultar historial de datos            | Media                | Baja                | Alta               | Alta              | 
+| Optimizar riego según sensores          | Alta                 | Alta                | Alta               | Alta              | 
+| Configurar múltiples sensores           | Baja                 | Baja                | Alta               | Media             | 
+| Medir impacto económico/productivo      | Baja                 | Nula                | Alta               | Alta              | 
+| Compartir información o reportes        | Media                | Baja                | Alta               | Media             | 
+| Acceso desde app móvil                   | Alta                 | Alta                | Media              | Media             | 
 </center>
 <p>Con este user task matrix entendemos las actividades que realizan nuestros usuarios segmento y la importancia que estas acciones tienen de las tareas principales que identificamos se observa.</p>
 
@@ -1390,12 +1275,6 @@ En esta sección presentamos un journey mapping que describe el recorrido típic
 <img src="../assets/user-journey-mapping/user-journey-mapping-segmento-negocio.png" alt="User Journey Mapping"/>
 </center>
 
-**Segmento Especialista**
-
-<p>Este Journey Mapping describe el recorrido del usuario especialista en el uso de EcoGuardian para optimizar el cuidado de plantas. Se detallan sus objetivos, procesos, canales de interacción, dificultades y experiencias emocionales a lo largo de las fases de investigación, adopción, uso, desarrollo y evaluación. El análisis permite identificar oportunidades para mejorar la facilidad de uso, la precisión de los datos y la integración con otras plataformas, garantizando una experiencia efectiva y satisfactoria para usuarios avanzados.</p>
-<center>
-<img src="../assets/user-journey-mapping/user-journey-mapping-segmento-especialista.png" alt="User Journey Mapping"/>
-</center>
 
 ### 2.3.4. Empathy Mapping.
 
@@ -1407,9 +1286,7 @@ En esta sección presentamos un journey mapping que describe el recorrido típic
 
  <img src="../assets/empathy-mapping/segmento-negocio.png" alt="Segmento negocio"/>
 
-**Segmento 3:**
 
-<img src="../assets/empathy-mapping/segmento-especialista.png" alt="Segmento especialista"/>
 
 ### 2.3.5. As-is Scenario Mapping.
 
@@ -1426,9 +1303,6 @@ Link del Miro: https://miro.com/welcomeonboard/dGx3dm9LMGlsYkhBdmpWUzhFVkxrdGJHb
 
 <img src="../assets/as-is-scenario-mapping/as-is-scenario-negocio.jpg" alt="Segmento negocio">
 
-**Segmento Especialista**
-
-<img src="../assets/as-is-scenario-mapping/as-is-scenario-especialista.jpg" alt="Segmento especialista">
 
 
 
@@ -1488,9 +1362,6 @@ Miro con el As-Is To-Be: https://miro.com/welcomeonboard/aTZVNVpRQU54SUJDelF3cUU
 
 <img src="../assets/to-be-scenario-mapping/to-be-scenario-negocios.jpg" alt="Segmento negocios">
 
-**Segmento Especialista**
-
-<img src="../assets/to-be-scenario-mapping/to-be-scenario-especialista.jpg" alt="Segmento especialista">
 
 
 ## 3.2. User Stories.
@@ -2070,7 +1941,6 @@ La sección de User Stories sirve para saber las distintas situaciones y puntos 
 <img src="../assets/impact-mapping/IoT-%20Impact%20map%20negocios.png" alt="Impact Mapping Negocio">
 
 
-<img src="../assets/impact-mapping/segmento-especialista.png" alt="Imapct Mapping Especialista">
 
 
 
