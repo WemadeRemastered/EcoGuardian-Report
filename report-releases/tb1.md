@@ -38,6 +38,10 @@
         <td>Ramírez Hoffmann, Sebastián</td>
         <td>U202211894</td>
     </tr>
+    <tr>
+        <td>Avila Asto, Alex</td>
+        <td>U20221A322</td>
+    </tr>
 </table>
 </center>
 
@@ -412,7 +416,7 @@ Además, participé activamente en la <strong>definición de metas claras</stron
 
 ### 1.1.1. Descripción de la Startup
 
-EcoGuardian es una solución IoT que ayuda a cuidar plantas mediante sensores de humedad, temperatura, luz, entre otros. La solución multiplataforma envía alertas inmediatas y recopila información para generar recomendaciones personalizadas realizadas por un personal experimentado en el área. Ideal para hogares, oficinas, pequeños agricultores y empresas del sector agrícola cada uno con distintos planes de pago. Algunas de las funciones principales se enfocan en el monitorización,  estadísticas, recomendaciones y seguimiento de crecimiento.
+EcoGuardian es una solución IoT que ayuda a cuidar plantas mediante sensores de humedad, temperatura, luz, entre otros. La solución multiplataforma envía alertas inmediatas y recopila información para generar recomendaciones personalizadas realizadas por un personal experimentado en el área. Ideal para hogares, oficinas, pequeños agricultores y empresas del sector agrícola cada uno con distintos planes de pago. Algunas de las funciones principales se enfocan en el monitorización,  estadísticas, recomendaciones y seguimiento de crecimiento.
 
 #### 1.1.2. Perfiles de integrantes del equipo
 
@@ -442,20 +446,21 @@ EcoGuardian es una solución IoT que ayuda a cuidar plantas mediante sensores de
       <td style="padding: 8px; text-align: left;">Ingeniería de Software</td>
       <td style="padding: 8px; text-align: left;">Cuento con experiencia en el desarrollo web y móvil, trabajando con frameworks como ASP.NET Core, NestJS y Spring Boot en el backend, así como React, Vue y Angular en el frontend, y Flutter para aplicaciones móviles. Además, tengo conocimientos en Arquitectura de Software y en la implementación de marcos de trabajo ágiles, especialmente Scrum. Me destaco por mi capacidad de autoorganización y aprendizaje autónomo.</td>
     </tr>
-    <tr>
-      <td style="padding: 8px; text-align: center;"><img src="../assets/photos-members/Mathias-Kunimoto.png" alt="Mathias Kunimoto" style="margin-bottom: 5px; width: 450px;"/></td>
-      <td style="padding: 8px; text-align: left;">Mathias Kunimoto</td>
-      <td style="padding: 8px; text-align: left;">u202210148</td>
-      <td style="padding: 8px; text-align: left;">Ingeniería de Software</td>
-      <td style="padding: 8px; text-align: left;">Tengo experiencia en el desarrollo frontend, trabajando con tecnologías como Tailwind CSS, React y JavaScript. Me considero una persona sociable, organizada y con gran capacidad de adaptación, lo que me permite integrarme fácilmente en equipos de trabajo y aportar al cumplimiento de los objetivos. Siempre busco sacar mi mayor potencial, aprendiendo constantemente y contribuyendo con una actitud proactiva y comprometida.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; text-align: center;"><img src="../assets/photos-members/Italo-Luna-Capunay.png" alt="Italo Luna" style="margin-bottom: 5px; width: 450px;"/></td>
-      <td style="padding: 8px; text-align: left;">Italo Luna</td>
-      <td style="padding: 8px; text-align: left;">u202213375</td>
-      <td style="padding: 8px; text-align: left;">Ingeniería de Software</td>
-      <td style="padding: 8px; text-align: left;">Soy estudiante de Ingeniería de Software con perfil Full Stack, y experiencia en desarrollo frontend y backend. Manejo tecnologías como Vue.js, Angular, Flutter, Tailwind CSS, y del lado del backend Node.js, Spring Boot, Ruby on Rails, Python y C++, además de bases de datos SQL y NoSQL. Tengo un buen manejo de Git para control de versiones y colaboración en equipo.</td>
-    </tr>
+<tr>
+  <td style="padding: 8px; text-align: center;">
+    <img src="https://avatars.githubusercontent.com/u/60982533" alt="Alex Avila" style="margin-bottom: 5px; width: 450px;"/>
+  </td>
+  <td style="padding: 8px; text-align: left;">Alex Ávila Asto</td>
+  <td style="padding: 8px; text-align: left;">U20221A322</td>
+  <td style="padding: 8px; text-align: left;">Ingeniería de Software</td>
+  <td style="padding: 8px; text-align: left;">
+    Soy estudiante de Ingeniería de Software con perfil Full Stack & Mobile, con experiencia en desarrollo de aplicaciones web y móviles. 
+    Manejo tecnologías como Java, Spring Boot, Quarkus, Flutter, Docker y Keycloak, además de arquitecturas de microservicios y event-driven. 
+    Tengo conocimientos en AWS con foco en serverless (Lambda, API Gateway, DynamoDB, S3), infraestructura como código (CDK/Terraform) y CI/CD. 
+    He trabajado en proyectos que van desde plataformas comunitarias serverless hasta sistemas de transporte escolar basados en microservicios, 
+    aplicando buenas prácticas de diseño, pruebas y despliegue.
+  </td>
+</tr>
     <tr>
       <td style="padding: 8px; text-align: center;"><img src="../assets/photos-members/Manuel-Peña-Rivera.jpg" alt="Manuel Peña" style="margin-bottom: 5px; width: 450px;"/></td>
       <td style="padding: 8px; text-align: left;">Manuel Peña</td>
