@@ -1934,21 +1934,21 @@ A continuación, se presenta el Context Map elegido que resume las relaciones en
 ### 4.1.3. Software Architecture.
 
 #### 4.1.3.1. Software Architecture System Landscape Diagram.
-<img src="../assets/system-landscape-diagram/system-landscape-diagram.jpg" alt="EcoGuardian Context Diagram"/>
+<img src="../assets/system-landscape-diagram/structurizr-101372-SystemLandscape.png" alt="EcoGuardian Context Diagram"/>
 
 **Descripción:**
 La arquitectura conecta a usuarios (domésticos, negocios y especialistas) con una plataforma IoT que gestiona el cuidado de plantas mediante sensores, envíos de notificaciones (correo), recomendaciones expertas y procesamiento de pagos con Stripe.
 
 #### 4.1.3.2. Software Architecture Context Level Diagrams.
 
-<img src="../assets/context-diagram/SystemContext.png" alt="EcoGuardian Context Diagram"/>
+<img src="../assets/context-diagram/structurizr-101372-SystemContext.png" alt="EcoGuardian Context Diagram"/>
 
 **Descripción**
 La arquitectura muestra cómo el sistema central se comunica con usuarios (domésticos, negocios y especialistas) e integra servicios externos como Stripe, Email System y hardware IoT para gestionar pagos, notificaciones y el control de las plantas.
 
 #### 4.1.3.2. Software Architecture Container Level Diagrams.
 
-<img src="../assets/container-diagram/container-diagram.png" alt="EcoGaurdian Container Diagram"/>
+<img src="../assets/container-diagram/structurizr-101372-ContainerView.png" alt="EcoGuardian Container Diagram"/>
 
 **Descripción**
 La arquitectura por contenedores distribuye la lógica del sistema entre aplicaciones web, móviles, embebidas y edge, que se comunican con un backend central vía API REST. Esta estructura permite procesar datos locales, enviar notificaciones, controlar hardware IoT y gestionar pagos de forma eficiente.
@@ -3728,16 +3728,16 @@ En esta sección se muestran los diagramas de componentes de los diferentes prod
 
 Web App:
 
-<img src="../assets/component-diagrams/structurizr-101372-PaymentBCWebApp.png" alt="Payment Component Diagram on Web App" width="350"/>
+<img src="../assets/component-diagrams/structurizr-101372-SubscriptionBCWebApp.png" alt="Payment Component Diagram on Web App" width="350"/>
 
 Backend:
 
-<img src="../assets/component-diagrams/structurizr-101372-PaymentBoundedContextonMobileApp.png" alt="Payment Component Diagram on API" width="350"/>
+<img src="../assets/component-diagrams/structurizr-101372-PaymentSystem.png" alt="Payment Component Diagram on API" width="350"/>
 
 <br/>
 Mobile:
 
-<img src="../assets/component-diagrams/structurizr-101372-PaymentBoundedContextonMobileApp.png"
+<img src="../assets/component-diagrams/structurizr-101372-SubscriptionBoundedContextonMobileApp.png"
 alt="Payment Component Diagram on Mobile App" width="350"/>
 
 #### 5.4.6. Bounded Context Software Architecture Code Level Diagrams.
@@ -3786,184 +3786,14 @@ Esta clase se encarga de definir el nucleo del dominio y manejar estados a trav�
 Esta clase se encarga de la comunicacion hacia capas de nivel superior
 
 Mobile App:
+No aplica
 
-- En esta capa se definen las clases que abstraen las solicitudes y respuestas al servidor y aquellas que gestionan las consultas al servidor.
-
-#### DTO
-
-**SignInRequestDto**
-
-Representa una abstracción para la petición de inicio de sesión.
-
-| Atributo       | Tipo   |
-|----------------|--------|
-| email        | string |
-| password       | string |
-
-| Método                        | Descripción                                                                                               |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------|
-| toRequest                |  Crea una nuevo objeto con los parametros de la instancia de la clase                                       |
-
-**SignUpRequestDto**
-
-Representa una abstracción para la petición de registro de usuario.
-
-| Atributo       | Tipo   |
-|----------------|--------|
-| email        | string |
-| password       | string |
-| roleId         |int     |
-
-| Método                        | Descripción                                                                                               |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------|
-| toRequest                |  Crea una nuevo objeto con los parametros de la instancia de la clase                                       |
-
-
-**UserAuthenticatedResponseDto**
-
-Representa una abstracción para la respuesta de un usuario autenticado.
-
-| Atributo       | Tipo   |
-|----------------|--------|
-| id             | int   |
-| email        | string |
-| token     | string |
-| roleId    | int |
-
-
-| Método                        | Descripción                                                                                               |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------|
-| fromJson                |  Devuelve una nueva instancia de la clase en base a la información proveniente de una respuesta del servidor                          |
-
-
+Backend:
+No aplica
 
 Web App:
 
-- En esta capa se definen las clases que abstraen las solicitudes y respuestas al servidor y aquellas que gestionan las consultas al servidor.
-
-### Request
-
-#### SignInRequest
-
-Representa una abstracción para la petición de inicio de sesión realizada.
-
-| Atributo       | Tipo   |
-|----------------|--------|
-| email        | string |
-| password       | string |
-
-#### SignUpRequest
-
-Representa una abstracción para la petición de registro de usuario.
-
-
-| Atributo       | Tipo   |
-|----------------|--------|
-| email        | string |
-| password       | string |
-| RoleId         | number    |
-
-
-
-
-### Response
-
-#### UserAuthenticatedResponse
-
-Representa una abstracción para la respuesta que contiene la información de un usuario autenticado.
-
-| Atributo       | Tipo   |
-|----------------|--------|
-| id             | number   |
-| email        | string |
-| token     | string |
-| roleId    | number |
-
-
-### Assembler
-
-**AuthAssembler**
-
-| Método                        | Descripción                                                                                               |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------|
-| toRequest                |  Crea una nueva instancia de la clase SignInRequest                                                   |
-| toRequest                | Crea una nueva instancia de la clase SignUpRequest                                                     |
-| toResponse                | Crea una nueva instancia de la clase UserAuthenticatedResponse                                         |
-
-
-
-Backend:
-- En esta capa se describen las clases que representan el núcleo del dominio del contexto de Identity and Access Management. Se incluyen las entidades, objetos de valor, agregados, servicios de dominio bajo el patrón CQRS (Command Query Responsibility Segregation), y las interfaces de repositorio.
-
- ---
-#### Value Objects
-**Roles**
-
-Representa los tipos de roles disponibles para la asignación al usuario.
-
-| Atributo   | Descripción                                  |
-|------------|----------------------------------------------|
-| Domestic   | Representa el rol de un usuario doméstico.   |
-| Business   | Representa el rol de un usuario de negocios. |
-| Specialist | Representa el rol de un especialista.        |
-
-
----
-#### Entities
-
-
-**Role**
-
-Representa un rol disponible en el sistema
-
-| Atributo       | Tipo   |
-|----------------|--------|
-| Id             | int    |
-| Type          | string |
-
-
- ---
-
-#### Aggregates
-**User**
-Representa un usuario del sistema.
-
-| Atributo       | Tipo   |
-|----------------|--------|
-| Id             | int    |
-| Email          | string |
-| Password       | string |
-| RoleId         | int    |
-
- ---
-#### Commands
-| Clase                        | Descripción                                                                                               |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------|
-| SignInCommand                | Representa un comando que inicia sesión en el sistema.                                                     |
-| SignUpCommand                | Representa un comando que registra un nuevo usuario en el sistema.                                         |
-| SeedRolesCommand             | Representa un comando que inicializa los roles disponibles en el sistema.                                  |
-
-
- ---
-#### Domain Services (Interfaces)
-**Command Services**
-
-| Interface                      | Descripción                                                                                     |
-|--------------------------------|-------------------------------------------------------------------------------------------------|
-| IUserCommandService           | Define las operaciones que ejecutan cambios sobre el agregado User mediante comandos del dominio. |
-| IRoleCommandService           | Define las operaciones que ejecutan cambios sobre la entidad Role mediante comandos del dominio. |
-
-
-
- ---
-#### Repositories (Interfaces)
-| Interface                           | Descripción                                                                                     |
-|------------------------------------|-------------------------------------------------------------------------------------------------|
-| IUserRepository                    | Define un contrato para el manejo de persistencia y consultas sobre la tabla users.             |
-| IRoleRepository                    | Define un contrato para el manejo de persistencia y consultas sobre la tabla roles.             |
-
- ---
-
+No aplica
 
 #### 5.5.2. Interface Layer.
 
@@ -3977,88 +3807,15 @@ Edge App:
 
 Mobile App:
 
-- En esta capa se definen los widgets que permiten la visualización de información
-
-#### Widgets
-
-**SignInScreen**
-
-Este widget representa una vista para el inicio de sesión del usuario
-
-**SignUpScreen**
-
-Este widget representa una vista para el registro de usuarios
+No aplica
 
 Web App:
 
-- En esta capa se definen los componentes que permiten la visualización de información
-
-#### Pages
-
-**SignInPage**
-
-Este componente representa una vista para el inicio de sesión del usuario
-
-**SignUpPage**
-
-Este componente representa una vista para el registro de usuarios
-
-Backend:
-- En esta capa se definen las clases que representan las solicitudes desde la web y las respuestas del servidor, también aquellas clases que se comunican a través de la web y reglas de negocio de la aplicación.
-
- ---
+No aplica
 
 
-
-
-#### Resources
-
-- Cada solicitud al servidor se representa mediante clases de recursos, que actúan como objetos de transferencia de datos. Estas clases permiten estructurar y controlar tanto las peticiones como las respuestas, asegurando una separación clara entre la capa de interface y la lógica del dominio.
-
-| Clase            | Descripción                                      |
-  |---------------------|--------------------------------------------------|
-| SignInResource        | Recibe datos para el inicio de sesión.            |
-| SignUpResource  |  Recibe datos para el registro de usuarios.             |
-| UserAuthenticatedResource |  Recibe datos para devolver los datos de inicio de sesión.     |
- ---
-
-#### Transforms/Assemblers
-- Los transformadores se encargan de convertir los recursos de entrada en comandos y las entidades en recursos, utilizando el patrón Assembler para gestionar estas transformaciones de manera eficiente.
-
-
-| Clase            | Descripción                                      |
-  |---------------------|--------------------------------------------------|
-|SignInCommandFromResourceAssembler       | Transforma un recurso de entrada en un comando de inicio de sesión.      |
-| SignUpCommandFromResourceAssembler  |  Transforma un recurso de entrada en un comando para el registro de usuarios.              |
-  AuthenticatedUserResourceFromEntityAssembler        | Transforma los datos de la entidad user y el token en un recurso.       |
- 
----
-
-
-#### Facade
-
-| Interfaz            | Descripción                                      |
-  |---------------------|--------------------------------------------------|
-| IUserServiceFacade        | Maneja las consultas de dominio que seran expuestas a otros bounded context.            |
-
-
-| Clase            | Descripción                                      |
-  |---------------------|--------------------------------------------------|
-| UserServiceFacade        | Implementación del contrato IUserServiceFacade.            |
-
-#### Controllers
-
-- Cada aggregate root dentro de nuestro Bounded Context cuenta con un controlador REST que expone de forma pública las operaciones relacionadas, permitiendo la interacción externa con la aplicación a través de solicitudes http.
-
-**AuthController**
-
-
-| Ruta especifica             | Descripción                                      |
-  |---------------------|--------------------------------------------------|
-| /api/v1/auth      | Gestiona el inicio de sesión y registro de usuarios  |
 
  
----
 
 #### 5.5.3. Application Layer.
 
@@ -4085,14 +3842,11 @@ Web App:
 
 Backend:
 
-### CommandServices
-| Clase                               | Descripción |
-|-------------------------------------|-------------|
-| `IUserCommandService`              | Maneja comandos para gestionar usuarios. Utiliza la *entidad* `User`. |
-| `IRoleCommandService`              | Maneja comandos para gestionar roles. Utiliza la *entidad* `Role`. |
-| `UserCommandService`               | Implementación del servicio que maneja los comandos relacionados con usuarios. |
-| `RoleCommandService`               | Implementación del servicio que maneja los comandos relacionados con roles. |
+### Services
 
+| Interface          | Descripción                                                                    |
+|----------------|--------------------------------------------------------------------------------|
+| IKeyCloackService | Define los metodos para autenticarse con el servicio de KeyCloack a traves de un contrato |
 
 
 
@@ -4112,38 +3866,18 @@ En esta clase se definen los metodos que permitiran realizare consultas hacia la
 
 Mobile App:
 
-- En esta capa se incluyen las clases que se encargan de comunicarse con servicios web.
-
-### Service
-
-**AuthService**
-
-| Método                           | Descripción |
-|-------------------------------------|-------------|
-| signIn               | Permite autenticar un usuario con sus credenciales. |
-| signUp                 | Permite registrar un nuevo usuario |
-
-
+No aplica
 
 Web App:
 
-- En esta capa se incluyen las clases que se encargan de comunicarse con servicios web.
-
-### Service
-
-**AuthService**
-
-| Método                           | Descripción |
-|-------------------------------------|-------------|
-|  signIn               | Permite autenticar un usuario con sus credenciales. |
-| signUp                 | Permite registrar un nuevo usuario |
+No aplica
 
 Backend:
 
 ### Implementación de las interfaces de los Repositories
 | Clase          | Interfaz Implementada | Descripción                                                                    |
 |----------------|-----------------------|--------------------------------------------------------------------------------|
-| UserRepository | IUserRepository       | Implementa los métodos de consulta y persistencia de los usuarios del sistema. |
+| KeyCloackService | IKeyCloackService       | Implementa los métodos necesarios para auetnticarse con el servicio de KeyCloack |
 
 #### 5.5.5. Bounded Context Software Architecture Component Level Diagrams.
 
@@ -4151,17 +3885,15 @@ En esta sección se muestran los diagramas de componentes de los diferentes prod
 
 Web App:
 
-<img src="../assets/component-diagrams/structurizr-101372-IamBCWebApp.png" alt="IAM Component Diagram on Web App" width="350"/>
+No aplica
 
 Backend:
 
-<img src="../assets/component-diagrams/structurizr-101372-IamSystem.png" alt="Iam Component Diagram on API" width="350"/>
+<img src="../assets/component-diagrams/structurizr-101372-AuthIntegrationSystem.png" alt="Iam Component Diagram on API" width="350"/>
 
 
 Mobile:
-
-<img src="../assets/component-diagrams/structurizr-101372-IAMBoundedContextonMobileApp.png"
-alt="IAM Component Diagram on Mobile App" width="350"/>
+No aplica
 
 Edge App:
 
@@ -4174,15 +3906,15 @@ alt="Edge Component Diagram on Mobile App" width="350"/>
 
 Web App:
 
-<img src="../assets/class-diagrams/iamWeb.png" alt="Iam Context Domain Layer Class Diagrams"/>
+No aplica
 
 Mobile App:
 
-<img src="../assets/class-diagrams/iamMobile.png" alt="Iam Context Domain Layer Class Diagrams"/>
+No aplica
 
 Backend:
 
-<img src="../assets/class-diagrams/iamBackend.png" alt="Iam Context Domain Layer Class Diagrams"/>
+No aplica
 
 
 Edge App:
@@ -4191,7 +3923,7 @@ Edge App:
 
 ##### 5.5.6.2. Bounded Context Database Design Diagram.
 
-<img src="../assets/tactical-level-ddd/db-diagrams/iam-db-diagram.png" alt="Iam Database Design Diagram"/>
+No aplica
 
 
 ### 5.6. Bounded Context: Profiles and Preferences
@@ -4576,11 +4308,11 @@ Web App:
 
 Backend:
 
-<img src="../assets/component-diagrams/structurizr-101372-ProfileBoundedContextonMobileApp.png" alt="Profile Component Diagram on API" width="350"/>
+<img src="../assets/component-diagrams/structurizr-101372-ProfileSystem.png" alt="Profile Component Diagram on API" width="350"/>
 
 Mobile:
 
-<img src="../assets/component-diagrams/structurizr-101372-ProfileSystem.png"
+<img src="../assets/component-diagrams/structurizr-101372-ProfileBoundedContextonMobileApp.png"
 alt="Profile Component Diagram on Mobile App" width="350"/>
 
 #### 5.6.6. Bounded Context Software Architecture Code Level Diagrams.
@@ -4604,7 +4336,7 @@ Backend:
 <img src="../assets/tactical-level-ddd/db-diagrams/profile-db-diagram.jpeg" alt="Profile Database Design Diagram"/>
 
 
-### 5.7. Bounded Context: Assets and Resources
+### 5.7. Bounded Context: Devices Management
 
 #### 5.7.1. Domain Layer
 
@@ -5109,15 +4841,15 @@ En esta sección se muestran los diagramas de componentes de los diferentes prod
 
 Web App:
 
-<img src="../assets/component-diagrams/structurizr-101372-AssetsBCWebApp.png" alt="Assets Component Diagram on Web App" width="600"/>
+<img src="../assets/component-diagrams/structurizr-101372-DevicesBCWebApp.png" alt="Assets Component Diagram on Web App" width="600"/>
 
 Backend:
 
-<img src="../assets/component-diagrams/structurizr-101372-AssetsSystem.png" alt="Assets Component Diagram on Backend" width="600"/>
+<img src="../assets/component-diagrams/structurizr-101372-DeviceManagementSystem.png" alt="Assets Component Diagram on Backend" width="600"/>
 
 Mobile:
 
-<img src="../assets/component-diagrams/structurizr-101372-AssetsBoundedContextonMobileApp.png" alt="Assets Component Diagram on Mobile App" width="350"/>
+<img src="../assets/component-diagrams/structurizr-101372-DevicesBoundedContextonMobileApp.png" alt="Assets Component Diagram on Mobile App" width="350"/>
 
 
 #### 5.1.6. Bounded Context Software Architecture Code Level Diagrams.
@@ -5160,11 +4892,11 @@ Web App:
 
 Backend:
 
-<img src="../assets/component-diagrams/structurizr-101372-PaymentBCWebApp.png" alt="Service Design Planning Component Diagram on API" width="350"/>
+<img src="../assets/component-diagrams/structurizr-101372-PaymentSystem.png" alt="Service Design Planning Component Diagram on API" width="350"/>
 
 Mobile:
 
-<img src="../assets/component-diagrams/structurizr-101372-PaymentBCWebApp.png" alt="Service Design Planning Component Diagram on Mobile App" width="350"/>
+<img src="../assets/component-diagrams/structurizr-101372-PaymentBoundedContextonMobileApp.png" alt="Service Design Planning Component Diagram on Mobile App" width="350"/>
 
 ## 5.8.4. Bounded Context Software Architecture Code Level Diagrams
 
