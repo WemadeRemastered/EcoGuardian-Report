@@ -5547,6 +5547,590 @@ Proceso de respuesta del especialista a la pregunta realizada por el usuario.
 **Descripción:**
 Proceso de registro de planta en el calendario para hacer el respectivo monitoreo de la planta.
 
+
+## 6.4.3. Applications Wireframes.
+
+**Web Applicaction:**
+
+Management Register Plant Wireframe: 
+
+<img src="../assets/wireframes/Management-Consumer-RegisterPlant.png" alt="wireframe web app" width = "400" />
+
+**Descripción:**
+Dashboard en donde se mostrará toda la información requerida
+
+<img src="../assets/wireframes/Management-Consumer-RegisterPlant-2.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Registro de una planta con la información requerida
+
+<img src="../assets/wireframes/Management-Consumer-RegisterPlant-3.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Proceso para el pago para poder hacer la instalación
+
+<img src="../assets/wireframes/Management-Consumer-RegisterPlant-4.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Nueva planta agregada al dashboard
+
+<br>
+
+Management Edit Plant section Wireframe: 
+
+<img src="../assets/wireframes/Management-Consumer-EditPlant.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard con toda la información
+
+<img src="../assets/wireframes/Management-Consumer-EditPlant-2.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Editar la información de la planta
+
+<br>
+
+Management Business Register Plant Wireframe: 
+
+<img src="../assets/wireframes/Management-Business-RegisterPlant.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard con toda la información
+
+<img src="../assets/wireframes/Management-Business-RegisterPlant-1.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Registrar una nueva plantación
+
+<img src="../assets/wireframes/Management-Business-RegisterPlant-2.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Proceso para el pago para poder hacer la instalación
+
+<br>
+
+Management Business Edit Plant Wireframe:
+
+<img src="../assets/wireframes/Management-Business-EditPlant.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard con toda la información
+
+<img src="../assets/wireframes/Management-Business-EditPlant-1.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Editar la información de la plantación 
+
+<br>
+
+Management Delete Plant Wireframe:
+
+<img src="../assets/wireframes/Management-DeletePlant.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard con toda la información
+
+<img src="../assets/wireframes/Management-DeletePlant-1.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Configuración para poder eliminar la planta
+
+<img src="../assets/wireframes/Management-DeletePlant-2.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Planta eliminada con su identificador ID 
+
+<br>
+
+Consulting Dashboard Wireframe:
+
+<img src="../assets/wireframes/Consulting Dashboard.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard con las preguntas realizadas y toda la información
+
+<img src="../assets/wireframes/Consulting Dashboard - Domestic and Bussiness.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard con las preguntas realizas y si han sido resolvidas
+
+<img src="../assets/wireframes/Consulting Dashboard - Domestic and Bussiness-1.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Registrar una pregunta frecuente con su respuesta 
+
+<br>
+
+Consulting Creation Wireframe:
+
+<img src="../assets/wireframes/Consulting Creation.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Registrar una nueva pregunta con su contenido 
+
+<img src="../assets/wireframes/Consulting Creation-1.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Nueva pregunta realizada correctamente
+
+<br>
+
+Consulting Answer Creation Wireframe:
+
+<img src="../assets/wireframes/Consulting Answer Creation.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Registrar respuesta a la pregunta realizada
+
+<img src="../assets/wireframes/Consulting Answer Creation-1.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Respuesta registrada a la pregunta realizada
+
+<br>
+
+Sign in/Sign up Wireframe:
+
+<img src="../assets/wireframes/Desktop - 2.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Registro de información para hacer registro del usuario
+
+<img src="../assets/wireframes/Desktop - 3.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Inicio de sesión del usuario
+
+<br>
+
+Sign in/Sign up Wireframe:
+
+<img src="../assets/wireframes/iPhone 16 - 6.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard del usuario iniciando sesión 
+
+<img src="../assets/wireframes/Desktop - 4.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Información de pago mostrando el estado de la suscripción del usuario mostrando su fecha de vencimiento y que versión tiene
+
+<img src="../assets/wireframes/Desktop - 5.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Planes de pago y su metodo de pago
+
+<br>
+
+Analytics Wireframe:
+
+<img src="../assets/wireframes/Dashboard Principal.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard de los análisis 
+
+<img src="../assets/wireframes/Dashboard Plantación.png" alt="wireframe web app" width = "400"/>
+
+**Descripción:**
+Dashboard de su monitoreo de su plantación.
+
+**Mobile Aplication Wireframes:**
+
+
+#### Registro Plantacion Segmento Empresarial:
+<img src="../assets/wireframes/Web-App/Management-Business-RegisterPlant-Mobile-1.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Dashboard donde se muestra toda la información y el boton de agregar planta.
+
+<img src="../assets/wireframes/Web-App/Management-Business-RegisterPlant-Mobile-2.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Mensaje de éxito al agregar una planta.
+
+<img src="../assets/wireframes/Web-App/Management-Business-RegisterPlant-Mobile-3.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Dashboard de su monitoreo de su plantación
+
+<img src="../assets/wireframes/Web-App/Management-Business-RegisterPlant-Mobile.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Formulario de agregar nueva plantación para segmento empresa.
+
+#### Registro Planta Segmento Domestico:
+<img src="../assets/wireframes/Web-App/Management-Consumer-RegisterPlant-Mobile-1.png" alt="wireframe mobile app" height = "400" width = "250"/> 
+
+**Descripción:**
+Dashboard donde se encuentra boton de agregar planta.
+
+<img src="../assets/wireframes/Web-App/Management-Consumer-RegisterPlant-Mobile-2.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Mensaje de éxito al agregar planta.
+
+<img src="../assets/wireframes/Web-App/Management-Consumer-RegisterPlant-Mobile-3.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Formulario de agregar planta.
+
+<img src="../assets/wireframes/Web-App/iPhone 16 - 10-1.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Historial de pagos
+
+<img src="../assets/wireframes/Web-App/iPhone 16 - 10.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Vista del perfil de usuario.
+
+<img src="../assets/wireframes/Web-App/iPhone 16 - 11-1.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Vista de subcripciones.
+
+<img src="../assets/wireframes/Web-App/iPhone 16 - 11.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Vista de perfil del segmento especialista.
+
+<img src="../assets/wireframes/Web-App/iPhone 16 - 9-1.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+**Descripción:**
+Perfil con sección de pagos pendientes.
+
+## 6.4.4. Applications Wireflow Diagrams.
+
+Esta sección presenta la propuesta de Wireflows. Debe considerarse un Wireflow
+para cada User goal, considerando los User Persona para cada aplicación que forma
+parte del alcance. En este caso consideramos los mas relevantes hasta el momento a nivel de funcionalidad inicial:
+
+
+**Registar Usuario**
+
+<img src="../assets/wireflows/register-user-wireflow.jpeg" alt="wireframe Registrar usuario" width="400"/>
+
+**Descripción:**
+Flujo de registro de nuevo usuario con ingreso de datos personales, selección de tipo de usuario y confirmación de cuenta.
+
+**Registar Planta**
+
+<img src="../assets/wireflows/register-plant-wireflow.jpeg" alt="Wireframe Registrar Planta" width="400"/>
+
+**Descripción:**
+Proceso de registro de nueva planta con configuración de sensores y umbrales de monitoreo.
+
+**Editar Planta**
+
+<img src="../assets/wireflows/edit-plant-wireflow.jpeg" alt="wireframe editar planta" width="400"/>
+
+**Descripción:**
+Flujo de edición de información de plantas existentes, permitiendo modificar parámetros y datos registrados.
+
+**Eliminar Planta**
+
+<img src="../assets/wireflows/delete-plant-wireflow.jpeg" alt="wireframe Eliminar planta" width="400"/>
+
+**Descripción:**
+Proceso de eliminación de plantas con confirmaciones de seguridad y gestión de datos asociados.
+
+**Pago de Suscripción**
+
+<img src="../assets/wireflows/payment-wireflow.jpeg" alt="wireframe Payment usuario" width="400"/>
+
+**Descripción:**
+Proceso de pago de suscripción a la hora de escoger un plan y acceder al dashboard principal.
+
+**Consultas**
+
+<img src="../assets/wireflows/consulting-wireflow.jpeg" alt="wireframe consulta usuario" width="400"/>
+
+**Descripción:**
+Proceso de consulta del usuario por si tiene alguna pregunta y se envia la pregunta al especialista.
+
+**Domestico Especialista**
+
+<img src="../assets/wireflows/domestic-wireflow.jpeg" alt="wireframe domestic asnwer usuario" width="400"/>
+
+**Descripción:**
+Proceso de respuesta del especialista a la pregunta realizada por el usuario.
+
+**Registro de planta calendario**
+
+<img src="../assets/wireflows/register-plant-calendar-wireflow.jpeg" alt="wireframe register plant calendar" width="400"/>
+
+**Descripción:**
+Proceso de registro de planta en el calendario para hacer el respectivo monitoreo de la planta.
+
+
+
+## 6.4.5. Applications Mock-ups.
+
+Esta sección presenta y explica los Mock-ups de las aplicaciones. Se evidencia la aplicación de los principios, elementos de diseño,
+diseño inclusivo y arquitectura de información, así como el Design System
+establecido para los productos digitales.
+
+Mockups:
+
+<!-- General desktop wireframes -->
+<img src="../assets/mockups/Desktop - 2.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Desktop - 3.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Desktop - 4.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Desktop - 5.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/iPhone 16 - 8.png" alt="wireframe iPhone mockup" width="400"/>
+<img src="../assets/mockups/iPhone 16 - 6.png" alt="wireframe iPhone mockup" width="400"/>
+
+<!-- Consulting and dashboards -->
+<img src="../assets/mockups/Consulting Answer Creation.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Consulting Answer Creation-1.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Consulting Creation.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Consulting Creation-1.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Consulting Dashboard.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Consulting Dashboard-1.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Consulting Dashboard - Domestic and Bussiness-1.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Consulting Dashboard - Domestic and Bussiness.png" alt="wireframe desktop app" width="400"/>
+
+<!-- Dashboard -->
+<img src="../assets/mockups/Dashboard Plantacion.png" alt="wireframe desktop app" width="400" />
+<img src="../assets/mockups/Dashboard Principal.png" alt="wireframe desktop app" width="400"/>
+
+<!-- Business & Consumer Edit/Register -->
+<img src="../assets/mockups/Management-Business-EditPlant.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Management-Business-EditPlant-1.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Management-Business-EditPlant-2.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Management-Business-RegisterPlant-1.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Management-Business-RegisterPlant-2.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Management-Business-RegisterPlant-3.png" alt="wireframe desktop app" width="400"/>
+
+<img src="../assets/mockups/Management-Consumer-EditPlant.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Management-Consumer-EditPlant-1.png" alt="wireframe desktop app" width="400"/>
+<img src="../assets/mockups/Management-Consumer-EditPlant-2.png" lt="wireframe desktop app" width="400"/>
+
+
+
+Mockups Mobile App:
+<!-- Business Register - Mobile -->
+<img src="../assets/mockups/Management-Business-RegisterPlant-Mobile-1.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-Business-RegisterPlant-Mobile-2.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-Business-RegisterPlant-Mobile-3.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-Business-RegisterPlant-Mobile.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+<!-- Consumer Register - Mobile -->
+<img src="../assets/mockups/Management-Consumer-RegisterPlant-Mobile-1.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-Consumer-RegisterPlant-Mobile-2.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-Consumer-RegisterPlant-Mobile-3.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-Consumer-RegisterPlant-Mobile.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+<!-- Delete Plant - Mobile -->
+<img src="../assets/mockups/Management-DeletePlant-Mobile-1.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-DeletePlant-Mobile-2.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-DeletePlant-Mobile-3.png" alt="wireframe mobile app" height = "400" width = "250"/>
+<img src="../assets/mockups/Management-DeletePlant-Mobile.png" alt="wireframe mobile app" height = "400" width = "250"/>
+
+<!-- iPhone mockups -->
+
+<img src="../assets/mockups/iPhone 16 - 9.png" alt="wireframe iPhone mockup" height = "400" width = "250"/>
+
+
+
+## 6.4.6. Applications User Flow Diagrams.
+
+Esta sección presenta la propuesta de User Flows. Se considera un User Flow
+para cada User goal, considerando los User Persona para cada aplicación que forma
+parte del alcance. Estos User Flows deben ser consistentes con los Wireflows de los
+cuales se derivan.
+
+En este caso los user flow que definimos serian:
+
+Business: Proceso de pagos pendientes facturados
+
+Domestico: Registrar una planta comun
+
+Especialista: Proceso de notificacion de problemas
+
+Tomamos en cuenta que se debe cancelar el pago antes de hacer un registro nuevo.
+
+En esta situacion se consideran los happy y unhappy paths
+
+**Autenticacion Usuario**
+
+**User Goal:**
+As a User I want to authenticate to platform for access to his services.
+
+<img src="../assets/userflows/auth-user-userflow.png" alt="userflow auth usuario" width="400"/>
+
+
+**Registrar Planta**
+
+**User Goal:**
+As a Consumer I want to register a plant to monitoring
+
+<img src="../assets/userflows/register-planta-userflow.png" alt="userflow register plant" width="400"/>
+
+
+**Editar Planta**
+
+**User Goal:**
+As a Consumer I want to edit a plant that I registered before for change his configuration.
+
+<img src="../assets/userflows/editar-plant-userflow.png" alt="userflow edit plant" width="400"/>
+
+
+**Eliminar Planta**
+
+**User Goal:**
+As a Consumer I want to delete a plant that I’m not using for save my current plan costs.
+
+<img src="../assets/userflows/delete-plant-userflow.png" alt="userflow delete plant" width="400"/>
+
+
+**Pago Sucrcipción**
+
+**User Goal:**
+As a consumer, I want to select a subscription plan and pay using my bank account in order to complete my current order.
+
+<img src="../assets/userflows/payment-userflow.png" alt="userflow payment" width="400"/>
+
+**Consultas**
+
+**User Goal:**
+As a Consumer I want to make a question  to specialist about my plant metrics evaluated for get a detail reccomendation
+
+<img src="../assets/userflows/consulting-userflow.png" alt="userflow consulting" width="400"/>
+
+**Domestico Especialista Respuesta**
+
+**User Goal:**
+As a Specialist I want to answer questions that provides for consumers for give a detail recommendations
+
+<img src="../assets/userflows/domestic-userflow.png" alt="userflow domestic" width="400"/>
+
+**Registro de planta en el calendario**
+
+**User Goal:**
+As a Consumer I want to register a plant into the calendar to monitoring the plant 
+
+<img src="../assets/userflows/register-plant-calendar-userflow.png" alt="userflow domestic" width="400"/>
+
+
+## 6.5. Applications Prototyping.
+Esta sección incluye Prototipos de UI para Desktop y Mobile Web Browser con
+simulación de interacción y navegación, acorde con la propuesta de paths de User
+Flow Diagrams. Esta sección inicia con una introducción en la que se explica los
+principales criterios para las decisiones de interacción.
+
+<img src="../assets/mockups/prototype.png" alt="wireframe web app" width="400"/>
+
+link del figma: <a href = "https://www.figma.com/proto/0rjyzCalexoZmteQjXHSJl/Web-App?node-id=170-8218&p=f&t=oP3jf47NVjYvxxG8-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=170%3A8218&show-proto-sidebar=1"> Link Figma </a>
+
+# Capítulo VII: Product Implementation, Validation & Deployment
+
+## 7.1. Software Configuration Management.
+
+En los siguientes puntos, detallaremos las herramientas, convenciones, referencias y configuraciones empleadas a lo largo del desarrollo del proyecto, los cuales contribuyeron a mantener la base en el trabajo realizado.
+
+
+
+## 7.1.1. Software Development Environment Configuration.
+Figma: https://www.figma.com/
+
+Es una herramienta visual, donde diseñamos el prototipo de la pagina web. Se usó para crear los wireframes, mock-ups, asi como los desktop and mobile application del proyecto.
+
+LucidChart: https://lucid.app/
+
+Es una plataforma, la cual tiene opciones que nos ayudaron en la creación de diagramas, mapas y flujos usando plantillas y tableros. Fue usado para la creación del event storming
+
+PlantText: https://www.planttext.com/
+
+Es una plataforma que permite interpretar código uml y diagramarlo. Fue usado para la creación de los diagramas de clase.
+
+Software Development: Para el desarrollo de la landing page se utilizarón las tecnologías basicas del desarrollo web: HTML, CSS Y JS.
+
+Frontend Web Applications
+
+Para el desarrollo del Frontend de la aplicación web se utilizó Vue.Js junto con algunas bibliotecas de material design como PrimeVue y PrimeFlex, además de Chart.Js para la generación de dashboards.
+
+Software Deployment
+
+Netlify: https://www.netlify.com/
+
+Es una plataforma en la cual hospedamos la lading page del proyecto, se integra con repositorios en Git.
+
+Vercel: https://vercel.com/
+
+Es una plataforma en la cual hospedamos la aplicación web.
+
+Software Documentation
+
+Vertabelo: https://vertabelo.com/
+
+Es una herramienta online la cual ayuda en el desarrollo y creacion de base de datos. Se usó para la base de datos del proyecto.
+
+Structurizr: https://www.structurizr.com/
+
+Esta plataforma permite el modelado de diagramas de arquitectura de software. Se usó para la creación de los diagramas C4
+
+
+
+
+
+## 7.1.2. Source Code Management.
+
+Para la gestión y actualización del proyecto, se creó una organización via GitHub, en la cual se tuvo un control sobre los cambios a lo largo del ciclo de vida del proyect. Se organizo de la siguiente manera.
+
+Organization: https://github.com/wemade-IoT 
+
+Report: [https://github.com/wemade-IoT/Documents_Repository](https://github.com/wemade-IoT/Documents_Repository.com)
+
+Landing Page: [https://github.com/wemade-IoT/landing-page](https://github.com/wemade-IoT/landing-page)
+
+Front End Web App: [https://github.com/wemade-IoT/eco-guardian-frontend](https://github.com/wemade-IoT/eco-guardian-frontend)
+
+
+Para controlar de manera eficiente el flujo de trabajo se utilizó GitFlow, donde contamos con una rama principal main que es donde se encuentra la versión más estable y lista para pasar a producción del proyecto.
+
+Ramas auxiliares:
+
+hotfix: Es la rama donde almacenamos una copia sobre una versión estable del proyecto
+
+feature: Son las ramas donde se desarrollan las funcionalidades del proyecto. Luego de completarlas, se fusionan con la rama develop.
+
+La nomenclatura para los features fueron las siguientes: feature/name. Por ejemplo, feature/sign-in, para ingresar a la aplicación web.
+
+Se utilizo el formato "report_branch" para hacer referencia a las versiones registradas por cada entrega del documento
+
+Commit Conventions
+
+Para el formato de los commits se siguió la estructura de Conventional Commits 1.0.0, la cual tiene la siguiente estructura:
+
+< type > [optional scope]: < description > Donde:
+
+type: Es el tipo de cambio. Tenemos valores como: fix, feat, build, chore, ci, docs, style, refactor, perf, test, etc. scope: Indica donde se realizó el commit (opcional). description: Menciona las actualizaciones del codigo.
+
+
+## 7.1.3. Source Code Style Guide & Conventions.
+
+Para el desarrollo del código en HTML y CSS se decidió seguir la convención de Google HTML/CSS Style Guide. Entre las más importantes destacan:
+
+Es fundamental que el tipo de documento se declare al inicio del archivo mediante etiquetas meta. El elemento ``` <title> ``` debe colocarse dentro de las etiquetas ``` <head> ```. Se debe aplicar una sangría de dos espacios. Es recomendable usar minúsculas para los elementos HTML, así como para sus atributos, valores, propiedades y selectores CSS. Los atributos en HTML deben estar entre comillas, y todos los elementos deben contar con su etiqueta de cierre correspondiente. Se aconseja evitar líneas de código excesivamente largas. Además, las imágenes deben tener definidos su ancho, alto y un texto alternativo (atributo alt).
+
+En cuanto al código JavaScript, se sigue la guía de estilo de Google para C# cada instrucción debe finalizar con un punto y coma, los nombres de variables y funciones deben escribirse en formato upperCamelCase, y los valores de tipo cadena deben ir entre comillas simples.
+
+Para desarrollar pruebas de aceptación con Gherkin, se aplican las “Convenciones de Gherkin para especificaciones legibles”, que implican el uso de palabras clave como “Dado”, “Cuando”, “Entonces” y “Y”, junto con una sangría específica y comentarios bien separados.
+
+Por otro lado, el código en C# debe seguir las pautas del Microsoft Naming Conventions, que establecen reglas sobre el formato de nombres de carpetas, clases y métodos, la estructura de la sangría, la división de líneas largas y la coincidencia entre el nombre del archivo y la clase que contiene. También se recomienda incluir un salto de línea después de cada declaración.
+
+Asimismo, para el desarrollo en C++ se aplican las convenciones de Google C++ Style Guide. Estas incluyen el uso de CamelCase para nombres de clases y snake_case para variables, funciones y archivos. Se deben emplear nombres descriptivos, evitar abreviaturas innecesarias y mantener una sangría consistente, generalmente de dos espacios.
+
+Finalmente, en el caso del lenguaje Dart, se siguen las convenciones establecidas en la Effective Dart Style Guide, donde se emplea lowerCamelCase para variables, funciones y parámetros; y UpperCamelCase para nombres de clases, tipos y enumeraciones. Los archivos deben usar snake_case, y se sugiere evitar líneas largas para mantener una coherencia en la sangria.
+
+
+
+## 7.1.4. Software Deployment Configuration.
+
+Para la configuracion de Landing Page y Web Aplication se hace uso de vercel y netlify.
+Como configuraciones se hace mencion de hacer un despliegue local al jsonServer para validar cierta data y hacer el efecto de mock de la data, en futuras entregas cuando tengamos una base de datos definida dejaremos de lado esa configuracion.
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones.
