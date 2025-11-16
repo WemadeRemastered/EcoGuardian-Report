@@ -6131,6 +6131,3829 @@ Finalmente, en el caso del lenguaje Dart, se siguen las convenciones establecida
 Para la configuracion de Landing Page y Web Aplication se hace uso de vercel y netlify.
 Como configuraciones se hace mencion de hacer un despliegue local al jsonServer para validar cierta data y hacer el efecto de mock de la data, en futuras entregas cuando tengamos una base de datos definida dejaremos de lado esa configuracion.
 
+7.2.	Solution Implementation.
+
+## 7.2.1. Sprint 2
+### 7.2.1.1. Sprint Planning 2.
+
+<p>Para el segundo sprint se planificó continuar con el desarrollo de la aplicación web, enfocándose en la implementación de nuevas funcionalidades y mejoras basadas en los comentarios recibidos durante la revisión del primer sprint. Además, se realizaron las primeras versiones de la aplicación móvil, edge y embebida.</p>
+
+| Sprint #                        | Sprint 1                                                                                
+|---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Sprint Planning Background      |
+| Date                            | 2025-11-08 |
+| Time                            | 8:00 am |
+| Location                        | Vía presencial y virtual |
+| Prepared By                     | Ramirez Hoffman, Sebastian |
+| Attendees (to planning meeting) | Jave Diaz, Mathias Alejandro/  Huilca Chipana, Gustavo / Alex Avila |
+| Sprint Goal & User Stories      |
+| Sprint 1 Goal                   | El objetivo de este sprint se enfoca en ofrecer a los usuarios consumidores el poder registrar y monitorear sus plantas y plantaciones, el registro de consultas, autenticación y el proceso de orden de instalación. Además, a los usuarios especialistas, se les ofrece la visualización de consultas y poder responderlas; a los developers, los servicios web de gestión de información de las plantas y plantaciones, consultas de los usuarios, órdenes de instalación, pagos y suscripciones; y autenticación de los usuarios y de los dispositivos IoT, así como el procesamiento y envío de las métricas de monitoreo consolidados. Finalmente, a los device makers, se les ofrece la recopilación de datos de los sensores de humedad, luz y temperatura y conectividad con las demás aplicaciones del sistema.Creemos que esto ofrecerá una visualización detallada sobre el estado de las plantas/plantaciones, así como la aclaración de dudas, resolución de consultas y el planeamiento de la orden de instalación de los dispositivos IoT. Además, ofrecerá la gestión de la información de las plantas, plantaciones, consultas de los usuarios, órdenes de instalación, pagos y suscripciones, y métricas recopiladas de los dispositivos IoT, así como la autenticación de los dispositivos registrados en el sistema y de los usuarios registrados.Esto podrá ser confirmado cuando los usuarios consumidores puedan registrarse e iniciar sesión, monitorear, agregar y hacer consultas sobre sus plantas/plantaciones, así como realizar órdenes de instalación. Además, se confirmará cuando los usuarios especialistas puedan responder las consultas y ver las órdenes de instalación que se le asignaron; los developers puedan integrar los servicios web en las aplicaciones web y móvil, así como gestionar la información de estos servicios; y los device makers puedan recopilar y enviar la información registrada de los sensores. |
+| Sprint 2 Velocity               | 0 |
+| Sum of Story Points             | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+
+### 7.2.1.2. Sprint Backlog 1.
+
+<table>
+    <tr>
+        <td>User Story ID</td>
+        <td>User Story Title</td>
+        <td>Work-Item / Task Id</td>
+        <td>Work-Item / Task Title</td>
+        <td>Description</td>
+        <td>Estimation (Hours)</td>
+        <td>Assigned To</td>
+        <td>Status (To-do / InProcess / ToReview / Done)</td>
+    </tr>
+    <tr>
+        <td>HU05</td>
+        <td>Registro de planta en plataforma web</td>
+        <td>T01</td>
+        <td>Implementación de formulario de registro de plantas en la aplicación web</td>
+        <td>Desarrollar la interfaz para que los usuarios registren nuevas plantas en la aplicación web.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU05</td>
+        <td>Registro de planta en plataforma web</td>
+        <td>T02</td>
+        <td>Integración de endpoint para el registro de plantas en la aplicación web</td>
+        <td>Conectar el formulario de registro de plantas con el backend para guardar los datos.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU07</td>
+        <td>Registro de plantación en plataforma web</td>
+        <td>T01</td>
+        <td>Implementación de formulario de registro de plantaciones en la aplicación web</td>
+        <td>Desarrollar la interfaz para que los usuarios registren nuevas plantaciones en la aplicación web.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU07</td>
+        <td>Registro de plantación en plataforma web</td>
+        <td>T02</td>
+        <td>Integración de endpoint para el registro de plantaciones en la aplicación web</td>
+        <td>Conectar el formulario de registro de plantaciones con el backend para guardar los datos.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU08</td>
+        <td>Registro de plantación en plataforma móvil</td>
+        <td>T01</td>
+        <td>Implementación de formulario de registro de plantaciones en la aplicación móvil</td>
+        <td>Desarrollar la interfaz para que los usuarios registren nuevas plantaciones en la aplicación móvil.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU08</td>
+        <td>Registro de plantación en plataforma móvil</td>
+        <td>T02</td>
+        <td>Integración de endpoint para el registro de plantaciones en la aplicación móvil</td>
+        <td>Conectar el formulario de registro de plantaciones con el backend para guardar los datos.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU06</td>
+        <td>Registro de planta en plataforma móvil</td>
+        <td>T01</td>
+        <td>Implementación de formulario de registro de plantas en la aplicación móvil</td>
+        <td>Desarrollar la interfaz para que los usuarios registren nuevas plantas en la aplicación móvil.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU06</td>
+        <td>Registro de planta en plataforma móvil</td>
+        <td>T02</td>
+        <td>Integración de endpoint para el registro de plantas en la aplicación móvil</td>
+        <td>Conectar el formulario de registro de plantas con el backend para guardar los datos.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU25</td>
+        <td>Monitoreo de Plantas móvil</td>
+        <td>T01</td>
+        <td>Implementación de cards para la vista de plantaciones por usuario</td>
+        <td>Diseñar y desarrollar las tarjetas para visualizar las plantaciones en la interfaz móvil.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU25</td>
+        <td>Monitoreo de Plantas móvil</td>
+        <td>T02</td>
+        <td>Integración de endpoint para la consulta de plantaciones por usuario</td>
+        <td>Conectar la vista de plantaciones en la aplicación móvil con el endpoint de consulta.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU25</td>
+        <td>Monitoreo de Plantas móvil</td>
+        <td>T03</td>
+        <td>Implementación de assembler para la serialización de información recopilada por plantación</td>
+        <td>Desarrollar el componente para transformar los datos de plantación para su visualización.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU24</td>
+        <td>Monitoreo de Plantas por Usuario</td>
+        <td>T01</td>
+        <td>Implementación de cards para la vista de plantas por usuario</td>
+        <td>Diseñar y desarrollar las tarjetas para visualizar las plantas en la interfaz móvil.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU24</td>
+        <td>Monitoreo de Plantas por Usuario</td>
+        <td>T02</td>
+        <td>Integración de endpoint para la consulta de plantas por usuario</td>
+        <td>Conectar la vista de plantas en la aplicación móvil con el endpoint de consulta.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU24</td>
+        <td>Monitoreo de Plantas por Usuario</td>
+        <td>T03</td>
+        <td>Implementación de assembler para la serialización de información recopilada por plantas</td>
+        <td>Desarrollar el componente para transformar los datos de plantas para su visualización.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU29</td>
+        <td>Registro y gestión de dispositivos IoT</td>
+        <td>T01</td>
+        <td>Integrar registro de IoT a edge app y sistema</td>
+        <td>Configurar la integración para registrar dispositivos IoT en la aplicación edge y el sistema central.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU16</td>
+        <td>Seleccionar fecha y hora de instalación (Web)</td>
+        <td>T01</td>
+        <td>Creación del componente Date Picker</td>
+        <td>Desarrollar el componente de selección de fecha para la aplicación web.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU16</td>
+        <td>Seleccionar fecha y hora de instalación (Web)</td>
+        <td>T02</td>
+        <td>Creación del componente de visualización de Time Slots para la instalación</td>
+        <td>Desarrollar el componente para mostrar los bloques de tiempo disponibles para la instalación.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU16</td>
+        <td>Seleccionar fecha y hora de instalación (Web)</td>
+        <td>T03</td>
+        <td>Validación de horarios no disponibles</td>
+        <td>Implementar la lógica para verificar y deshabilitar horarios ya ocupados.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU16</td>
+        <td>Seleccionar fecha y hora de instalación (Web)</td>
+        <td>T04</td>
+        <td>Integración de backend</td>
+        <td>Conectar los componentes de fecha y hora con el backend para obtener y guardar la información.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU15</td>
+        <td>Seleccionar fecha y hora de instalación (Móvil)</td>
+        <td>T01</td>
+        <td>Creación del widget Date Picker</td>
+        <td>Desarrollar el widget de selección de fecha para la aplicación móvil.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU15</td>
+        <td>Seleccionar fecha y hora de instalación (Móvil)</td>
+        <td>T02</td>
+        <td>Creación del widget de visualización de Time Slots para la instalación</td>
+        <td>Desarrollar el widget para mostrar los bloques de tiempo disponibles para la instalación en móvil.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU15</td>
+        <td>Seleccionar fecha y hora de instalación (Móvil)</td>
+        <td>T03</td>
+        <td>Validación de horarios no disponibles</td>
+        <td>Implementar la lógica en móvil para verificar y deshabilitar horarios ya ocupados.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU15</td>
+        <td>Seleccionar fecha y hora de instalación (Móvil)</td>
+        <td>T04</td>
+        <td>Integración de backend</td>
+        <td>Conectar los widgets de fecha y hora con el backend para obtener y guardar la información en móvil.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU19</td>
+        <td>Pago de suscripción (Web)</td>
+        <td>T01</td>
+        <td>Validacion de pago de orden con Stripe</td>
+        <td>Implementar la validación del proceso de pago de suscripciones a través de Stripe.</td>
+        <td>6</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU19</td>
+        <td>Pago de suscripción (Web)</td>
+        <td>T02</td>
+        <td>Formulario de registro para ingresar los detalles del pago de subscripcion</td>
+        <td>Desarrollar el formulario web para que los usuarios ingresen sus datos de pago de suscripción.</td>
+        <td>6</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU18</td>
+        <td>Pago de instalación (Web)</td>
+        <td>T01</td>
+        <td>Validacion de pago de orden con Stripe</td>
+        <td>Implementar la validación del proceso de pago de instalaciones a través de Stripe.</td>
+        <td>6</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU18</td>
+        <td>Pago de instalación (Web)</td>
+        <td>T02</td>
+        <td>Formulario de registro para ingresar los detalles del pago de instalacion</td>
+        <td>Desarrollar el formulario web para que los usuarios ingresen sus datos de pago de instalación.</td>
+        <td>6</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU21</td>
+        <td>Seguimiento de orden web</td>
+        <td>T01</td>
+        <td>Implementacion de componente para visualizar estado de orden de pago</td>
+        <td>Desarrollar un componente web para mostrar el estado actual de una orden de pago.</td>
+        <td>6</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU22</td>
+        <td>Monitoreo de Plantas web</td>
+        <td>T01</td>
+        <td>Implementación de cards para la vista de plantas por usuario</td>
+        <td>Diseñar y desarrollar las tarjetas para visualizar las plantas en la interfaz web.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU22</td>
+        <td>Monitoreo de Plantas web</td>
+        <td>T02</td>
+        <td>Integración de endpoint para la consulta de plantas por usuario</td>
+        <td>Conectar la vista de plantas en la aplicación web con el endpoint de consulta.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU22</td>
+        <td>Monitoreo de Plantas web</td>
+        <td>T03</td>
+        <td>Implementación de assembler para la serialización de información recopilada por planta</td>
+        <td>Desarrollar el componente para transformar los datos de planta para su visualización.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU23</td>
+        <td>Monitoreo de Plantaciones web</td>
+        <td>T01</td>
+        <td>Implementación de cards para la vista de plantaciones por usuario</td>
+        <td>Diseñar y desarrollar las tarjetas para visualizar las plantaciones en la interfaz web.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU23</td>
+        <td>Monitoreo de Plantaciones web</td>
+        <td>T02</td>
+        <td>Integración de endpoint para la consulta de plantaciones por usuario</td>
+        <td>Conectar la vista de plantaciones en la aplicación web con el endpoint de consulta.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU23</td>
+        <td>Monitoreo de Plantaciones web</td>
+        <td>T03</td>
+        <td>Implementación de assembler para la serialización de información recopilada por plantación</td>
+        <td>Desarrollar el componente para transformar los datos de plantación para su visualización.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS02</td>
+        <td>Registro de estadísticas</td>
+        <td>T01</td>
+        <td>Recepción de datos analíticos desde el Edge</td>
+        <td>Configurar el sistema para recibir y almacenar datos analíticos de los dispositivos Edge.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS02</td>
+        <td>Registro de estadísticas</td>
+        <td>T02</td>
+        <td>Procesamiento y creación de endpoint para los datos análiticos</td>
+        <td>Desarrollar la lógica de procesamiento y el endpoint para exponer los datos analíticos.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU09</td>
+        <td>Registro de usuario doméstico</td>
+        <td>T01</td>
+        <td>Formulario de registro de usuario domestico</td>
+        <td>Desarrollar el formulario para el registro de nuevos usuarios domésticos.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU09</td>
+        <td>Registro de usuario doméstico</td>
+        <td>T02</td>
+        <td>Integracion de registro de usuario domestico en backend</td>
+        <td>Conectar el formulario de registro con el backend para almacenar la información del usuario doméstico.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU09</td>
+        <td>Registro de usuario doméstico</td>
+        <td>T03</td>
+        <td>Validacion de pago antes de registrar usuario en backend</td>
+        <td>Implementar la validación de pago en el backend antes de completar el registro de usuario.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU10</td>
+        <td>Registro de usuario empresarial</td>
+        <td>T01</td>
+        <td>Formulario de registro de usuario empresarial</td>
+        <td>Desarrollar el formulario para el registro de nuevos usuarios empresariales.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU10</td>
+        <td>Registro de usuario empresarial</td>
+        <td>T02</td>
+        <td>Integracion de registro de usuario empresarial en backend</td>
+        <td>Conectar el formulario de registro con el backend para almacenar la información del usuario empresarial.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU10</td>
+        <td>Registro de usuario empresarial</td>
+        <td>T03</td>
+        <td>Validacion de pago antes de registrar usuario en backend</td>
+        <td>Implementar la validación de pago en el backend antes de completar el registro de usuario empresarial.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU11</td>
+        <td>Autenticación de usuario especialista web</td>
+        <td>T01</td>
+        <td>Vista para realizar el ingreso de datos de cuenta de usuario especialista web</td>
+        <td>Diseñar y desarrollar la interfaz web para el inicio de sesión de especialistas.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU11</td>
+        <td>Autenticación de usuario especialista web</td>
+        <td>T02</td>
+        <td>Autenticacion de la cuenta y registro de sesion en backend</td>
+        <td>Implementar la lógica de autenticación y registro de sesión para especialistas en el backend.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU13</td>
+        <td>Autenticación de usuario web</td>
+        <td>T01</td>
+        <td>Vista para realizar el ingreso de datos de cuenta de usuario consumidor web</td>
+        <td>Diseñar y desarrollar la interfaz web para el inicio de sesión de usuarios consumidores.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU13</td>
+        <td>Autenticación de usuario web</td>
+        <td>T02</td>
+        <td>Autenticacion de la cuenta y registro de sesion en backend</td>
+        <td>Implementar la lógica de autenticación y registro de sesión para consumidores en el backend.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU12</td>
+        <td>Autenticación de usuario especialista móvil</td>
+        <td>T01</td>
+        <td>Vista para realizar el ingreso de datos de cuenta de usuario especialista móvil</td>
+        <td>Diseñar y desarrollar la interfaz móvil para el inicio de sesión de especialistas.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU12</td>
+        <td>Autenticación de usuario especialista móvil</td>
+        <td>T02</td>
+        <td>Autenticacion de la cuenta y registro de sesion en backend</td>
+        <td>Implementar la lógica de autenticación y registro de sesión para especialistas en el backend.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU14</td>
+        <td>Autenticación de usuario móvil</td>
+        <td>T01</td>
+        <td>Vista para realizar el ingreso de datos de cuenta de usuario consumidor móvil</td>
+        <td>Diseñar y desarrollar la interfaz móvil para el inicio de sesión de usuarios consumidores.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU14</td>
+        <td>Autenticación de usuario móvil</td>
+        <td>T02</td>
+        <td>Autenticacion de la cuenta y registro de sesion en backend</td>
+        <td>Implementar la lógica de autenticación y registro de sesión para consumidores en el backend.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU26</td>
+        <td>Cartera de pagos</td>
+        <td>T01</td>
+        <td>Implementacion de cartera de pagos en Backend para procesos de pago</td>
+        <td>Desarrollar la funcionalidad de cartera de pagos en el backend para gestionar las transacciones.</td>
+        <td>4</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU27</td>
+        <td>Historial de pagos web</td>
+        <td>T01</td>
+        <td>Implementacion de componente para visualizar historial de pago</td>
+        <td>Desarrollar un componente web para mostrar el historial de pagos del usuario.</td>
+        <td>4</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS03</td>
+        <td>Integración de Stripe para gestión proceso de pagos</td>
+        <td>T01</td>
+        <td>Configuracion de Stripe en Backend</td>
+        <td>Configurar la pasarela de pagos Stripe en el entorno de backend.</td>
+        <td>4</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS03</td>
+        <td>Integración de Stripe para gestión proceso de pagos</td>
+        <td>T02</td>
+        <td>Implementacion de Stripe en el sistema</td>
+        <td>Integrar la funcionalidad de Stripe en los módulos relevantes del sistema.</td>
+        <td>6</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS04</td>
+        <td>Implementación de autenticación con JWT</td>
+        <td>T01</td>
+        <td>Integracion y configuracion de metodo JWT en Backend</td>
+        <td>Implementar y configurar la autenticación basada en JSON Web Tokens (JWT) en el backend.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU17</td>
+        <td>Asignación de especialista para instalación (externo)</td>
+        <td>T01</td>
+        <td>Definición del proceso de asignación de especialista</td>
+        <td>Establecer el flujo y las reglas para la asignación de especialistas a las instalaciones.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS06</td>
+        <td>Implementación de políticas de acceso y roles</td>
+        <td>T01</td>
+        <td>Integracion y configuracion de metodo RBAC en Backend</td>
+        <td>Integrar y configurar el control de acceso basado en roles (RBAC) en el backend.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU33</td>
+        <td>Registro de pregunta de usuario consumidor (Web)</td>
+        <td>T01</td>
+        <td>Registro de las preguntas según planta web</td>
+        <td>Permitir el registro de preguntas relacionadas con plantas a través de la interfaz web.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU33</td>
+        <td>Registro de pregunta de usuario consumidor (Web)</td>
+        <td>T02</td>
+        <td>Validacion de datos de formulario web</td>
+        <td>Implementar la validación de los datos ingresados en el formulario web de preguntas.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU33</td>
+        <td>Registro de pregunta de usuario consumidor (Web)</td>
+        <td>T03</td>
+        <td>Integracion de Endpoint para registro de pregunta en backend</td>
+        <td>Conectar el formulario de preguntas web con el endpoint del backend para su registro.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU33</td>
+        <td>Registro de pregunta de usuario consumidor (Web)</td>
+        <td>T04</td>
+        <td>Vista dedicada a mostrar el formulario o espacio para el registro de pregunta web</td>
+        <td>Diseñar y desarrollar la vista donde los usuarios puedan registrar sus preguntas en la web.</td>
+        <td>8</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU33</td>
+        <td>Registro de pregunta de usuario consumidor (Web)</td>
+        <td>T05</td>
+        <td>Registro de las preguntas según plantacion</td>
+        <td>Permitir el registro de preguntas relacionadas con plantaciones a través de la interfaz web.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU35</td>
+        <td>Responder pregunta y cambiar estado (Web)</td>
+        <td>T01</td>
+        <td>Formulario para responder pregunta</td>
+        <td>Desarrollar el formulario web para que los especialistas respondan las preguntas de los usuarios.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU35</td>
+        <td>Responder pregunta y cambiar estado (Web)</td>
+        <td>T02</td>
+        <td>Cambio de estado de pregunta al recibir registro de pregunta en backend</td>
+        <td>Implementar la lógica en el backend para actualizar el estado de una pregunta una vez respondida.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU35</td>
+        <td>Responder pregunta y cambiar estado (Web)</td>
+        <td>T03</td>
+        <td>Validacion de datos de formulario de pregunta web</td>
+        <td>Implementar la validación de los datos en el formulario web de respuesta de preguntas.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU34</td>
+        <td>Visualización y gestión de preguntas para especialista (Web)</td>
+        <td>T01</td>
+        <td>Vista para visualizar las preguntas registradas en el sistema</td>
+        <td>Diseñar y desarrollar la vista web para que los especialistas visualicen todas las preguntas.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU34</td>
+        <td>Visualización y gestión de preguntas para especialista (Web)</td>
+        <td>T02</td>
+        <td>Ordenar y Filtrar las preguntas según estado o prioridad</td>
+        <td>Implementar la funcionalidad de ordenar y filtrar preguntas por estado o prioridad en la vista web.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU34</td>
+        <td>Visualización y gestión de preguntas para especialista (Web)</td>
+        <td>T03</td>
+        <td>Integracion de endpoint para conseguir las preguntas en backend</td>
+        <td>Conectar la vista de preguntas web con el endpoint del backend para obtener los datos.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU41</td>
+        <td>Edición de datos personales web</td>
+        <td>T01</td>
+        <td>Edición de datos personales web frontend</td>
+        <td>Desarrollar la interfaz frontend para que los usuarios editen sus datos personales en la web.</td>
+        <td>6</td>
+        <td>Mathias Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU41</td>
+        <td>Edición de datos personales web</td>
+        <td>T02</td>
+        <td>Validación de email para evitar duplicados backend</td>
+        <td>Implementar la validación en el backend para asegurar que los emails no se dupliquen al editar.</td>
+        <td>4</td>
+        <td>Mathias Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU41</td>
+        <td>Edición de datos personales web</td>
+        <td>T03</td>
+        <td>Profiles Bounded Backend</td>
+        <td>Desarrollar la lógica de negocio en el backend para la gestión de perfiles de usuario.</td>
+        <td>8</td>
+        <td>Mathias Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU53</td>
+        <td>Visualización de consumo de recursos web</td>
+        <td>T01</td>
+        <td>Creación del componente de gráfico de línea</td>
+        <td>Desarrollar un componente de gráfico de línea para visualizar el consumo de recursos en la web.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU53</td>
+        <td>Visualización de consumo de recursos web</td>
+        <td>T02</td>
+        <td>Integración de backend</td>
+        <td>Conectar el componente de gráfico de línea con el backend para obtener los datos de consumo.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS11</td>
+        <td>Configuración del servicio de cálculo de niveles de agua en la Aplicación Edge</td>
+        <td>T01</td>
+        <td>Configuración del servicio de cálculo de niveles de agua en la Aplicación Edge.</td>
+        <td>Configurar el servicio en la aplicación Edge para calcular los niveles de agua.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS10</td>
+        <td>Configuración del servicio de cálculo de niveles de agua en la Aplicación Edge</td>
+        <td>T01</td>
+        <td>Configuración del servicio de cálculo de niveles de agua en la Aplicación Edge.</td>
+        <td>Configurar el servicio en la aplicación Edge para calcular los niveles de agua.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS09</td>
+        <td>Configuración del servicio de cálculo de consumo de agua en la Aplicación Edge</td>
+        <td>T01</td>
+        <td>Configuración del servicio de cálculo de consumo de agua en la Aplicación Edge.</td>
+        <td>Configurar el servicio en la aplicación Edge para calcular el consumo de agua.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU45</td>
+        <td>Edición de planta web</td>
+        <td>T01</td>
+        <td>Implementación de formulario para editar información de plantas en la aplicación web</td>
+        <td>Desarrollar el formulario web para que los usuarios editen la información de sus plantas.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU45</td>
+        <td>Edición de planta web</td>
+        <td>T02</td>
+        <td>Integración de endpoint para editar información de plantas en la aplicación web</td>
+        <td>Conectar el formulario de edición de plantas web con el endpoint de backend.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU47</td>
+        <td>Edición de planta móvil</td>
+        <td>T01</td>
+        <td>Implementación de formulario para editar información de plantas en la aplicación móvil</td>
+        <td>Desarrollar el formulario móvil para que los usuarios editen la información de sus plantas.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU47</td>
+        <td>Edición de planta móvil</td>
+        <td>T02</td>
+        <td>Integración de endpoint para editar información de plantas en la aplicación móvil</td>
+        <td>Conectar el formulario de edición de plantas móvil con el endpoint de backend.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU46</td>
+        <td>Eliminación de planta web</td>
+        <td>T01</td>
+        <td>Implementación de modal para eliminar un registro de plantas en la aplicación web</td>
+        <td>Diseñar y desarrollar el modal de confirmación para eliminar plantas en la interfaz web.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU46</td>
+        <td>Eliminación de planta web</td>
+        <td>T02</td>
+        <td>Integración de endpoint para eliminar un registo de plantas en la aplicación web</td>
+        <td>Conectar el modal de eliminación de plantas web con el endpoint de backend.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU48</td>
+        <td>Eliminación de planta móvil</td>
+        <td>T01</td>
+        <td>Implementación de modal para eliminar un registro de plantas en la aplicación móvil</td>
+        <td>Diseñar y desarrollar el modal de confirmación para eliminar plantas en la interfaz móvil.</td>
+        <td>4</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU48</td>
+        <td>Eliminación de planta móvil</td>
+        <td>T02</td>
+        <td>Integración de endpoint para eliminar un registo de plantas en la aplicación móvil</td>
+        <td>Conectar el modal de eliminación de plantas móvil con el endpoint de backend.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU32</td>
+        <td>Vinculación de IoT a Edge, FOG y Sistema central</td>
+        <td>T01</td>
+        <td>Pruebas de conectividad FOG Edge</td>
+        <td>Realizar pruebas para asegurar la conexión entre los sistemas FOG y Edge.</td>
+        <td>8</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Doing</td>
+    </tr>
+    <tr>
+        <td>HU32</td>
+        <td>Vinculación de IoT a Edge, FOG y Sistema central</td>
+        <td>T02</td>
+        <td>Pruebas de conectividad Edge Embeded</td>
+        <td>Realizar pruebas para asegurar la conexión entre los dispositivos Edge y Embedded.</td>
+        <td>6</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU32</td>
+        <td>Vinculación de IoT a Edge, FOG y Sistema central</td>
+        <td>T03</td>
+        <td>Pruebas de conectividad Fog Sistema (Empresarial)</td>
+        <td>Realizar pruebas para asegurar la conexión entre el sistema FOG y el sistema empresarial.</td>
+        <td>8</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Doing</td>
+    </tr>
+    <tr>
+        <td>HU32</td>
+        <td>Vinculación de IoT a Edge, FOG y Sistema central</td>
+        <td>T04</td>
+        <td>Pruebas de conectividad Edge Sistema (Domestico)</td>
+        <td>Realizar pruebas para asegurar la conexión entre el sistema Edge y el sistema doméstico.</td>
+        <td>8</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU30</td>
+        <td>Configurar parámetros del dispositivo IoT</td>
+        <td>T01</td>
+        <td>Integrar la configuracion de parametros al dispositivo IoT</td>
+        <td>Implementar la integración para enviar y aplicar parámetros de configuración a los dispositivos IoT.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU36</td>
+        <td>Mostrar información adicional de la API externa (Web)</td>
+        <td>T01</td>
+        <td>Implementar API externa para recibir datos adicionales en endpoint backend</td>
+        <td>Integrar una API externa en el backend para obtener datos complementarios.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU36</td>
+        <td>Mostrar información adicional de la API externa (Web)</td>
+        <td>T02</td>
+        <td>Mostrar informacion de la API externa al solicitar en front web</td>
+        <td>Desarrollar la interfaz web para mostrar la información obtenida de la API externa.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU38</td>
+        <td>Visualización y gestión de preguntas para especialista (Móvil)</td>
+        <td>T01</td>
+        <td>Vista para visualizar las preguntas registradas en el sistema</td>
+        <td>Diseñar y desarrollar la vista móvil para que los especialistas visualicen todas las preguntas.</td>
+        <td>8</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU38</td>
+        <td>Visualización y gestión de preguntas para especialista (Móvil)</td>
+        <td>T02</td>
+        <td>Ordenar y Filtrar las preguntas según estado o prioridad</td>
+        <td>Implementar la funcionalidad de ordenar y filtrar preguntas por estado o prioridad en la vista móvil.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU38</td>
+        <td>Visualización y gestión de preguntas para especialista (Móvil)</td>
+        <td>T03</td>
+        <td>Integracion de endpoint para conseguir las preguntas en backend</td>
+        <td>Conectar la vista de preguntas móvil con el endpoint del backend para obtener los datos.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffmann</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU43</td>
+        <td>Validación de cambio de contraseña (Web)</td>
+        <td>T01</td>
+        <td>Validacion de cambios de contraseña al recibir edicion de datos de perfil web</td>
+        <td>Implementar la validación para cambios de contraseña al editar el perfil de usuario web.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU49</td>
+        <td>Gestión de sensores y actuadores con IAM</td>
+        <td>T01</td>
+        <td>Validacion de IAM con sensores y Actuadores</td>
+        <td>Implementar la validación de la gestión de identidad y acceso (IAM) para sensores y actuadores.</td>
+        <td>6</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU49</td>
+        <td>Gestión de sensores y actuadores con IAM</td>
+        <td>T02</td>
+        <td>Cambio de umbrales y parametros desde backend a embeded</td>
+        <td>Desarrollar la funcionalidad para actualizar umbrales y parámetros desde el backend hacia los dispositivos embedded.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU50</td>
+        <td>Registro y visualización de anomalías (Web)</td>
+        <td>T01</td>
+        <td>Registro de cuando se registra una anomalia en el sistema en relacion a la planta/plantacion</td>
+        <td>Implementar la función para registrar anomalías detectadas en plantas/plantaciones en el sistema.</td>
+        <td>8</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU50</td>
+        <td>Registro y visualización de anomalías (Web)</td>
+        <td>T02</td>
+        <td>Visualizacion de card en vista y componentes de notificacion con datos de notificacion registrada</td>
+        <td>Diseñar y desarrollar la visualización de tarjetas y componentes de notificación con información de anomalías.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU51</td>
+        <td>Registro y visualización de anomalías (Móvil)</td>
+        <td>T01</td>
+        <td>Visualizacion de card en view y widgets de notificacion con datos de notificacion registrada</td>
+        <td>Diseñar y desarrollar la visualización de tarjetas y widgets de notificación con información de anomalías en móvil.</td>
+        <td>6</td>
+        <td>Mathias Alejandro Jave Diaz</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU54</td>
+        <td>Visualización de consumo de recursos móvil</td>
+        <td>T01</td>
+        <td>Creación del widget de gráfico de línea</td>
+        <td>Desarrollar un widget de gráfico de línea para visualizar el consumo de recursos en la aplicación móvil.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>HU54</td>
+        <td>Visualización de consumo de recursos móvil</td>
+        <td>T02</td>
+        <td>Integración de backend</td>
+        <td>Conectar el widget de gráfico de línea móvil con el backend para obtener los datos de consumo.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS01</td>
+        <td>Integración de MFA en Backend</td>
+        <td>T01</td>
+        <td>Integracion y configuracion de metodo MFA en Backend</td>
+        <td>Integrar y configurar la autenticación multifactor (MFA) en el backend del sistema.</td>
+        <td>8</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS05</td>
+        <td>Gestión de variables de entorno</td>
+        <td>T01</td>
+        <td>Uso de variables de entorno y uso de estas en deployment</td>
+        <td>Configurar y utilizar variables de entorno para el despliegue de la aplicación.</td>
+        <td>4</td>
+        <td>Sebastian Ramirez Hoffman</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS07</td>
+        <td>Validación de datos de pago en Backend</td>
+        <td>T01</td>
+        <td>Realizar validacion de datos de pago en Backend</td>
+        <td>Implementar la lógica de validación para los datos de pago recibidos en el backend.</td>
+        <td>6</td>
+        <td>Alex Avila Asto</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>TS08</td>
+        <td>Configuración de servicio de cálculo de energía en Edge</td>
+        <td>T01</td>
+        <td>Configuración del servicio de cálculo de consumo de energía en la Aplicación Edge.</td>
+        <td>Configurar el servicio en la aplicación Edge para calcular el consumo de energía.</td>
+        <td>4</td>
+        <td>Gustavo Huilca Chipana</td>
+        <td>Done</td>
+    </tr>
+</table>
+
+### 7.2.1.3. Development Evidence for Sprint Review.
+<p>En esta sección se presentan las evidencias de desarrollo del Sprint 2, incluyendo los commits realizados en el repositorio de GitHub, que reflejan el progreso y las implementaciones realizadas durante el sprint.</p>
+
+| Repository                                        | Branch                          | Commit Id | Commit Message                                                                                                                                                                  | Commit Message Body                                                                                                                             | Commited on (Date)             |
+|---------------------------------------------------|---------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 5741717   | feat(analytics): add get metric by device id and metric type                                                                                                                    |                                                                                                                                                 | Wed Jun 18 11:37:29 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | e641fc2   | feat(assets): add device creation                                                                                                                                               |                                                                                                                                                 | Wed Jun 18 11:33:20 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 8816eeb   | hotfix: question service returning empty array..                                                                                                                                |                                                                                                                                                 | Wed Jun 18 10:57:09 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 0fd7840   | hotfix: missing dependency Device repository implemented                                                                                                                        |                                                                                                                                                 | Wed Jun 18 10:50:35 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 5fcd1a1   | Merge branch 'develop' of https://github.com/wemade-IoT/EcoGuardian-Backend into develop                                                                                        |                                                                                                                                                 | Wed Jun 18 10:35:52 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 4cf6ad6   | chore: delete .idea files                                                                                                                                                       |                                                                                                                                                 | Wed Jun 18 10:35:42 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 6e6f70e   | Merge branch 'develop' of https://github.com/wemade-IoT/EcoGuardian-Backend into develop                                                                                        |                                                                                                                                                 | Wed Jun 18 10:34:08 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 73371b4   | hotfix: gitignore file update based on previous versions                                                                                                                        |                                                                                                                                                 | Wed Jun 18 10:34:06 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | f1b8b2f   | fix: correct previous merge                                                                                                                                                     |                                                                                                                                                 | Wed Jun 18 10:32:23 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 9a93123   | feat: merged profiles and preferences                                                                                                                                           |                                                                                                                                                 | Wed Jun 18 09:30:55 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 31ce26d   | Merge remote-tracking branch 'origin/feature/profiles-preferences' into develop                                                                                                 | # Conflicts:                                                                                                                                    | Wed Jun 18 09:28:35 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 2ac8eb8   | feat: fixing a hole and merge                                                                                                                                                   |                                                                                                                                                 | Wed Jun 18 08:56:48 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | b601606   | feat: htnr                                                                                                                                                                      |                                                                                                                                                 | Wed Jun 18 08:40:20 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 8dbbf40   | feat(payment): add Stripe API key to create PaymentIntent and temporarily disable auth middleware for Device                                                                    |                                                                                                                                                 | Wed Jun 18 08:32:56 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | f1c05b2   | Merge pull request #8 from wemade-IoT/feat/integrate-subscriptionandpayments-iam                                                                                                | feat(subscriptionAndPayments): added foreign keys for user  and confi…                                                                          | Wed Jun 18 07:50:51 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 6386667   | feat(subscriptionAndPayments): added foreign keys for user  and configured Stripe API key                                                                                       |                                                                                                                                                 | Wed Jun 18 07:27:26 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | d31da77   | Merge pull request #7 from wemade-IoT/feat/Question-AnswersServices                                                                                                             | hotfix: added query to get all questions                                                                                                        | Wed Jun 18 00:16:43 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | fa43831   | feat(iam): add device auth                                                                                                                                                      |                                                                                                                                                 | Tue Jun 17 23:49:35 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 123bf07   | feat: preapare for merge                                                                                                                                                        |                                                                                                                                                 | Tue Jun 17 23:33:40 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 2ce1a2a   | Merge branch 'feature/profiles-preferences' of https://github.com/wemade-IoT/EcoGuardian-Backend into feature/profiles-preferences                                              |                                                                                                                                                 | Tue Jun 17 23:15:52 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 82e95d3   | feat(analytics): add analytics endpoints                                                                                                                                        |                                                                                                                                                 | Tue Jun 17 11:43:24 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 36aa0d7   | feat: added profileContextFacade                                                                                                                                                |                                                                                                                                                 | Mon Jun 16 23:42:37 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 2e5f6a3   | feat: pulled from develop                                                                                                                                                       |                                                                                                                                                 | Mon Jun 16 23:09:23 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 13299fe   | Merge remote-tracking branch 'origin/develop' into feature/profiles-preferences                                                                                                 | # Conflicts:                                                                                                                                    | Mon Jun 16 22:03:15 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 132f072   | hotfix: added query to get all questions                                                                                                                                        |                                                                                                                                                 | Mon Jun 16 20:58:17 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | bdc5d6c   | Merge Integration ACL for CRM                                                                                                                                                   | Integrating BC with ACL                                                                                                                         | Sun Jun 15 10:12:43 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | c4a80ec   | feat: Added extra queries (By UserID and PlantID) to search for questions                                                                                                       |                                                                                                                                                 | Sun Jun 15 10:11:03 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 0704b47   | feat: Implemented some validations & integration by ACL with IAM and Monitoring services                                                                                        |                                                                                                                                                 | Sun Jun 15 10:06:42 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | a2084d0   | fix: fixed duplicate cors configuration bug                                                                                                                                     |                                                                                                                                                 | Sat Jun 14 14:51:33 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | c913886   | Merge pull request #3 from wemade-IoT/feat/question-answer-operations                                                                                                           | Feat/question answer operations                                                                                                                 | Sat Jun 14 12:34:37 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 0b6457a   | Merge branch 'develop' into feat/question-answer-operations                                                                                                                     |                                                                                                                                                 | Sat Jun 14 12:33:50 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feat/question-answer-operations | 3c6a512   | feat(CRM): Added required additions and documentation.                                                                                                                          |                                                                                                                                                 | Sat Jun 14 12:28:26 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 2be63fe   | Update .gitignore to exclude NuGet and build artifacts                                                                                                                          |                                                                                                                                                 | Fri Jun 13 20:23:12 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 5c8f3e0   | feat(planning): add auth to planning endpoint                                                                                                                                   |                                                                                                                                                 | Fri Jun 13 19:18:01 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 4f43bf1   | fix: correct order states seed event                                                                                                                                            |                                                                                                                                                 | Fri Jun 13 17:39:28 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 6b42527   | Merge branch 'feature/installation-order' into develop                                                                                                                          | # Conflicts:                                                                                                                                    | Fri Jun 13 16:55:23 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 30d44ce   | chore: update .gitignore                                                                                                                                                        |                                                                                                                                                 | Fri Jun 13 16:39:34 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 9ae5428   | chore: delete EcoGuardian-Backend.sln.DotSettings.user                                                                                                                          |                                                                                                                                                 | Fri Jun 13 16:37:32 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 6a00a37   | chore: delete EcoGuardian-Backend/obj directory                                                                                                                                 |                                                                                                                                                 | Fri Jun 13 16:35:29 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 3cc52de   | chore: delete EcoGuardian-Backend/bin directory                                                                                                                                 |                                                                                                                                                 | Fri Jun 13 16:35:19 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | bff904f   | chore: delete .idea directory                                                                                                                                                   |                                                                                                                                                 | Fri Jun 13 16:34:38 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 229983f   | fix: Add seed data for subscriptions and payments in ApplicationEventHandler                                                                                                    |                                                                                                                                                 | Fri Jun 13 14:25:55 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 29ba775   | Merge branch 'develop' of https://github.com/wemade-IoT/EcoGuardian-Backend into develop # Por favor ingresa un mensaje de commit que explique por qué es necesaria esta fusión | # especialmente si esto fusiona un upstream actualizado en una rama de tópico. # # Lines starting with '#' will be ignored                      | Fri Jun 13 13:32:02 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 01d4452   | feat(configuration): update projec paths and add CORS policy for all origins                                                                                                    |                                                                                                                                                 | Fri Jun 13 13:30:56 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 981fdb6   | Merge pull request #2 from wemade-IoT/feat/user-suscription                                                                                                                     | merging feat/user suscription into develop                                                                                                      | Fri Jun 13 13:19:39 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | a8dd281   | Merge branch 'develop' into feat/user-suscription                                                                                                                               |                                                                                                                                                 | Fri Jun 13 13:19:28 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | c37e469   | Merge branch 'feature/profiles-preferences' of /Users/manuelpena/Documents/GitHub/IoT/EcoGuardian-Backend with conflicts.                                                       |                                                                                                                                                 | Thu Jun 12 23:31:40 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | 1df1979   | feat(planning): add acl and plantation area to order                                                                                                                            |                                                                                                                                                 | Thu Jun 12 17:10:30 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 579f57a   | feat(update): stripe nuget added                                                                                                                                                |                                                                                                                                                 | Wed Jun 11 19:18:44 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 545c81a   | feat(subscriptions-payments): initial bc structure and implementation added                                                                                                     |                                                                                                                                                 | Wed Jun 11 19:16:29 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | e1abe99   | feat: added ProfileConfigurationBuilder on AppDbContext                                                                                                                         |                                                                                                                                                 | Wed Jun 11 08:48:40 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | a44fb4e   | feat: added IProfileRepositoryService and ProfileRepositoryService on InfrastructureDependencyContaineri                                                                        |                                                                                                                                                 | Wed Jun 11 08:46:43 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | a961fe9   | feat: added IProfileCommandService                                                                                                                                              | ProfileCommandService and IProfileQueryService                                                                                                  | Wed Jun 11 08:45:31 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | d739a3a   | feat: added ProfileConfigurationBuilder class                                                                                                                                   |                                                                                                                                                 | Wed Jun 11 08:43:09 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 1533314   | feat: added ProfileController class                                                                                                                                             |                                                                                                                                                 | Wed Jun 11 08:42:20 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | d9fdace   | feat: added ProfileResourceFromEntityAssembler class                                                                                                                            |                                                                                                                                                 | Wed Jun 11 08:41:41 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 09d387a   | feat: added UpdateProfileCommandFromResource class                                                                                                                              |                                                                                                                                                 | Wed Jun 11 08:40:46 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 911ab99   | feat: added CreateProfileCommandFromResource class                                                                                                                              |                                                                                                                                                 | Wed Jun 11 08:39:37 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | ff6d0de   | feat: added UpdateProfileResource record                                                                                                                                        |                                                                                                                                                 | Wed Jun 11 08:38:52 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 582873b   | feat: added ProfileResource record                                                                                                                                              |                                                                                                                                                 | Wed Jun 11 08:38:29 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 62a6806   | feat: added CreateProfileResource record                                                                                                                                        |                                                                                                                                                 | Wed Jun 11 08:38:02 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | f649341   | feat: added ProfileQueryService                                                                                                                                                 |                                                                                                                                                 | Wed Jun 11 08:37:19 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 058b731   | feat: added ProfileCommandService class                                                                                                                                         |                                                                                                                                                 | Wed Jun 11 08:37:00 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 75c0120   | feat: added ProfileRepository class                                                                                                                                             |                                                                                                                                                 | Wed Jun 11 08:35:45 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | cba3b1a   | feat: added IProfileQueryService Interface Query Service                                                                                                                        |                                                                                                                                                 | Wed Jun 11 08:34:47 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 80c3b93   | feat: added IProfileCommandService Interface Command Service                                                                                                                    |                                                                                                                                                 | Wed Jun 11 08:34:08 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 22b7d9e   | feat: added IProfileRepository interface                                                                                                                                        |                                                                                                                                                 | Wed Jun 11 08:33:04 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 18ce894   | feat: added GetProfileByEmailQuery                                                                                                                                              |                                                                                                                                                 | Wed Jun 11 08:32:36 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 369b73f   | feat: added Profile UpdateProfileCommand builder                                                                                                                                |                                                                                                                                                 | Wed Jun 11 08:30:48 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 6e857c6   | feat: added Profile CreateProfileCommand builder                                                                                                                                |                                                                                                                                                 | Wed Jun 11 08:30:38 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 99df7cc   | feat: Added UpdateProfileCommand record                                                                                                                                         |                                                                                                                                                 | Wed Jun 11 08:23:36 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | 13b8aab   | feat: Added CreateProfileCommand record                                                                                                                                         |                                                                                                                                                 | Wed Jun 11 08:23:18 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/profile-preferences     | b35c754   | feat: Added Profile Aggregate                                                                                                                                                   |                                                                                                                                                 | Wed Jun 11 08:22:35 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 0e232ed   | chore: configuring filter authorization and acl for monitorin bc                                                                                                                |                                                                                                                                                 | Wed Jun 11 08:00:01 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | c9b87d9   | feat(planning): add order details                                                                                                                                               |                                                                                                                                                 | Mon Jun 9 17:16:08 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 56bba5c   | feat(installation): add complete payment and complete installation commands                                                                                                     |                                                                                                                                                 | Mon Jun 9 16:24:19 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | 09cae64   | fix(planning): correct attributes for order.                                                                                                                                    |                                                                                                                                                 | Mon Jun 9 16:21:52 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 5e5d1d4   | refactor: changed efc mapping implementation                                                                                                                                    | redifined user model and other stuffs                                                                                                           | Mon Jun 9 09:30:51 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | 0028057   | chore: update .gitignore                                                                                                                                                        |                                                                                                                                                 | Sun Jun 8 18:24:27 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | 37e8f2b   | feat(planning): add controller for orders                                                                                                                                       |                                                                                                                                                 | Sun Jun 8 18:23:44 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | 44b014e   | feat(planning): add application layer for planning bc                                                                                                                           |                                                                                                                                                 | Sun Jun 8 17:57:56 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | ae94356   | feat(planning): add interface layer transformers and resources.                                                                                                                 |                                                                                                                                                 | Sun Jun 8 16:12:05 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | 0fea377   | feat(planing): add planning bc infrastructure layer                                                                                                                             |                                                                                                                                                 | Sun Jun 8 15:54:46 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | d296d86   | feat(planning): add configuration builders for planning bc                                                                                                                      |                                                                                                                                                 | Sun Jun 8 15:50:20 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | fedea52   | feat(planning): add domain layer repositories and services for planning bc                                                                                                      |                                                                                                                                                 | Sun Jun 8 15:37:34 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/installation-order      | 940fd65   | feat(planning): add domain layer models for planning bc                                                                                                                         |                                                                                                                                                 | Sun Jun 8 15:30:12 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 7df56fe   | feat: add date time converter helper                                                                                                                                            |                                                                                                                                                 | Sun Jun 8 15:29:23 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/authentication-user     | 7940c8d   | chore: add .gitignore                                                                                                                                                           |                                                                                                                                                 | Sun Jun 8 15:28:19 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 2101b98   | chore: delete EcoGuardian-Backend/obj directory                                                                                                                                 |                                                                                                                                                 | Sun Jun 8 14:28:55 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | f0a26c4   | chore: delete EcoGuardian-Backend/bin directory.                                                                                                                                |                                                                                                                                                 | Sun Jun 8 14:28:02 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feat/question-answer-operations | d98c0eb   | feat(CRM): Implemented CRM operations                                                                                                                                           | this has mostly the basic requirements for the CRM BC to work... Additional notes: Once IAM is done add the dependency to the builder folder... | Sat Jun 7 21:46:29 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/authentication-user     | b119088   | feat(authentication): configure user and role entities in DbContext and update connection string                                                                                |                                                                                                                                                 | Sat Jun 7 20:44:39 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/authentication-user     | e051bac   | feat(authentication): add hashing and token services for user authentication                                                                                                    |                                                                                                                                                 | Sat Jun 7 20:44:32 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/register-plant          | 8d8b92c   | feat(authentication): add user role management and query functionalities                                                                                                        |                                                                                                                                                 | Sat Jun 7 20:44:15 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/authentication-user     | 930f68e   | feat(authentication): add authentication controller and middleware for user sign-in and sign-up                                                                                 |                                                                                                                                                 | Sat Jun 7 20:43:27 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/authentication-user     | 8ad96a9   | feat(authentication): implement user management functionality with user creation                                                                                                | retrieval                                                                                                                                       | Sat Jun 7 20:41:28 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | ce7b9ef   | fix(operationAndMonitoring): added missing name reference to resource assmebler                                                                                                 |                                                                                                                                                 | Thu Jun 5 11:38:14 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 47a4639   | fix(operatonAndMonioring):added missing name column                                                                                                                             |                                                                                                                                                 | Thu Jun 5 11:34:51 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 0ad942c   | chore: configured cors                                                                                                                                                          |                                                                                                                                                 | Thu Jun 5 10:45:33 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | c1b6223   | chore: added coker compose configuration                                                                                                                                        |                                                                                                                                                 | Thu Jun 5 09:51:30 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/register-plant          | ae60140   | chore: configured docker container for development                                                                                                                              |                                                                                                                                                 | Thu Jun 5 09:50:00 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 554c448   | chore: complete merge to feature/register-plant                                                                                                                                 |                                                                                                                                                 | Wed Jun 4 15:02:17 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | 138b9b7   | chore: configured gitignore                                                                                                                                                     |                                                                                                                                                 | Wed Jun 4 14:51:19 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/register-plant          | 5dbb29b   | feat(operationAndMonitorin): added get plants by user id feature                                                                                                                |                                                                                                                                                 | Wed Jun 4 13:32:49 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/register-plant          | 4af7f62   | feat(operationAndMonitoring): added delete plant feature                                                                                                                        |                                                                                                                                                 | Wed Jun 4 13:23:22 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/register-plant          | ff216f3   | feat(operationAndMonitoring): added edit plant feature                                                                                                                          |                                                                                                                                                 | Wed Jun 4 13:17:38 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/register-plant          | db00009   | feat(operationAndMonitoring): added register plants and plantations feature                                                                                                     |                                                                                                                                                 | Tue Jun 3 18:23:56 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop                         | d591a6e   | chore: deleted .idea file                                                                                                                                                       |                                                                                                                                                 | Mon Jun 2 23:32:37 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | feature/register-plant          | 940cb4d   | chore:innitial commit                                                                                                                                                           |                                                                                                                                                 | Mon Jun 2 23:31:07 2025 -0500  |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | develop                         | b496be9   | feat(iam): complete web services conection                                                                                                                                      |                                                                                                                                                 | Tue Jun 17 23:46:44 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | develop                         | f929dce   | feat(analytics): add embedded data fetch                                                                                                                                        |                                                                                                                                                 | Tue Jun 17 12:16:16 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | develop                         | 416146c   | feat(iam): added iam implementation                                                                                                                                             |                                                                                                                                                 | Sun Jun 15 20:17:54 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | feature/register-plant          | 395354c   | chore: comfigured analytics blueprint correctly                                                                                                                                 |                                                                                                                                                 | Sun Jun 15 19:49:08 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | feature/register-plant          | 33e4a6e   | feat(analytics): added analytics implementation                                                                                                                                 |                                                                                                                                                 | Sun Jun 15 19:32:21 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | feature/register-plant          | 3386e11   | feat(analytics): added analytics implementation                                                                                                                                 |                                                                                                                                                 | Sun Jun 15 19:32:01 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | develop                         | f3a0338   | chore: update .gitignore                                                                                                                                                        |                                                                                                                                                 | Sun Jun 15 15:08:43 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | develop                         | b356689   | chore: create .gitignore                                                                                                                                                        |                                                                                                                                                 | Sun Jun 15 15:02:01 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Edge    | develop                         | 2a0d48b   | chore: initial project setup.                                                                                                                                                   |                                                                                                                                                 | Sun Jun 15 15:00:15 2025 -0500 |
+<table>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e817958</td>
+        <td>fix(http): update baseURL to production endpoint</td>
+        <td></td>
+        <td>Wed Jun 18 23:33:04 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>357f4db</td>
+        <td>fix(payment): correct return_url format in handleSubmit function</td>
+        <td></td>
+        <td>Wed Jun 18 21:33:09 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>54b223d</td>
+        <td>feat: Add initial vercel configuration for rewrites</td>
+        <td></td>
+        <td>Wed Jun 18 20:06:39 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>6b3e996</td>
+        <td>Merge pull request #11 from wemade-IoT/develop</td>
+        <td>Develop</td>
+        <td>Wed Jun 18 20:01:44 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>7446f4b</td>
+        <td>feat: Add mock data for analytics</td>
+        <td>notifications                                                                                                                 sensors                                                                                       users                                                                                  and plantations</td>
+        <td>Wed Jun 18 20:00:58 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>d08655c</td>
+        <td>fix(package): add json-server script to package.json</td>
+        <td></td>
+        <td>Wed Jun 18 19:31:54 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>6fbd925</td>
+        <td>feat: Implement notification service with mock API connection</td>
+        <td>feat: Enhance modal creation with optional redirection path</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>5465efc</td>
+        <td>feat: Add sleep helper function to simulate API requests</td>
+        <td></td>
+        <td>Wed Jun 18 19:19:48 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>97c3393</td>
+        <td>refactor(auth): clean up signUp method and update register action</td>
+        <td></td>
+        <td>Wed Jun 18 09:05:40 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>ee2f82c</td>
+        <td>fix(package): add missing comma in dependencies section</td>
+        <td></td>
+        <td>Wed Jun 18 08:09:45 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>5f9f81a</td>
+        <td>Merge pull request #10 from wemade-IoT/feat/choose-plan</td>
+        <td>feat(payment): implement payment and subscription processing with Str…</td>
+        <td>Wed Jun 18 07:49:08 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>1211b98</td>
+        <td>Merge branch &#39;develop&#39; into feat/choose-plan</td>
+        <td></td>
+        <td>Wed Jun 18 07:48:59 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>3b06693</td>
+        <td>feat(payment): implement payment and subscription processing with Stripe integration            PaymentRequest</td>
+        <td>and PaymentResponse classes for payment data handling. - Created SubscriptionAssembler  SubscriptionRequest            and SubscriptionResponse classes for subscription data management. Developed PaymentService and SubscriptionService for API interactions related to payments and subscriptions.</td>
+        <td>Wed Jun 18 07:29:45 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>b90d1a7</td>
+        <td>Merge pull request #9 from wemade-IoT/feat/addQuestion</td>
+        <td>Feat/add question</td>
+        <td>Tue Jun 17 19:52:48 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>f62a9d0</td>
+        <td>feat: added the answering logic to card (Might want to refactor later)</td>
+        <td></td>
+        <td>Tue Jun 17 19:50:42 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>6fcfede</td>
+        <td>feat(CRM) implemented some changes to http logic along side the missing CRM features</td>
+        <td></td>
+        <td>Tue Jun 17 00:08:05 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e9e748c</td>
+        <td>hotfix: Fixed the folder and documents merge</td>
+        <td></td>
+        <td>Mon Jun 16 21:14:32 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>fb034de</td>
+        <td>Merge branch &#39;develop&#39; of https://github.com/wemade-IoT/eco-guardian-frontend into develop</td>
+        <td></td>
+        <td>Mon Jun 16 09:49:39 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>11027a2</td>
+        <td>hotfix: fix auth validation error</td>
+        <td></td>
+        <td>Mon Jun 16 09:47:23 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e245dc2</td>
+        <td>feat(planning): implement order service to components</td>
+        <td></td>
+        <td>Sun Jun 15 13:16:03 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>5bad21a</td>
+        <td>feat(planning): add order domain files.</td>
+        <td></td>
+        <td>Sun Jun 15 12:28:20 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>b584ddd</td>
+        <td>Merge branch &#39;feature/installation-order&#39; into develop</td>
+        <td># Conflicts:</td>
+        <td>Sun Jun 15 10:41:17 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>6df8cc1</td>
+        <td>feat(monitorin): validated if user is enterprise from authStore</td>
+        <td></td>
+        <td>Sun Jun 15 02:53:47 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>faae938</td>
+        <td>fix: fixed iam and complete todo tasks related with iam</td>
+        <td></td>
+        <td>Sun Jun 15 02:48:10 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>eb21f28</td>
+        <td>chore: uploaded feature/register-plant changes</td>
+        <td></td>
+        <td>Sun Jun 15 01:03:56 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>f554531</td>
+        <td>chore: restored original config</td>
+        <td></td>
+        <td>Sun Jun 15 00:52:00 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>a0ddb6a</td>
+        <td>refactor(monitorin): moved plant business logic to plantstore</td>
+        <td></td>
+        <td>Sun Jun 15 00:46:30 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>37dd7c4</td>
+        <td>feat(monitorin): customize plant information component</td>
+        <td></td>
+        <td>Sun Jun 15 00:15:13 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>ebaa707</td>
+        <td>feat(monitorin): added delete plant ot plantation feature</td>
+        <td></td>
+        <td>Sat Jun 14 21:17:07 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>68d89c0</td>
+        <td>Merge pull request #8 from wemade-IoT/feat/choose-plan</td>
+        <td>merging Feat/choose plan into develop</td>
+        <td>Fri Jun 13 16:24:14 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>3c6d220</td>
+        <td>Merge branch &#39;develop&#39; into feat/choose-plan</td>
+        <td></td>
+        <td>Fri Jun 13 16:23:04 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>5f6c1d1</td>
+        <td>feat: implement billing and payment components with validation schema</td>
+        <td></td>
+        <td>Fri Jun 13 16:05:45 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>12425d1</td>
+        <td>Merge branch &#39;feature/authentication-user&#39; into develop</td>
+        <td></td>
+        <td>Fri Jun 13 12:34:48 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>0b911de</td>
+        <td>fix: enhance login error handling and success messages</td>
+        <td></td>
+        <td>Fri Jun 13 12:19:15 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>fc7ccbb</td>
+        <td>fix: improve login action to handle token and user data correctly</td>
+        <td></td>
+        <td>Fri Jun 13 12:19:08 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>6df2cb5</td>
+        <td>refactor: change http property visibility to public in HttpService</td>
+        <td></td>
+        <td>Fri Jun 13 11:45:23 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>9dfea81</td>
+        <td>fix: correct registration logic and improve alert messages</td>
+        <td></td>
+        <td>Fri Jun 13 11:43:10 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>caa2c41</td>
+        <td>refactor: streamline login method and clean up code</td>
+        <td></td>
+        <td>Fri Jun 13 11:43:00 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>218e6bc</td>
+        <td>feat: refactor AuthService to use HttpService and update signIn method</td>
+        <td></td>
+        <td>Fri Jun 13 11:42:54 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>a7491c7</td>
+        <td>feat: update API URL in environment template</td>
+        <td></td>
+        <td>Fri Jun 13 11:42:03 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>8de4f79</td>
+        <td>feat: add return link to login</td>
+        <td></td>
+        <td>Mon Jun 9 09:20:23 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>193ece0</td>
+        <td>feat: update login form layout and add registration link</td>
+        <td></td>
+        <td>Mon Jun 9 09:20:04 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>66d4683</td>
+        <td>feat(planning): add Installation preferences page.</td>
+        <td></td>
+        <td>Sun Jun 8 13:41:46 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>90bba98</td>
+        <td>feat(planning): add installation order page</td>
+        <td></td>
+        <td>Sun Jun 8 10:05:09 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>9e99320</td>
+        <td>feat(planning): add date verification for scheduling</td>
+        <td></td>
+        <td>Sat Jun 7 23:59:39 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>3f2afe7</td>
+        <td>feat(planning): add time slots component.</td>
+        <td></td>
+        <td>Sat Jun 7 23:59:12 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>caa3c6c</td>
+        <td>feat(planning): add order calendar</td>
+        <td></td>
+        <td>Sat Jun 7 23:19:52 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>508140a</td>
+        <td>feat: add background image to right side of login and fix routes</td>
+        <td></td>
+        <td>Sat Jun 7 19:12:50 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>9623bab</td>
+        <td>feat: add login form with email and password fields</td>
+        <td></td>
+        <td>Sat Jun 7 19:11:49 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>ed3b573</td>
+        <td>feat: add logo to left side login page</td>
+        <td></td>
+        <td>Sat Jun 7 19:10:55 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>c50a00c</td>
+        <td>feat: add background image to right side of registration page</td>
+        <td></td>
+        <td>Sat Jun 7 19:08:21 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>05858e8</td>
+        <td>feat: add registration form with necessary fields</td>
+        <td></td>
+        <td>Sat Jun 7 19:07:59 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>f37cffb</td>
+        <td>feat: add  logo to left side  registration page</td>
+        <td></td>
+        <td>Sat Jun 7 19:06:29 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>7a23ec7</td>
+        <td>Merge pull request #7 from wemade-IoT/feat/register-question</td>
+        <td>feat: implement question management components and services</td>
+        <td>Sat Jun 7 12:26:03 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>d3d3b0e</td>
+        <td>feat: implement question management components and services</td>
+        <td></td>
+        <td>Thu Jun 5 21:53:32 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>45114c8</td>
+        <td>feat(monitoring): added register and update plant feature</td>
+        <td></td>
+        <td>Thu Jun 5 17:36:37 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>9cdfcdd</td>
+        <td>refactor: rename some components</td>
+        <td></td>
+        <td>Wed Jun 4 21:12:42 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>5740d45</td>
+        <td>Merge pull request #6 from wemade-IoT/main</td>
+        <td>merging main into feat/choose-plan</td>
+        <td>Wed Jun 4 18:47:21 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e1ad780</td>
+        <td>refactor: change component directories for appropiate bc</td>
+        <td></td>
+        <td>Wed Jun 4 18:23:49 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>6e5f3b7</td>
+        <td>chore: renamed bcs for new version</td>
+        <td></td>
+        <td>Wed Jun 4 18:19:30 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>1de4c90</td>
+        <td>feat: update notification and installation services imports and implementations</td>
+        <td></td>
+        <td>Wed Jun 4 16:26:39 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>85f0513</td>
+        <td>feat: add .gitkeep files for empty directories in analytics</td>
+        <td>consulting       iam     management  monitoring                     payment                                                                                                                                planning                          and profile</td>
+        <td>Wed Jun 4 15:24:06 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>22cdb01</td>
+        <td>refactor: remove unused installation and notifications services</td>
+        <td></td>
+        <td>Wed Jun 4 15:18:27 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>0645727</td>
+        <td>fix(iam): fixed login logic</td>
+        <td></td>
+        <td>Tue May 13 03:30:03 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>7881b70</td>
+        <td>Merge pull request #5 from wemade-IoT/develop</td>
+        <td>feat: remove unused specialist role check from analytics page</td>
+        <td>Tue May 13 02:07:49 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>80b5ba9</td>
+        <td>feat: remove unused specialist role check from analytics page</td>
+        <td></td>
+        <td>Tue May 13 02:07:09 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>805cec3</td>
+        <td>Merge pull request #4 from wemade-IoT/develop</td>
+        <td>Develop</td>
+        <td>Tue May 13 02:05:23 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>f821302</td>
+        <td>feat: add new consulting questions and update tips carousel to limit displayed queries</td>
+        <td></td>
+        <td>Tue May 13 02:03:52 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>1ec547b</td>
+        <td>feat: restructure toolbar component layout for improved user role display</td>
+        <td></td>
+        <td>Tue May 13 01:48:09 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>541ccf3</td>
+        <td>feat: add logout functionality to sidebar component</td>
+        <td></td>
+        <td>Tue May 13 01:48:04 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>1a1b914</td>
+        <td>feat: add NotificationsService for fetching notifications</td>
+        <td></td>
+        <td>Tue May 13 01:48:01 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e0cae5d</td>
+        <td>feat: implement ManagementService for plant data retrieval</td>
+        <td></td>
+        <td>Tue May 13 01:47:59 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>8b36dda</td>
+        <td>feat: implement InstallationService for managing sensor data retrieval</td>
+        <td></td>
+        <td>Tue May 13 01:47:56 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e4cdc80</td>
+        <td>feat: add auth store for user authentication and session management</td>
+        <td></td>
+        <td>Tue May 13 01:47:50 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>df8b2b3</td>
+        <td>feat: implement login form with email and password handling</td>
+        <td></td>
+        <td>Tue May 13 01:47:47 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e0a6940</td>
+        <td>feat: implement AuthService for user authentication with axios</td>
+        <td></td>
+        <td>Tue May 13 01:47:44 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>3eab9cf</td>
+        <td>feat: implement ConsultingService for API interaction using axios</td>
+        <td></td>
+        <td>Tue May 13 01:47:41 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>0570d1b</td>
+        <td>feat: add HttpService for centralized axios configuration and token management</td>
+        <td></td>
+        <td>Tue May 13 01:47:38 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>161ca9e</td>
+        <td>feat: remove AnatemporalPage from router and update home path</td>
+        <td></td>
+        <td>Tue May 13 01:47:35 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>57e1546</td>
+        <td>feat: remove DECOMMISSIONED state from DEVICE_STATE constant</td>
+        <td></td>
+        <td>Tue May 13 01:47:30 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>fd0286c</td>
+        <td>feat: remove anatemporal page component and add new plant image asset</td>
+        <td></td>
+        <td>Tue May 13 01:47:21 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>a896333</td>
+        <td>feat: restructure analytics page to conditionally display devices or plants list based on user role</td>
+        <td></td>
+        <td>Tue May 13 01:47:14 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>ff96a03</td>
+        <td>feat: refactor widget card and container components for improved styling and dynamic data fetching</td>
+        <td></td>
+        <td>Tue May 13 01:47:08 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>afad7c9</td>
+        <td>feat: refactor tips carousel component to fetch and display consulting queries dynamically</td>
+        <td></td>
+        <td>Tue May 13 01:47:03 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>ff3ac82</td>
+        <td>feat: refactor plants list component to fetch plants data from management service</td>
+        <td></td>
+        <td>Tue May 13 01:47:00 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>b7ccc07</td>
+        <td>feat: enhance plant card component with improved styling and status representation</td>
+        <td></td>
+        <td>Tue May 13 01:46:57 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>fdb8e5f</td>
+        <td>feat: update lines chart component to handle empty chart data gracefully and fetch analytics data on mount</td>
+        <td></td>
+        <td>Tue May 13 01:46:54 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>4d624ab</td>
+        <td>feat: enhance devices list component with detailed device status and attributes</td>
+        <td></td>
+        <td>Tue May 13 01:46:50 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>d09ee88</td>
+        <td>feat: update alert card component to format date and adjust alerts list to use created_at</td>
+        <td></td>
+        <td>Tue May 13 01:46:44 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>241e92f</td>
+        <td>feat: implement AnalyticsService for fetching analytics data</td>
+        <td></td>
+        <td>Tue May 13 01:46:39 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>15d1a43</td>
+        <td>feat: integrate Pinia for state management in the application</td>
+        <td></td>
+        <td>Tue May 13 01:46:37 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>a331225</td>
+        <td>feat: initialize database structure with users</td>
+        <td>sensors                                                                                                          notifications                                                                      plants                                                                                plantations                  metrics                                                                                                                                                                          and queries</td>
+        <td>Tue May 13 01:46:33 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e54eff5</td>
+        <td>chore: update dependencies and add new packages</td>
+        <td>- Added @fortawesome/fontawesome-free version 6.7.2 for icon support. - Added json-server version 1.0.0-beta.3 for mock API -</td>
+        <td>Tue May 13 01:46:29 2025 -0500 Added pinia version 3.0.2 for state management. functionality.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>65ccc83</td>
+        <td>feat: add .env to .gitignore to exclude environment variable files</td>
+        <td></td>
+        <td>Tue May 13 01:46:22 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>eb31eb5</td>
+        <td>feat: add .env.template for API URL configuration</td>
+        <td></td>
+        <td>Tue May 13 01:46:16 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>7afacfc</td>
+        <td>Merge pull request #3 from wemade-IoT/feat/gustavo</td>
+        <td>feat (management): add plant list and cards</td>
+        <td>Mon May 12 21:37:16 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>ca27d01</td>
+        <td>feat: add plant information component and update anatemporal page layout</td>
+        <td></td>
+        <td>Mon May 12 21:34:38 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>1566bf3</td>
+        <td>feat (management): add plant list and cards</td>
+        <td></td>
+        <td>Mon May 12 20:50:38 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>7149550</td>
+        <td>feat: update routing and add anatemporal page for dashboard</td>
+        <td></td>
+        <td>Mon May 12 19:58:45 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>f143ab9</td>
+        <td>Merge pull request #2 from wemade-IoT/feat/toto</td>
+        <td>feat: add tips carousel component with status display and improved la…</td>
+        <td>Mon May 12 19:34:19 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>828d196</td>
+        <td>Merge pull request #1 from wemade-IoT/feat/gustavo</td>
+        <td>merge Feat/gustavo into develop</td>
+        <td>Mon May 12 19:33:13 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>52045c3</td>
+        <td>feat: add new mock data and type definition files for analytics module</td>
+        <td></td>
+        <td>Mon May 12 19:31:45 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>97cbc2b</td>
+        <td>feat: add mock devices data and device state type definitions for analytics module</td>
+        <td></td>
+        <td>Mon May 12 19:31:39 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e30ab87</td>
+        <td>feat: add mock chart data and type definitions for analytics module</td>
+        <td></td>
+        <td>Mon May 12 19:31:34 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>0605329</td>
+        <td>feat: add new helper and interface files for analytics module</td>
+        <td></td>
+        <td>Mon May 12 19:31:29 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>70263b8</td>
+        <td>feat: add chart options configuration and index file for analytics</td>
+        <td></td>
+        <td>Mon May 12 19:31:23 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>3792c10</td>
+        <td>feat: implement lines chart component with responsive design and data selection</td>
+        <td></td>
+        <td>Mon May 12 19:31:15 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>3b41fcb</td>
+        <td>feat: enhance devices list component with detailed device information and layout improvements</td>
+        <td></td>
+        <td>Mon May 12 19:31:13 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>9ce0c99</td>
+        <td>fix: add newline at end of file in style.css</td>
+        <td></td>
+        <td>Mon May 12 19:31:10 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>3980503</td>
+        <td>feat: remove unstyled option from PrimeVue configuration</td>
+        <td></td>
+        <td>Mon May 12 19:31:07 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>9d8c62a</td>
+        <td>feat: add tips carousel component with status display and improved layout</td>
+        <td></td>
+        <td>Mon May 12 18:53:12 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>c8d0813</td>
+        <td>feat (notification): add alerts list and cards</td>
+        <td></td>
+        <td>Mon May 12 18:49:04 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>52aaf35</td>
+        <td>feat (analytics): add widgets container and cards</td>
+        <td></td>
+        <td>Mon May 12 18:30:13 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>9343963</td>
+        <td>feat: add main layout page with sidebar and toolbar components</td>
+        <td></td>
+        <td>Mon May 12 16:41:22 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>4509505</td>
+        <td>feat: create error page component with basic template</td>
+        <td></td>
+        <td>Mon May 12 16:41:19 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>9f34a7d</td>
+        <td>feat: add toolbar component with alerts and date display</td>
+        <td></td>
+        <td>Mon May 12 16:41:13 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>7f7704d</td>
+        <td>feat: add sidebar component with navigation icons and user avatar</td>
+        <td></td>
+        <td>Mon May 12 16:41:06 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>199c18e</td>
+        <td>feat: implement router configuration with login</td>
+        <td>register</td>
+        <td>and analytics routes</td>
+        <td></td>
+        <td>Mon May 12 16:41:01 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>cd08f5d</td>
+        <td>feat: add registration page component with form fields and routing</td>
+        <td></td>
+        <td>Mon May 12 16:40:56 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>a415fd8</td>
+        <td>feat: add login page component with form and routing</td>
+        <td></td>
+        <td>Mon May 12 16:40:53 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>a0e14e4</td>
+        <td>feat: create analytics page component with layout and imports for charts and lists</td>
+        <td></td>
+        <td>Mon May 12 16:40:49 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>15cbd2d</td>
+        <td>feat: add new Vue components for alerts list</td>
+        <td>devices list                                                                                                                  lines chart                                                                                    plant detail                                                                            queries list                    tips carousel</td>
+        <td>and widgets container for analytics page</td>
+        <td></td>
+        <td>Mon May 12 16:40:46 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>e6537f5</td>
+        <td>chore: remove empty .gitkeep file from services directory</td>
+        <td></td>
+        <td>Mon May 12 16:40:24 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>df2d3bd</td>
+        <td>style: update theme colors and scrollbar styles in style.css</td>
+        <td></td>
+        <td>Mon May 12 16:40:17 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>59e9184</td>
+        <td>feat: add TypeScript declaration for Vue components</td>
+        <td></td>
+        <td>Mon May 12 16:40:12 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>88d76fb</td>
+        <td>style: format and organize imports in main.ts for improved readability</td>
+        <td></td>
+        <td>Mon May 12 16:40:08 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>a33818e</td>
+        <td>refactor: remove unused Button component and update template structure</td>
+        <td></td>
+        <td>Mon May 12 16:40:02 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>4431400</td>
+        <td>feat: add db.json file for server data storage</td>
+        <td></td>
+        <td>Mon May 12 16:39:59 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>aee3d5d</td>
+        <td>feat: add logo.svg file for EcoGuardian App branding</td>
+        <td></td>
+        <td>Mon May 12 16:39:56 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>efaf98b</td>
+        <td>feat: update tsconfig and vite config for path aliasing</td>
+        <td></td>
+        <td>Mon May 12 16:39:51 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>776eff9</td>
+        <td>feat: add chart.js and @types/node dependencies</td>
+        <td></td>
+        <td>Mon May 12 16:39:45 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>f59d2d7</td>
+        <td>fix: update favicon and title for EcoGuardian App</td>
+        <td></td>
+        <td>Mon May 12 16:39:40 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>a47eee9</td>
+        <td>chore: primevue config and dependencies for axios and vue router</td>
+        <td></td>
+        <td>Mon May 12 09:56:33 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/eco-guardian-frontend</td>
+        <td>develop</td>
+        <td>76447c5</td>
+        <td>feat: initial setup</td>
+        <td></td>
+        <td>Mon May 12 09:28:18 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>d558d50</td>
+        <td>chore: configured merge conflicts</td>
+        <td></td>
+        <td>Wed Jun 18 17:56:57 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>38a3698</td>
+        <td>Merge pull request #5 from wemade-IoT/feature/installation-order</td>
+        <td>Feature/installation order</td>
+        <td>Wed Jun 18 17:34:16 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>d043f20</td>
+        <td>Merge branch &#39;develop&#39; into feature/installation-order</td>
+        <td></td>
+        <td>Wed Jun 18 17:31:36 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>986a117</td>
+        <td>Merge pull request #3 from wemade-IoT/feat/profiles-preferences</td>
+        <td>Feat/profiles preferences</td>
+        <td>Wed Jun 18 17:21:48 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>56d5fca</td>
+        <td>feat(monitoring): added enterprise user validation</td>
+        <td></td>
+        <td>Wed Jun 18 07:42:01 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>3a28177</td>
+        <td>Merge pull request #1 from wemade-IoT/feature/crm-question&amp;answer-view</td>
+        <td>feat(crm): implement CRM service and UI components partially.</td>
+        <td>Wed Jun 18 00:11:46 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>1677715</td>
+        <td>feat(crm): implement CRM service and UI components partially.</td>
+        <td></td>
+        <td>Wed Jun 18 00:04:22 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>e89a141</td>
+        <td>feat(monitorin): added plant tasks implementation</td>
+        <td></td>
+        <td>Tue Jun 17 23:25:14 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>6014221</td>
+        <td>feat: Create reusable detail row component</td>
+        <td></td>
+        <td>Tue Jun 17 22:55:02 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>a671353</td>
+        <td>feat: Implement subscription section with plan details</td>
+        <td></td>
+        <td>Tue Jun 17 22:54:50 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>5ac6e9d</td>
+        <td>feat: Add user details section with editable fields</td>
+        <td></td>
+        <td>Tue Jun 17 22:54:32 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>4ee02c9</td>
+        <td>feat: Implement profile header with avatar and user info</td>
+        <td></td>
+        <td>Tue Jun 17 22:54:08 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>e72fc05</td>
+        <td>feat: Add profile screen basic structure and AppBar</td>
+        <td></td>
+        <td>Tue Jun 17 22:53:40 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>8beb1c7</td>
+        <td>feat(analytics): implement backend</td>
+        <td></td>
+        <td>Tue Jun 17 20:43:44 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>67b1ee5</td>
+        <td>feat(analytics): add metrics and line graph widgets</td>
+        <td></td>
+        <td>Tue Jun 17 20:05:50 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>66e880e</td>
+        <td>feat(planning): implement backend</td>
+        <td></td>
+        <td>Tue Jun 17 18:07:28 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>86a12ad</td>
+        <td>feat(planning): add themes to widgets</td>
+        <td></td>
+        <td>Tue Jun 17 17:08:54 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>7e16d11</td>
+        <td>feat(planning): add planning widgets</td>
+        <td></td>
+        <td>Tue Jun 17 15:51:17 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>05b924f</td>
+        <td>feat(iam): implemented sign in</td>
+        <td></td>
+        <td>Mon Jun 16 19:38:16 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>21fa211</td>
+        <td>chore: resolved rebase conflicts</td>
+        <td></td>
+        <td>Mon Jun 16 09:34:52 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>220843a</td>
+        <td>feat(iam): implemented sign-in</td>
+        <td></td>
+        <td>Mon Jun 16 09:33:29 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>44d5d42</td>
+        <td>style(shared): changed bottom navigation bar spacing</td>
+        <td></td>
+        <td>Mon Jun 16 08:26:37 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>5bc3170</td>
+        <td>chore: comfigured proyect structure correctly</td>
+        <td></td>
+        <td>Mon Jun 16 08:21:25 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>7330776</td>
+        <td>feat: Implement core application structure with routing</td>
+        <td>theming</td>
+        <td>and screens</td>
+        <td></td>
+        <td>Thu Jun 12 23:47:37 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>7c6b427</td>
+        <td>chore: add ecoguardian logo and user placeholder images</td>
+        <td></td>
+        <td>Thu Jun 12 23:46:29 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>dd204eb</td>
+        <td>chore: add devtools options and update dependencies in pubspec.yaml</td>
+        <td></td>
+        <td>Thu Jun 12 23:46:22 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>675c41f</td>
+        <td>chore: configured base proyect template</td>
+        <td></td>
+        <td>Sat Jun 7 12:56:24 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>d40b2dc</td>
+        <td>chore: configured base proyect template</td>
+        <td></td>
+        <td>Sat Jun 7 12:55:46 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>https://github.com/wemade-IoT/EcoGuardian-Mobile</td>
+        <td>develop</td>
+        <td>5436d71</td>
+        <td>chore: initial commit</td>
+        <td></td>
+        <td>Sat Jun 7 12:18:20 2025 -0500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+### 7.2.1.4. Testing Suite Evidence for Sprint Review
+
+En esta sección se presenta la evidencia de las pruebas realizadas durante el Sprint 3, incluyendo principalmente las pruebas unitarias de las funcionalidades core de nuestra aplicación en la herramienta NUNIT. Se han implementado pruebas para los siguientes aspectos:
+
+- **Registro de una nueva planta**: Verifica que el sistema permita registrar una nueva planta con los datos necesarios y que se almacenen correctamente en la base de datos.
+
+<img src="../assets/sprint3/testing-suite/unit-test-1.png" alt="Registro de una nueva planta" width="600">
+
+- **Actualización de datos de una planta**: Asegura que el sistema permita actualizar la información de una planta existente y que los cambios se reflejen correctamente en la base de datos.
+
+<img src="../assets/sprint3/testing-suite/unit-test-2.png" alt="Actualización de datos de una planta" width="600">
+
+- **Eliminación de una planta**: Comprueba que el sistema permita eliminar una planta y que esta acción se registre adecuadamente en la base de datos.
+
+<img src="../assets/sprint3/testing-suite/unit-test-3.png" alt="Eliminación de una planta" width="600">
+
+- **Consulta de plantas registradas por usuario**: Verifica que el sistema permita a los usuarios consultar las plantas que han registrado, mostrando la información correcta y actualizada.
+
+<img src="../assets/sprint3/testing-suite/unit-test-4.png" alt="Consulta de plantas registradas por usuario" width="600">
+
+- **Verificación de la existencia de un usuario para el registro de una planta**: Asegura que el sistema valide la existencia del usuario antes de permitir el registro de una nueva planta, evitando errores de integridad en la base de datos.
+
+Finalmente, se muestra la tabla de commits relacionados a las pruebas unitarias realizadas durante el Sprint 3.
+
+| Repository                                        | Branch  | Commit Id | Commit Message                                          | Commit Message Body | Commited on (Date)             |
+|---------------------------------------------------|---------|-----------|---------------------------------------------------------|---------------------|--------------------------------|
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop | bcf9b00   | feat(monitoring): added monitoring unit tests           |                     | Sat Jul 05 11:37:29 2025 -0500 |
+| https://github.com/wemade-IoT/EcoGuardian-Backend | develop | d7b0e82   | feat(monitoring): added get plants by user id unit test |                     | Sat Jul 05 11:50:29 2025 -0500 |
+
+
+### 7.2.1.5 Execution Evidence for Sprint Review
+En este sprint pudimos lograr la implementación del monitoreo de plantas y plantaciones, así como la integración de los servicios de backend con las aplicaciones web y móvil, la visualización, creación y respuesta a consultas de usuarios, y la gestión de órdenes de instalación, pagos y suscripciones. Finalmente se logró la implementación de la recopilación de datos de sensores de humedad, luz y temperatura, asegurando que los dispositivos IoT pudieran comunicarse efectivamente con las aplicaciones web y móvil.
+A continuación se presentan screenshots de las funcionalidades principales funcionales implementadas en el Sprint 2:
+
+Aplicación Embebida:
+
+<img src="../assets/sprint2/exce/embedded.png" alt="sprint-2-embedded.png" class="img-fluid" style="width: 100%; height: auto;">
+
+Aplicación Edge:
+
+<img src="../assets/sprint2/exce/edge.png" alt="sprint-2-edge.png" class="img-fluid" style="width: 100%; height: auto;">
+
+Web Service:
+<img src="../assets/sprint2/exce/web-service.png" alt="sprint-2-web-service.png" class="img-fluid" style="width: 100%; height: auto;">
+
+Aplicación Web:
+
+<img src="../assets/sprint2/exce/web-app-1.png" alt="sprint-2-web-app.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<img src="../assets/sprint2/exce/web-app-2.png" alt="sprint-2-web-app-2.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<img src="../assets/sprint2/login.png" alt="sprint-2-web-app-2-1.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<img src="../assets/sprint2/exce/web-app-3.png" alt="sprint-2-web-app-3.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<img src="../assets/sprint2/exce/web-app-4.png" alt="sprint-2-web-app-4.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<img src="../assets/sprint2/exce/web-app-5.png" alt="sprint-2-web-app-5.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<img src="../assets/sprint2/exce/web-app-6.png" alt="sprint-2-web-app-6.png" class="img-fluid" style="width: 100%; height: auto;">
+
+Aplicación Móvil:
+
+<img src="../assets/sprint2/exce/mobile-1.png" alt="sprint-2-mobile-app-1.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<img src="../assets/sprint2/exce/mobile-2.png" alt="sprint-2-mobile-app-2.png" class="img-fluid" style="width: 100%; height: auto;">
+
+Finalmente se presenta el video de ejecución de las funcionalidades principales del Sprint 2.
+
+<img src="../assets/sprint2/exce/excecution-vide.png" alt="sprint-2-execution-video.png" class="img-fluid" style="width: 100%; height: auto;">
+
+Enlace del video: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213983_upc_edu_pe/EWh92TUIFxFMhfBSIyNnEuEB2FJpnlo8fkBxulUXMuTJ8Q?e=dZAiLJ
+
+
+### 7.2.1.6 Services Documentation Evidence for Sprint Review
+
+En esta sección se incluye la relación de Endpoints documentados con OpenAPI, relacionados con el alcance del Sprint. 
+
+En este sprint logramos alcanzar, con respecto a los web services, la implementación de los servicios de autenticación, gestión de órdenes, pagos, suscripciones, plantas y perfiles de usuario. Estos servicios permiten a los usuarios registrarse, iniciar sesión, crear y gestionar órdenes, realizar pagos y administrar sus plantas y perfiles.
+
+A continuación se presenta una tabla con los endpoints, acciones implementadas, verbo HTTP, sintaxis, parámetros, ejemplo de response y los commits relacionados (puedes agregar la URL de la documentación en la columna que desees):
+
+| Endpoint                                 | Acción                           | Verbo HTTP | Sintaxis                                                    | Parámetros                          | Ejemplo de Response                                          | Commits relacionados      |
+|------------------------------------------|----------------------------------|------------|-------------------------------------------------------------|-------------------------------------|--------------------------------------------------------------|---------------------------|
+| /api/v1/Authentication/sign-in           | Autenticación de usuario         | POST       | /api/v1/Authentication/sign-in                              | Body: username, password            | `{ "token": "...", "user": { ... } }`                        | 5741717, e641fc2, 8816eeb |
+| /api/v1/Authentication/sign-up           | Registro de usuario              | POST       | /api/v1/Authentication/sign-up                              | Body: username, password, email     | `{ "message": "Usuario creado correctamente", "userId": 1 }` | 5741717, e641fc2, 8816eeb |
+| /api/v1/Device                           | Crear dispositivo                | POST       | /api/v1/Device                                              | Body: device info                   | `true`                                                       | 0fd7840, 5fcd1a1, 4cf6ad6 |
+| /api/v1/Order                            | Crear orden                      | POST       | /api/v1/Order                                               | Body: order info                    | `true`                                                       | 6e6f70e, 73371b4, f1b8b2f |
+| /api/v1/Order                            | Obtener órdenes por consumidor   | GET        | /api/v1/Order?consumerId=1                                  | Query: consumerId                   | `[ { ... } ]`                                                | 6e6f70e, 73371b4, f1b8b2f |
+| /api/v1/Order/{id}                       | Actualizar orden                 | PUT        | /api/v1/Order/{id}                                          | Path: id, Body: order info          | `true`                                                       | 6e6f70e, 73371b4, f1b8b2f |
+| /api/v1/Payment                          | Crear pago                       | POST       | /api/v1/Payment                                             | Body: payment info                  | `true`                                                       | 9a93123, 31ce26d, 2ac8eb8 |
+| /api/v1/Payment/all                      | Listar pagos                     | GET        | /api/v1/Payment/all                                         | -                                   | `[ { ... } ]`                                                | 9a93123, 31ce26d, 2ac8eb8 |
+| /api/v1/Payment/confirm-payment-intent   | Confirmar pago                   | POST       | /api/v1/Payment/confirm-payment-intent                      | Body: payment intent                | `true`                                                       | 9a93123, 31ce26d, 2ac8eb8 |
+| /api/v1/Payment/payment-intent           | Crear intent de pago             | POST       | /api/v1/Payment/payment-intent                              | Body: payment info                  | `{ "clientSecret": "..." }`                                  | 9a93123, 31ce26d, 2ac8eb8 |
+| /api/v1/Payment/subscription-type        | Tipos de suscripción             | GET        | /api/v1/Payment/subscription-type                           | -                                   | `[ { ... } ]`                                                | 9a93123, 31ce26d, 2ac8eb8 |
+| /api/v1/Payment/{userId}                 | Pagos por usuario                | GET        | /api/v1/Payment/{userId}                                    | Path: userId                        | `[ { ... } ]`                                                | 9a93123, 31ce26d, 2ac8eb8 |
+| /api/v1/Plant                            | Crear planta                     | POST       | /api/v1/Plant                                               | Body: plant info                    | `true`                                                       | b601606, 8dbbf40, f1c05b2 |
+| /api/v1/Plant                            | Obtener plantas por usuario      | GET        | /api/v1/Plant?userId=1                                      | Query: userId                       | `[ { ... } ]`                                                | b601606, 8dbbf40, f1c05b2 |
+| /api/v1/Plant/{id}                       | Actualizar planta                | PUT        | /api/v1/Plant/{id}                                          | Path: id, Body: plant info          | `true`                                                       | b601606, 8dbbf40, f1c05b2 |
+| /api/v1/Plant/{id}                       | Eliminar planta                  | DELETE     | /api/v1/Plant/{id}                                          | Path: id                            | `true`                                                       | b601606, 8dbbf40, f1c05b2 |
+| /api/v1/Profile                          | Crear perfil                     | POST       | /api/v1/Profile                                             | Body: profile info                  | `true`                                                       | 6386667, d31da77, fa43831 |
+| /api/v1/Profile                          | Obtener perfil por email         | GET        | /api/v1/Profile?email=mail@dominio.com                      | Query: email                        | `{ ... }`                                                    | 6386667, d31da77, fa43831 |
+| /api/v1/Profile/{id}                     | Actualizar perfil                | PUT        | /api/v1/Profile/{id}                                        | Path: id, Body: profile info        | `true`                                                       | 6386667, d31da77, fa43831 |
+| /api/v1/Question                         | Registrar pregunta               | POST       | /api/v1/Question                                            | Body: question info                 | `{ ... }`                                                    | 123bf07, 2ce1a2a, 82e95d3 |
+| /api/v1/Question                         | Listar preguntas                 | GET        | /api/v1/Question                                            | -                                   | `[ { ... } ]`                                                | 123bf07, 2ce1a2a, 82e95d3 |
+| /api/v1/Question/plant/{plantId}         | Preguntas por planta             | GET        | /api/v1/Question/plant/{plantId}                            | Path: plantId                       | `[ { ... } ]`                                                | 123bf07, 2ce1a2a, 82e95d3 |
+| /api/v1/Question/user/{userId}           | Preguntas por usuario            | GET        | /api/v1/Question/user/{userId}                              | Path: userId                        | `[ { ... } ]`                                                | 123bf07, 2ce1a2a, 82e95d3 |
+| /api/v1/Question/{questionId}            | Obtener pregunta por id          | GET        | /api/v1/Question/{questionId}                               | Path: questionId                    | `{ ... }`                                                    | 123bf07, 2ce1a2a, 82e95d3 |
+| /api/v1/Question/{questionId}/answers    | Respuestas por pregunta          | GET        | /api/v1/Question/{questionId}/answers                       | Path: questionId                    | `[ { ... } ]`                                                | 123bf07, 2ce1a2a, 82e95d3 |
+| /api/v1/Question/{questionId}/answers    | Registrar respuesta              | POST       | /api/v1/Question/{questionId}/answers                       | Path: questionId, Body: answer info | `[ { ... } ]`                                                | 123bf07, 2ce1a2a, 82e95d3 |
+| /api/v1/Subscription                     | Crear suscripción                | POST       | /api/v1/Subscription                                        | Body: subscription info             | `true`                                                       | 36aa0d7, 2e5f6a3, 13299fe |
+| /api/v1/Subscription                     | Listar suscripciones             | GET        | /api/v1/Subscription                                        | -                                   | `[ { ... } ]`                                                | 36aa0d7, 2e5f6a3, 13299fe |
+| /api/v1/Subscription/id/{subscriptionId} | Obtener suscripción por id       | GET        | /api/v1/Subscription/id/{subscriptionId}                    | Path: subscriptionId                | `{ ... }`                                                    | 36aa0d7, 2e5f6a3, 13299fe |
+| /api/v1/Subscription/user/{userId}       | Suscripciones por usuario        | GET        | /api/v1/Subscription/user/{userId}                          | Path: userId                        | `[ { ... } ]`                                                | 36aa0d7, 2e5f6a3, 13299fe |
+| /api/v1/metric                           | Crear métrica                    | POST       | /api/v1/metric                                              | Body: metric info                   | `true`                                                       | 132f072, bdc5d6c, c4a80ec |
+| /api/v1/metric                           | Obtener métricas por dispositivo | GET        | /api/v1/metric?deviceId=1                                   | Query: deviceId                     | `[ { ... } ]`                                                | 132f072, bdc5d6c, c4a80ec |
+| /api/v1/metric/by-device-and-type        | Métricas por dispositivo y tipo  | GET        | /api/v1/metric/by-device-and-type?deviceId=1&metricTypeId=1 | Query: deviceId, metricTypeId       | `[ { ... } ]`                                                | 0704b47, a2084d0, c913886 |
+
+**Repositorio:** https://github.com/wemade-IoT/EcoGuardian-Backend
+
+
+### 7.2.1.7 Software Deployment evidence for spring preview
+
+### Despliegue Aplicación Web
+
+Se configuró el dominio de producción en **Vercel**, enlazado a la rama `main` para actualizaciones automáticas. Se añadieron las **variables de entorno** necesarias para conectar con los servicios backend y garantizar el correcto funcionamiento de la aplicación. El entorno cuenta con protección activa (bot y firewall) y está listo para escalar en producción.
+<img src="../assets/sprint2/exce/deploy.jpeg" alt="sprint-2-deploy.png" class="img-fluid" style="width: 100%; height: auto;">
+
+### Despliegue de Aplicación Móvil
+
+Se realizó el despliegue de la versión **1.0.0** de la app móvil mediante **Firebase App Distribution**, permitiendo distribuir el APK a los testers. Se invitó a 5 usuarios para realizar pruebas, facilitando la recopilación de comentarios antes del lanzamiento oficial. La versión incluye una *prueba de demostración* como etapa inicial de validación.
+<img src="../assets/sprint2/exce/deploy-mobile.jpeg" alt="sprint-2-deploy.png" class="img-fluid" style="width: 100%; height: auto;">
+
+### Despliegue de Backend en Microsoft Azure
+
+El despliegue del backend de **EcoGuardian** se realizó en **Microsoft Azure** bajo el servicio **App Service**. El nombre de la aplicación es **EcoGuardian** y se encuentra en ejecución en la región **Brazil South**. Utiliza el sistema operativo **Linux** para su funcionamiento. Además, el dominio predeterminado para el servicio es **ecoguardian-cgenhdd6dadrgbfz.brazilsouth-01.azurewebsites.net**, y se tiene la opción de agregar un dominio personalizado. El plan de servicio es **ASP-EcoGuardian-9695** y está configurado para manejar las necesidades de la plataforma con recursos optimizados para su operación.
+
+**Detalles importantes:**
+- **Estado:** En ejecución
+- **Suscripción:** Azure for Students
+- **Sistema Operativo:** Linux
+- **Plan de Hosting:** App Service
+
+<img src="../assets/sprint2/exce/deploy-backend.jpeg" alt="sprint-2-deploy.png" class="img-fluid" style="width: 100%; height: auto;">
+
+### 7.2.1.8 Team Collaboration Insights during Sprint 2
+
+<p>Finalmente, se muestran los insights de colaboración del equipo durante el Sprint 2, que reflejan la comunicación y el trabajo conjunto entre los miembros del equipo en los distintos productos y servicios desarrollados.</p>
+<p>Frontend: En esta fase, se trabajó en el diseño e implementación de la interfaz de usuario, asegurando una experiencia de usuario fluida y atractiva. Se enfocaron en el desarrollo de componentes interactivos para la visualización de datos, gestión de plantas, órdenes de instalación, así como la integración de funcionalidades para pagos y suscripciones. Además, se priorizó la compatibilidad y responsividad en múltiples dispositivos, garantizando una experiencia óptima tanto en desktop como en dispositivos móviles.</p> <img src="../assets/sprint2/team-collab/spritn-2-frontend.png" alt="sprint-2-frontend.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<p>Backend: Se trabajó en la implementación de servicios web para la gestión de información de plantas, plantaciones, consultas de usuarios, órdenes de instalación, pagos y suscripciones. Se enfocaron en asegurar que los servicios fueran eficientes y escalables, permitiendo una integración fluida con las aplicaciones frontend y móvil.</p>
+<img src="../assets/sprint2/team-collab/sprint-2-backend.png" alt="sprint-2-backend.png" class="img-fluid" style="width: 100%; height: auto;">
+
+<p>Edge: El equipo se centró en la recopilación de datos de sensores de humedad, luz y temperatura, asegurando que los dispositivos IoT pudieran comunicarse efectivamente con las aplicaciones web y móvil. Trabajaron en la optimización del procesamiento de datos para garantizar una respuesta rápida y precisa a las consultas de los usuarios.</p>
+<img src="../assets/sprint2/team-collab/sprint-2-edge.png" alt="sprint-2-edge.png" class="img-fluid" style="width: 100%; height: auto;">
+
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones.
