@@ -2,10 +2,11 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png"><br> 
   <strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
   Ingeniería de Software<br>
-  <strong>Arquitecturas de Software Emergentes - 1ASI0728</strong><br>
-  Profesor: Christian Luis De Los Rios Fernandez<br>
+  <strong> 1ASI0728 Arquitecturas de Software Emergentes</strong><br>
+  202520 <br>
   NCR:7322<br> 
-  <br>Informe de Trabajo Final - 2025 - 20
+  Profesor: Christian Luis De Los Rios Fernandez<br>
+  <br>Informe de Trabajo Final
 </center>
 
 <center>
@@ -43,6 +44,11 @@
         <td>U20221A322</td>
     </tr>
 </table>
+</center>
+
+<center>
+Diciembre de 2025
+
 </center>
 
 <div style="page-break-after: always;"></div>
@@ -1164,6 +1170,31 @@ Link del Miro: https://miro.com/welcomeonboard/dGx3dm9LMGlsYkhBdmpWUzhFVkxrdGJHb
     <tr>
       <td>Care Plan</td>
       <td>Suscripción con niveles de servicio (ej: Basic, Pro).</td>
+    </tr>
+    <!-- Agregar términos técnicos utilizados durante el diseño y desarrollo de la solución. -->
+    <tr>
+      <td>Medallion Architecture</td>
+      <td>Arquitectura de datos que organiza la información en capas (Bronce, Plata, Oro) para mejorar la calidad y accesibilidad.</td>
+    </tr>
+    <tr>
+      <td>Change Data Capture (CDC)</td>
+      <td>Técnica para detectar y capturar cambios en los datos en tiempo real, facilitando la actualización continua de la información.</td>
+    </tr>
+    <tr>
+      <td>Data Lake</td>
+      <td>Almacén centralizado que permite guardar datos estructurados y no estructurados a gran escala.</td>
+    </tr>
+    <tr>
+      <td>IAM (Identity and Access Management)</td>
+      <td>Sistema para gestionar identidades digitales y controlar el acceso a recursos dentro de la plataforma.</td>
+    </tr>
+    <tr>
+      <td>API Gateway</td>
+      <td>Punto de entrada que gestiona y enruta las solicitudes de API entre clientes y servicios backend.</td>
+    </tr>
+    <tr>
+      <td>API-Led-Connectivity</td>
+      <td>Enfoque de integración que utiliza APIs como bloques de construcción para conectar aplicaciones y datos.</td>
     </tr>
   </tbody>
 </table>
@@ -9972,6 +10003,10 @@ El despliegue del backend de **EcoGuardian** se realizó en **Microsoft Azure** 
 <p>Todo el proceso evidenció la importancia de la iteración continua, la validación temprana con usuarios y la documentación clara para la toma de decisiones. El trabajo en equipo, la comunicación constante y la adaptación a los cambios fueron factores determinantes para el éxito del proyecto.</p>
 
 <p>Como recomendaciones, se resalta la necesidad de mantener una mejora continua en los modelos y procesos, así como fortalecer la gestión del tiempo y la colaboración interdisciplinaria. Además, es fundamental seguir validando la solución con usuarios reales y estar atentos a la evolución tecnológica para mantener la competitividad y relevancia del producto.</p>
+
+<!-- Explicar cómo la tecnología emergente de iot e inteligencia artificial se ha aplicado y cómo ayuda a la resolución del problema. -->
+
+<p>La integración de tecnologías emergentes como IoT e inteligencia artificial ha sido fundamental para abordar la problemática identificada. Los dispositivos IoT permiten la recopilación en tiempo real de datos ambientales y de cultivo, lo que facilita una gestión más precisa y eficiente de los recursos agrícolas. La inteligencia artificial, por su parte, se utiliza para analizar estos datos y proporcionar recomendaciones personalizadas a los usuarios, optimizando el uso del agua, fertilizantes y otros insumos, lo que contribuye a una agricultura más sostenible y rentable.</p>
 
 
 # Bibliografía
